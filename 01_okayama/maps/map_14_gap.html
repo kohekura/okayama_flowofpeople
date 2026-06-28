@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+<meta charset="UTF-8">
+<title>回遊ポテンシャル・ギャップ地図 – 岡山市</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+body{margin:0;background:#0f0e17;font-family:sans-serif}
+#map{height:100vh;width:100%}
+.legend{background:rgba(15,14,23,0.93);padding:10px 14px;border-radius:8px;
+         color:#ddd;font-size:11px;line-height:1.9;border:1px solid #333}
+.ls{display:inline-block;width:16px;height:16px;border-radius:50%;
+    margin-right:6px;vertical-align:middle;opacity:0.85}
+.leaflet-popup-content-wrapper{background:#1a1a2e;color:#eee;border:1px solid #444}
+.leaflet-popup-tip{background:#1a1a2e}
+#ctrl{position:fixed;top:60px;right:10px;z-index:1000;
+       background:rgba(15,14,23,0.93);padding:10px;border-radius:8px;
+       color:#ddd;font-size:11px;border:1px solid #333}
+</style></head><body>
+<div id="map"></div>
+<div id="ctrl">
+  <b>表示切替</b><br>
+  <label><input type="radio" name="mode" value="gap" checked> ギャップ</label><br>
+  <label><input type="radio" name="mode" value="potential"> ポテンシャル</label><br>
+  <label><input type="radio" name="mode" value="flow"> 実際人流</label>
+</div>
+<script>
+const AREAS={"奉還町": {"lat": 34.6555, "lon": 133.9115, "potential": 0.0, "flow_norm": 0.328, "gap": -0.328, "flow_actual": 106.2, "active": 14.1, "wide": 10.3, "barrier": 1.36}, "寿町": {"lat": 34.657, "lon": 133.915, "potential": 0.24, "flow_norm": 0.275, "gap": -0.035, "flow_actual": 92.4, "active": 10.0, "wide": 16.9, "barrier": 1.55}, "駅元町": {"lat": 34.6545, "lon": 133.9215, "potential": 0.554, "flow_norm": 0.416, "gap": 0.138, "flow_actual": 129.1, "active": 33.3, "wide": 2.2, "barrier": 1.23}, "岡山駅": {"lat": 34.6549, "lon": 133.9183, "potential": 0.727, "flow_norm": 0.797, "gap": -0.07, "flow_actual": 228.3, "active": 22.1, "wide": 24.3, "barrier": 1.61}, "下石井": {"lat": 34.6513, "lon": 133.922, "potential": 0.221, "flow_norm": 0.993, "gap": -0.772, "flow_actual": 279.3, "active": 15.0, "wide": 7.0, "barrier": 1.24}, "桑田町": {"lat": 34.66, "lon": 133.9235, "potential": 0.446, "flow_norm": 1.0, "gap": -0.554, "flow_actual": 281.2, "active": 26.2, "wide": 0.0, "barrier": 1.13}, "岩田町": {"lat": 34.6563, "lon": 133.92, "potential": 0.691, "flow_norm": 0.461, "gap": 0.23, "flow_actual": 140.8, "active": 18.6, "wide": 21.3, "barrier": 1.59}, "本町": {"lat": 34.6621, "lon": 133.92, "potential": 0.708, "flow_norm": 0.714, "gap": -0.006, "flow_actual": 206.7, "active": 17.7, "wide": 1.6, "barrier": 1.14}, "幸町": {"lat": 34.66, "lon": 133.9225, "potential": 0.404, "flow_norm": 0.371, "gap": 0.033, "flow_actual": 117.2, "active": 54.1, "wide": 0.0, "barrier": 1.09}, "柳町": {"lat": 34.6617, "lon": 133.9255, "potential": 0.777, "flow_norm": 0.136, "gap": 0.641, "flow_actual": 56.2, "active": 54.9, "wide": 0.0, "barrier": 1.16}, "野田屋町": {"lat": 34.6575, "lon": 133.925, "potential": 0.457, "flow_norm": 0.3, "gap": 0.158, "flow_actual": 98.7, "active": 49.7, "wide": 10.9, "barrier": 1.33}, "磨屋町": {"lat": 34.6593, "lon": 133.928, "potential": 0.799, "flow_norm": 0.239, "gap": 0.561, "flow_actual": 82.8, "active": 51.8, "wide": 0.0, "barrier": 0.52}, "田町": {"lat": 34.661, "lon": 133.929, "potential": 0.964, "flow_norm": 0.138, "gap": 0.826, "flow_actual": 56.7, "active": 87.1, "wide": 5.9, "barrier": 1.13}, "中央町": {"lat": 34.6632, "lon": 133.9255, "potential": 0.77, "flow_norm": 0.0, "gap": 0.77, "flow_actual": 20.7, "active": 35.6, "wide": 5.7, "barrier": 1.23}, "天神町": {"lat": 34.6585, "lon": 133.916, "potential": 0.26, "flow_norm": 0.198, "gap": 0.062, "flow_actual": 72.2, "active": 4.5, "wide": 0.1, "barrier": 1.11}, "中山下": {"lat": 34.6562, "lon": 133.926, "potential": 0.42, "flow_norm": 0.498, "gap": -0.078, "flow_actual": 150.4, "active": 20.7, "wide": 5.3, "barrier": 1.2}, "表町": {"lat": 34.6593, "lon": 133.9305, "potential": 0.67, "flow_norm": 0.598, "gap": 0.072, "flow_actual": 176.4, "active": 43.3, "wide": 32.6, "barrier": 1.98}, "西大寺町": {"lat": 34.659, "lon": 133.9348, "potential": 0.266, "flow_norm": 0.065, "gap": 0.2, "flow_actual": 37.7, "active": 14.1, "wide": 25.5, "barrier": 1.83}, "出石町": {"lat": 34.662, "lon": 133.9315, "potential": 1.0, "flow_norm": 0.044, "gap": 0.956, "flow_actual": 32.1, "active": 46.9, "wide": 14.0, "barrier": 1.5}, "後楽園": {"lat": 34.6657, "lon": 133.9342, "potential": 0.072, "flow_norm": 0.005, "gap": 0.066, "flow_actual": 22.0, "active": 9.0, "wide": 11.4, "barrier": 1.44}, "岡山城": {"lat": 34.6625, "lon": 133.937, "potential": 0.201, "flow_norm": 0.17, "gap": 0.031, "flow_actual": 64.8, "active": 2.9, "wide": 10.0, "barrier": 1.38}, "内山下": {"lat": 34.6555, "lon": 133.933, "potential": 0.04, "flow_norm": 0.326, "gap": -0.286, "flow_actual": 105.5, "active": 5.3, "wide": 9.8, "barrier": 1.32}};
+const HUBS=[{"name": "岡山駅", "lat": 34.6553, "lon": 133.9177, "w": 1.0}, {"name": "イオンモール岡山", "lat": 34.6537, "lon": 133.9196, "w": 0.85}, {"name": "西川緑道公園", "lat": 34.658, "lon": 133.9195, "w": 0.55}, {"name": "表町商店街", "lat": 34.6597, "lon": 133.9318, "w": 0.65}, {"name": "岡山県庁", "lat": 34.6625, "lon": 133.9346, "w": 0.45}, {"name": "岡山市役所", "lat": 34.6618, "lon": 133.9341, "w": 0.45}, {"name": "後楽園", "lat": 34.6614, "lon": 133.9342, "w": 0.4}];
+const map=L.map('map').setView([34.659,133.926],15);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+  {attribution:'&copy; OSM &copy; CARTO',maxZoom:20}).addTo(map);
+
+function gapColor(g){
+  if(g>0.15) return '#e63946';   // 機会損失（大）
+  if(g>0.05) return '#f4a261';   // 機会損失（小）
+  if(g<-0.10) return '#2ec4b6';  // 想定外の強さ
+  if(g<-0.05) return '#a8dadc';
+  return '#888888';              // 均衡
+}
+function scalarColor(v,cmap){
+  const c=Math.max(0,Math.min(1,v));
+  if(cmap==='YlOrRd'){
+    const r=Math.round(255*Math.min(1,c*2));
+    const g=Math.round(255*Math.max(0,1-c*2+0.5));
+    return `rgb(${r},${g},50)`;
+  }
+  const b=Math.round(200*c+55);
+  return `rgb(30,100,${b})`;
+}
+
+let circles={};
+let mode='gap';
+
+function makePopup(nm,d){
+  const gClass=d.gap>0.05?'color:#e63946':d.gap<-0.05?'color:#2ec4b6':'color:#888';
+  return `<div style="min-width:220px">
+    <b style="font-size:14px">${nm}</b>
+    <hr style="border-color:#444;margin:4px 0">
+    <span style="${gClass}">ギャップ: <b>${d.gap>0?'+':''}${d.gap.toFixed(2)}</b></span><br>
+    ポテンシャル: ${d.potential.toFixed(2)}<br>
+    実際人流(正規化): ${d.flow_norm.toFixed(2)}<br>
+    昼間人流(実数): <b>${d.flow_actual}</b><br>
+    <hr style="border-color:#444;margin:4px 0">
+    <span style="color:#2ec4b6">▌</span>Active Frontage: ${d.active}%<br>
+    <span style="color:#f4a261">▌</span>幹線道路割合: ${d.wide}%<br>
+    バリアスコア: ${d.barrier}
+  </div>`;
+}
+
+function updateCircles(){
+  Object.entries(AREAS).forEach(([nm,d])=>{
+    if(!circles[nm])return;
+    let color,r;
+    if(mode==='gap'){
+      color=gapColor(d.gap);
+      r=Math.max(20,Math.min(80,Math.abs(d.gap)*300));
+    } else if(mode==='potential'){
+      color=scalarColor(d.potential,'YlOrRd');
+      r=Math.max(20,Math.min(80,d.potential*80));
+    } else {
+      color=scalarColor(d.flow_norm,'Blues');
+      r=Math.max(20,Math.min(80,d.flow_norm*80));
+    }
+    circles[nm].setStyle({fillColor:color,color:color,radius:r});
+  });
+}
+
+Object.entries(AREAS).forEach(([nm,d])=>{
+  const c=L.circle([d.lat,d.lon],{
+    radius:50,color:gapColor(d.gap),weight:1.5,
+    fillColor:gapColor(d.gap),fillOpacity:0.7
+  }).bindPopup(makePopup(nm,d)).addTo(map);
+  circles[nm]=c;
+  L.tooltip({permanent:true,direction:'center',offset:[0,0]})
+   .setContent(`<b style="font-size:9px;color:#fff">${nm.slice(0,3)}</b>`)
+   .setLatLng([d.lat,d.lon]).addTo(map);
+});
+
+// 主要拠点（星マーカー）
+HUBS.forEach(h=>{
+  L.circleMarker([h.lat,h.lon],{
+    radius:12*h.w+4,color:'#ffd700',weight:2,
+    fillColor:'#ffd700',fillOpacity:0.3
+  }).bindTooltip(`<b style="color:#ffd700">${h.name}</b>`,{permanent:false})
+   .addTo(map);
+});
+
+// 表示切替
+document.querySelectorAll('input[name=mode]').forEach(r=>{
+  r.addEventListener('change',e=>{ mode=e.target.value; updateCircles(); });
+});
+
+// 凡例
+const leg=L.control({position:'bottomleft'});
+leg.onAdd=()=>{
+  const d=L.DomUtil.create('div','legend');
+  d.innerHTML=`<b>人流ギャップ</b><br>
+    <span class="ls" style="background:#e63946"></span>機会損失（大）ギャップ>0.15<br>
+    <span class="ls" style="background:#f4a261"></span>機会損失（小）ギャップ>0.05<br>
+    <span class="ls" style="background:#888"></span>均衡<br>
+    <span class="ls" style="background:#a8dadc"></span>想定外の強さ（小）<br>
+    <span class="ls" style="background:#2ec4b6"></span>想定外の強さ（大）<br>
+    <hr style="border-color:#333;margin:4px 0">
+    <span style="color:#ffd700">⬤</span> 主要拠点（大きさ＝引力強度）`;
+  return d;
+};
+leg.addTo(map);
+</script></body></html>

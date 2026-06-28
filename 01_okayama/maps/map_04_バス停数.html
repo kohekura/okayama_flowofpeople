@@ -1,0 +1,47 @@
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8"><title>考察2-B：バス停数（量）と昼間人流（r=−0.23）</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+body{margin:0;padding:0;background:#0f0e17;font-family:"Noto Sans JP",sans-serif}
+#hdr{background:#0f0e17;color:#f5a623;padding:10px 18px;font-size:1.15rem;font-weight:bold;border-bottom:1px solid #222}
+#sub{background:#0f0e17;color:#a8dadc;padding:2px 18px 8px;font-size:.8rem}
+#map{height:calc(100vh - 72px)}
+.lbl{background:transparent!important;border:none!important;box-shadow:none!important;
+  color:#fff;font-size:9px;font-weight:bold;text-shadow:0 0 3px #000}
+#leg{position:absolute;bottom:28px;right:10px;background:rgba(15,14,23,.92);
+  color:#e0e0e0;padding:10px 14px;border-radius:8px;font-size:.78rem;
+  min-width:155px;z-index:999;border:1px solid #333;line-height:1.6}
+#leg h4{margin:0 0 5px;color:#f5a623;font-size:.85rem}
+</style></head><body>
+<div id="hdr">考察2-B：バス停数（量）と昼間人流（r=−0.23）</div>
+<div id="sub">バス停が多い（分散型）エリアは逆に人流低傾向。集約型の幹線ハブが賑わいをつくる。</div>
+<div id="map"></div>
+<div id="leg"><h4>バス停数（100m）</h4><div style='background:linear-gradient(to right,#f1eef6,#3690c0,#034e7b);height:10px;border-radius:4px;margin:4px 0'></div><div style='display:flex;justify-content:space-between'><span>少</span><span>多</span></div><hr style='border-color:#333;margin:5px 0'><small>r=−0.23（負相関）<br>分散型＝賑わい生まない</small></div>
+<script>
+var map=L.map("map").setView([34.661,133.924],15);
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+  {attribution:"&copy; OpenStreetMap contributors",maxZoom:19}).addTo(map);
+L.circle([34.6555,133.9115],{radius:220,fillColor:"#ebe6f1",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>奉還町</b><br>バス停数(100m): 1停<br>昼間人流: 106<br>※停留所が分散＝人流低`).bindTooltip("奉還町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.657,133.915],{radius:220,fillColor:"#fff7fb",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>寿町</b><br>バス停数(100m): 0停<br>昼間人流: 92<br>※停留所が分散＝人流低`).bindTooltip("寿町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6545,133.9215],{radius:220,fillColor:"#fff7fb",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>駅元町</b><br>バス停数(100m): 0停<br>昼間人流: 129<br>※停留所が分散＝人流低`).bindTooltip("駅元町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6549,133.9183],{radius:220,fillColor:"#cfd0e5",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>岡山駅</b><br>バス停数(100m): 2停<br>昼間人流: 228<br>※停留所が分散＝人流低`).bindTooltip("岡山駅",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6513,133.922],{radius:220,fillColor:"#fff7fb",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>下石井</b><br>バス停数(100m): 0停<br>昼間人流: 279<br>※停留所が分散＝人流低`).bindTooltip("下石井",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.66,133.9235],{radius:220,fillColor:"#fff7fb",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>桑田町</b><br>バス停数(100m): 0停<br>昼間人流: 281<br>※停留所が分散＝人流低`).bindTooltip("桑田町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6563,133.92],{radius:220,fillColor:"#cfd0e5",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>岩田町</b><br>バス停数(100m): 2停<br>昼間人流: 141<br>※停留所が分散＝人流低`).bindTooltip("岩田町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6621,133.92],{radius:220,fillColor:"#ebe6f1",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>本町</b><br>バス停数(100m): 1停<br>昼間人流: 207<br>※停留所が分散＝人流低`).bindTooltip("本町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.66,133.9225],{radius:220,fillColor:"#fff7fb",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>幸町</b><br>バス停数(100m): 0停<br>昼間人流: 117<br>※停留所が分散＝人流低`).bindTooltip("幸町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6617,133.9255],{radius:220,fillColor:"#fff7fb",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>柳町</b><br>バス停数(100m): 0停<br>昼間人流: 56<br>※停留所が分散＝人流低`).bindTooltip("柳町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6575,133.925],{radius:220,fillColor:"#fff7fb",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>野田屋町</b><br>バス停数(100m): 0停<br>昼間人流: 99<br>※停留所が分散＝人流低`).bindTooltip("野田屋町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6593,133.928],{radius:220,fillColor:"#fff7fb",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>磨屋町</b><br>バス停数(100m): 0停<br>昼間人流: 83<br>※停留所が分散＝人流低`).bindTooltip("磨屋町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.661,133.929],{radius:220,fillColor:"#023858",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>田町</b><br>バス停数(100m): 8停<br>昼間人流: 57<br>※停留所が分散＝人流低`).bindTooltip("田町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6632,133.9255],{radius:220,fillColor:"#046faf",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>中央町</b><br>バス停数(100m): 6停<br>昼間人流: 21<br>※停留所が分散＝人流低`).bindTooltip("中央町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6585,133.916],{radius:220,fillColor:"#fff7fb",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>天神町</b><br>バス停数(100m): 0停<br>昼間人流: 72<br>※停留所が分散＝人流低`).bindTooltip("天神町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6562,133.926],{radius:220,fillColor:"#ebe6f1",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>中山下</b><br>バス停数(100m): 1停<br>昼間人流: 150<br>※停留所が分散＝人流低`).bindTooltip("中山下",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6593,133.9305],{radius:220,fillColor:"#cfd0e5",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>表町</b><br>バス停数(100m): 2停<br>昼間人流: 176<br>※停留所が分散＝人流低`).bindTooltip("表町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.659,133.9348],{radius:220,fillColor:"#fff7fb",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>西大寺町</b><br>バス停数(100m): 0停<br>昼間人流: 38<br>※停留所が分散＝人流低`).bindTooltip("西大寺町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.662,133.9315],{radius:220,fillColor:"#a5bcda",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>出石町</b><br>バス停数(100m): 3停<br>昼間人流: 32<br>※停留所が分散＝人流低`).bindTooltip("出石町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6657,133.9342],{radius:220,fillColor:"#fff7fb",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>後楽園</b><br>バス停数(100m): 0停<br>昼間人流: 22<br>※停留所が分散＝人流低`).bindTooltip("後楽園",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6625,133.937],{radius:220,fillColor:"#fff7fb",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>岡山城</b><br>バス停数(100m): 0停<br>昼間人流: 65<br>※停留所が分散＝人流低`).bindTooltip("岡山城",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6555,133.933],{radius:220,fillColor:"#fff7fb",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>内山下</b><br>バス停数(100m): 0停<br>昼間人流: 106<br>※停留所が分散＝人流低`).bindTooltip("内山下",{permanent:true,direction:"center",className:"lbl"});
+</script></body></html>

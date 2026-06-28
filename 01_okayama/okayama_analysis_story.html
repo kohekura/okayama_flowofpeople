@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>岡山市中心市街地 — 人流分析レポート</title>
+<style>
+  /* ─── Reset & Base ─── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #222;
+    background: #f7f5f2;
+  }
+
+  /* ─── Layout ─── */
+  .container { max-width: 820px; margin: 0 auto; padding: 0 24px; }
+
+  /* ─── Hero ─── */
+  .hero {
+    background: linear-gradient(135deg, #1a3a5c 0%, #0f6e8c 60%, #1a8a6e 100%);
+    color: white;
+    padding: 72px 0 56px;
+    text-align: center;
+  }
+  .hero .label {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-size: clamp(24px, 5vw, 40px);
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 16px;
+  }
+  .hero .subtitle {
+    font-size: 16px;
+    opacity: 0.85;
+    margin-bottom: 32px;
+  }
+  .hero .meta {
+    font-size: 13px;
+    opacity: 0.6;
+  }
+
+  /* ─── TL;DR ─── */
+  .tldr {
+    background: #fff;
+    border-left: 5px solid #0f6e8c;
+    margin: 40px auto;
+    max-width: 820px;
+    padding: 28px 32px;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .tldr h2 { font-size: 13px; color: #0f6e8c; letter-spacing: 2px; margin-bottom: 12px; }
+  .tldr ul { padding-left: 0; list-style: none; }
+  .tldr ul li {
+    padding: 6px 0 6px 20px;
+    position: relative;
+    font-size: 16px;
+  }
+  .tldr ul li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #0f6e8c;
+    font-weight: bold;
+  }
+
+  /* ─── Section ─── */
+  section {
+    background: #fff;
+    max-width: 820px;
+    margin: 32px auto;
+    padding: 48px 48px;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  }
+  section h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #1a3a5c;
+    border-bottom: 2px solid #e8edf2;
+    padding-bottom: 12px;
+  }
+  section h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #0f6e8c;
+    margin: 28px 0 10px;
+  }
+  section p { margin-bottom: 14px; }
+
+  /* ─── Step Boxes ─── */
+  .step-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .step-box {
+    border: 2px solid #e0e8f0;
+    border-radius: 10px;
+    padding: 20px 16px;
+    text-align: center;
+  }
+  .step-box .num {
+    font-size: 11px;
+    color: #0f6e8c;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+  }
+  .step-box .title { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+  .step-box .desc { font-size: 12px; color: #666; line-height: 1.5; }
+
+  /* ─── Data Cards ─── */
+  .data-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+    margin: 20px 0;
+  }
+  .data-card {
+    background: #f0f6fa;
+    border-radius: 8px;
+    padding: 16px 18px;
+  }
+  .data-card .label { font-size: 11px; color: #666; margin-bottom: 4px; }
+  .data-card .value { font-size: 20px; font-weight: 700; color: #1a3a5c; }
+  .data-card .note { font-size: 12px; color: #888; margin-top: 2px; }
+
+  /* ─── Finding Cards ─── */
+  .finding {
+    background: #f7fbff;
+    border-left: 4px solid #0f6e8c;
+    padding: 20px 24px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+  }
+  .finding .tag {
+    font-size: 11px;
+    font-weight: 700;
+    color: #0f6e8c;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+  }
+  .finding .headline { font-size: 17px; font-weight: 700; margin-bottom: 8px; color: #1a3a5c; }
+  .finding p { font-size: 14px; margin: 0; }
+
+  .finding.alert {
+    background: #fff8f0;
+    border-left-color: #e07020;
+  }
+  .finding.alert .tag { color: #e07020; }
+  .finding.alert .headline { color: #7a3a00; }
+
+  .finding.good {
+    background: #f0fff8;
+    border-left-color: #1a8a6e;
+  }
+  .finding.good .tag { color: #1a8a6e; }
+  .finding.good .headline { color: #0a4a30; }
+
+  /* ─── Cycle Timeline ─── */
+  .cycle-timeline { margin: 28px 0; }
+  .cycle-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 28px;
+    align-items: flex-start;
+  }
+  .cycle-num {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #1a3a5c, #0f6e8c);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .cycle-content {}
+  .cycle-content h4 { font-size: 16px; font-weight: 700; margin-bottom: 4px; color: #1a3a5c; }
+  .cycle-content .question { font-size: 13px; color: #666; margin-bottom: 8px; font-style: italic; }
+  .cycle-content p { font-size: 14px; color: #333; }
+  .cycle-content .result {
+    background: #eef5fa;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #1a3a5c;
+    font-weight: 500;
+  }
+
+  /* ─── Ranking Table ─── */
+  .rank-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 14px;
+  }
+  .rank-table th {
+    background: #1a3a5c;
+    color: white;
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 600;
+  }
+  .rank-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #e8edf2;
+    vertical-align: middle;
+  }
+  .rank-table tr:nth-child(even) td { background: #f7f9fb; }
+  .rank-table .score-bar {
+    background: #e0eaf4;
+    border-radius: 4px;
+    height: 8px;
+    position: relative;
+    width: 100%;
+    min-width: 80px;
+  }
+  .rank-table .score-fill {
+    background: linear-gradient(90deg, #0f6e8c, #1a8a6e);
+    height: 100%;
+    border-radius: 4px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .badge-red { background: #ffe0d0; color: #c04000; }
+  .badge-yellow { background: #fff3cc; color: #804000; }
+  .badge-green { background: #d0f0e0; color: #006040; }
+
+  /* ─── Glossary ─── */
+  .glossary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin: 20px 0;
+  }
+  .glossary-card {
+    background: #f7f5f2;
+    border-radius: 8px;
+    padding: 16px 18px;
+  }
+  .glossary-card .term {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a3a5c;
+    margin-bottom: 4px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ddd;
+  }
+  .glossary-card .plain {
+    font-size: 11px;
+    color: #0f6e8c;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .glossary-card .definition { font-size: 13px; color: #444; line-height: 1.5; }
+
+  /* ─── Quote Box ─── */
+  .insight-box {
+    background: linear-gradient(135deg, #1a3a5c, #0f6e8c);
+    color: white;
+    border-radius: 12px;
+    padding: 32px 36px;
+    margin: 28px 0;
+    text-align: center;
+  }
+  .insight-box .icon { font-size: 32px; margin-bottom: 12px; }
+  .insight-box p { font-size: 18px; font-weight: 700; line-height: 1.6; margin: 0; }
+  .insight-box .sub { font-size: 13px; opacity: 0.75; margin-top: 10px; }
+
+  /* ─── Policy List ─── */
+  .policy-list {
+    counter-reset: policy;
+    list-style: none;
+    padding: 0;
+  }
+  .policy-list li {
+    counter-increment: policy;
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+  }
+  .policy-list li::before {
+    content: counter(policy);
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background: #1a3a5c;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 2px;
+  }
+  .policy-list li .pol-body {}
+  .policy-list li .pol-title { font-size: 16px; font-weight: 700; color: #1a3a5c; margin-bottom: 4px; }
+  .policy-list li .pol-desc { font-size: 14px; color: #444; }
+
+  /* ─── Limitation Box ─── */
+  .limitation {
+    background: #fff9e8;
+    border: 1px solid #f0d060;
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  .limitation strong { color: #806000; }
+
+  /* ─── Footer ─── */
+  footer {
+    background: #1a3a5c;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: 32px 24px;
+    font-size: 12px;
+    margin-top: 40px;
+  }
+
+  /* ─── Utility ─── */
+  .em { color: #0f6e8c; font-weight: 700; }
+  .highlight { background: #fffde0; padding: 2px 4px; border-radius: 3px; }
+  .muted { color: #888; font-size: 13px; }
+
+  @media (max-width: 600px) {
+    section { padding: 28px 20px; }
+    .tldr { padding: 20px 20px; }
+    .cycle-item { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══ HERO ══ -->
+<div class="hero">
+  <div class="container">
+    <div class="label">GIS 人流分析レポート 2026</div>
+    <h1>岡山市中心市街地<br>「人が流れない場所」の解明</h1>
+    <div class="subtitle">なぜ街なかで人流が途切れるのか。データで探った4サイクルの旅</div>
+    <div class="meta">分析対象：岡山市中心市街地 22エリア　／　データ期間：月次人流データ×99ヶ月</div>
+  </div>
+</div>
+
+<!-- ══ TL;DR ══ -->
+<div class="tldr">
+  <h2>3行まとめ</h2>
+  <ul>
+    <li>岡山の中心市街地は「賑わいが続かない構造」になっており、駅と商店街・観光地の間で人の流れが途切れている</li>
+    <li>最大の原因は<span class="em">岡山駅周辺の「歩いていても何もない区間」</span>——店舗が道路に面していない・駐車場だらけ——にある</li>
+    <li>エリア全体を底上げするより、<span class="em">途切れている100m区間を集中的につなぐ</span>ほうが効果的という結論</li>
+  </ul>
+</div>
+
+<!-- ══ 1. 問題意識 ══ -->
+<section>
+  <h2>🗺 なぜこの分析をしたのか</h2>
+
+  <p>岡山市の中心市街地には、<span class="em">岡山駅・イオンモール・西川緑道・表町商店街・後楽園</span>という大きな拠点がいくつも集まっています。地図で見ると、これだけのコンテンツが一箇所に凝縮された街はそう多くありません。</p>
+
+  <p>ところが実際に街を歩くと、「なんとなく人が少ない区間がある」「駅から表町まで歩く人が少ない」「商店街の入口と奥で人の多さが全然違う」という感覚がある。この<span class="highlight">「ポテンシャルはあるのに、なぜ人が流れないのか」</span>という問いが出発点です。</p>
+
+  <h3>分析の問いかけ</h3>
+  <p>この分析が答えようとした問いは一つです：</p>
+
+  <div class="insight-box">
+    <div class="icon">❓</div>
+    <p>「岡山市中心市街地で、人の流れが<br>どこで・なぜ途切れているのか？」</p>
+    <div class="sub">どこを改善すれば、最も効果的に街全体の回遊が生まれるか</div>
+  </div>
+
+  <p>「どこに人が多いか」を調べるだけなら簡単です。しかし、それだけでは政策の手がかりにならない。「本来なら人が来るはずなのに来ていない場所」を特定することで、初めて「どこを直せばいいか」がわかります。</p>
+</section>
+
+<!-- ══ 2. 使ったデータ ══ -->
+<section>
+  <h2>📦 何のデータを使ったのか</h2>
+
+  <p>この分析では、大きく3種類のデータを使いました。</p>
+
+  <div class="data-cards">
+    <div class="data-card">
+      <div class="label">人流データ</div>
+      <div class="value">22エリア</div>
+      <div class="note">月次×24時間帯×99ヶ月分</div>
+    </div>
+    <div class="data-card">
+      <div class="label">地図データ（OSM）</div>
+      <div class="value">46,323件</div>
+      <div class="note">店舗・施設・駐車場など</div>
+    </div>
+    <div class="data-card">
+      <div class="label">GTFS（交通）</div>
+      <div class="value">路線バス</div>
+      <div class="note">両備・岡電の停留所データ</div>
+    </div>
+  </div>
+
+  <h3>① 人流データとは</h3>
+  <p>スマートフォンのGPS情報などから推定した「そのエリアに何人いたか」を示すデータです。中心市街地22エリアについて、1時間ごと・月ごとに記録されています。ただし<span class="em">22エリア中8エリアはデータがゼロ</span>で、実態ではなく測定上の欠損の可能性があります。</p>
+
+  <h3>② 地図データ（OpenStreetMap）とは</h3>
+  <p>世界中のボランティアが作っているオープンな地図データです。お店・駐車場・公園・オフィスビルなど建物の用途情報が入っています。今回はこれを使って「その場所が歩行者に開かれているか」を判断しました。</p>
+
+  <h3>③ 「本来来るはずの人数」の計算方法</h3>
+  <p>大きな施設（駅・イオン・後楽園など）は、遠くからでも人を引き付けます。物理の「重力」のように、<span class="em">施設が大きいほど・近いほど引力が強い</span>という計算式を使って、各エリアに「理論上来るはずの人数スコア」を算出しました。これを実際の人流と比べることで、「来るはずなのに来ていない」場所を発見します。</p>
+</section>
+
+<!-- ══ 3. 4サイクル ══ -->
+<section>
+  <h2>🔄 分析の流れ——4サイクルの旅</h2>
+
+  <p>この分析はChatGPTとの対話を挟みながら、4段階で進化しました。一度分析してわかったことをChatGPTに投げ、「次にどこを掘るべきか」を整理してから再度分析する、というループです。</p>
+
+  <div class="cycle-timeline">
+
+    <div class="cycle-item">
+      <div class="cycle-num">1</div>
+      <div class="cycle-content">
+        <h4>基礎ギャップ分析</h4>
+        <div class="question">「本来来るはずなのに来ていない場所はどこか？」</div>
+        <p>まず「理論上のポテンシャル」と「実際の人流」の差（ギャップ）を全22エリアで計算しました。</p>
+        <div class="result">発見：磨屋町・中山下・内山下が「ギャップ大」——来るはずなのに来ていない</div>
+      </div>
+    </div>
+
+    <div class="cycle-item">
+      <div class="cycle-num">2</div>
+      <div class="cycle-content">
+        <h4>感度分析——結果はどれだけ信頼できるか</h4>
+        <div class="question">「計算方法を変えても同じ答えが出るか？」</div>
+        <p>「重力の強さ」パラメータを変えたり、特定エリアを抜いてみたり（LOO分析）して、Cycle1の結果の信頼性を検証しました。同時に「一日中にぎわっているか・特定時間だけか」という時間多様性も分析。</p>
+        <div class="result">発見：複数モデルで磨屋町の「ギャップ」は再現される。一方、桑田町は全モデルで「説明不能な高人流」</div>
+      </div>
+    </div>
+
+    <div class="cycle-item">
+      <div class="cycle-num">3</div>
+      <div class="cycle-content">
+        <h4>人流クリフ分析 + 時間帯別分析</h4>
+        <div class="question">「隣のエリアと比べて急激に人が減る場所はどこか？」</div>
+        <p>「クリフ（崖）」= 隣り合うエリアの間で人流が急落する境界線を計算。また桑田町の謎を解くため、24時間の時間帯別パターンを分析しました。</p>
+        <div class="result">最大クリフ：桑田町→幸町 で2131倍の差。桑田町の謎解明：「終日型」の宿泊・飲食複合エリアで、ショッピング客が来る場所ではなく、泊まる人・飲む人が24時間いる場所だった</div>
+      </div>
+    </div>
+
+    <div class="cycle-item">
+      <div class="cycle-num">4</div>
+      <div class="cycle-content">
+        <h4>ルート別断絶診断 + 介入優先度マップ</h4>
+        <div class="question">「どのルートが最も壊れていて、どこを直せばいいか？」</div>
+        <p>駅〜表町、表町〜後楽園など5つの主要ルートを設定し、各ルート上のどのエリアが「回遊の障害」になっているかを特定。4種類の問題（引力不足・歩道の開放性・駐車場比率・人流落差）を総合した「介入優先スコア」を算出しました。</p>
+        <div class="result">最優先：岡山駅周辺。全5ルートの起点でありながら、最も歩行者に閉じた構造を持つ</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ 4. 大発見 ══ -->
+<section>
+  <h2>💡 3つの大発見</h2>
+
+  <!-- Finding 1 -->
+  <div class="finding alert">
+    <div class="tag">大発見 1</div>
+    <div class="headline">岡山駅周辺は「最も歩きにくい場所」だった</div>
+    <p>岡山駅のすぐ周辺は、人流データでは「一番人が多い場所」です。しかし地図データで「どれだけ道路に向いた店・施設があるか」を計算すると、全22エリア中で最低クラスの<span class="em">6.7%</span>しかありませんでした。</p>
+  </div>
+
+  <h3>「道路に向いた店・施設」ってどういう意味？</h3>
+  <p>たとえば商店街を歩いていると、左右にお店が並んでいて、ショーウィンドウが見えたり、店員さんの声が聞こえたりします。これが「歩行者に開かれた空間」です。</p>
+  <p>逆に、大きな駐車場、オフィスビルの壁面、デパートの裏口が続く道は、歩いていても何もありません。そういう区間が続くと、人は「早く通り過ぎよう」と感じ、次のエリアへ移動しません。</p>
+  <p>岡山駅の東口〜表町方面にかけての区間は、<span class="em">駐車場・オフィスビル壁面・大型商業施設の非公開側</span>が多く、「通り道」にしかなっていないという構造的な問題があります。</p>
+
+  <!-- Finding 2 -->
+  <div class="finding good">
+    <div class="tag">大発見 2</div>
+    <div class="headline">「問題エリア」と思っていた場所が実は良好だった</div>
+    <p>Cycle1〜2では「磨屋町が最大の断絶点」という結論が出ていました。ところがCycle4で地図データを使って調べると、磨屋町の「道路に向いた店・施設」比率は<span class="em">32.9%</span>で、むしろ良好なエリアでした。</p>
+  </div>
+
+  <p>なぜ矛盾したのか？ 磨屋町はOpenStreetMap（地図データ）への店舗登録が多い。でも実際には閉業した店や空き店舗がある可能性があります。<span class="em">地図上のデータと現実のにぎわいは違う</span>ことを改めて示した発見です。これは今後、現地調査で確認すべきポイントです。</p>
+
+  <!-- Finding 3 -->
+  <div class="finding">
+    <div class="tag">大発見 3</div>
+    <div class="headline">桑田町は「異常値」ではなく「別カテゴリの核」だった</div>
+    <p>全分析を通じて、桑田町という小さなエリアが「なぜかどのモデルでも説明できないほど人が多い」という謎でした。24時間の時間帯別データを分析してわかったのは、<span class="em">昼も夜も朝も、フラットに人がいる</span>ということ。</p>
+  </div>
+
+  <p>一般的な商業エリアは昼に多くて夜に減ります。しかし桑田町は午前5時〜28時（翌朝4時）まで、ほぼ一定の人数がいます。これは宿泊・飲食が中心のエリアで、<span class="em">「訪れる人」ではなく「泊まっている人・飲んでいる人」が24時間いる場所</span>です。散策型の回遊とは別の論理で動いているエリアであり、回遊促進の改善対象とは別に考える必要があります。</p>
+</section>
+
+<!-- ══ 5. 岡山の多核構造 ══ -->
+<section>
+  <h2>🏙 岡山は「5つの顔」を持つ街</h2>
+
+  <p>分析を通じて、岡山市中心市街地が単一の「中心市街地」ではなく、<span class="em">性格の異なる5種類の「核」</span>が並存していることが見えてきました。</p>
+
+  <div class="step-grid">
+    <div class="step-box">
+      <div class="num">核 ①</div>
+      <div class="title">交通核</div>
+      <div class="desc">岡山駅・駅元町<br>人は多いが通過する</div>
+    </div>
+    <div class="step-box">
+      <div class="num">核 ②</div>
+      <div class="title">宿泊・飲食核</div>
+      <div class="desc">桑田町・寿町<br>24時間フラットな滞在</div>
+    </div>
+    <div class="step-box">
+      <div class="num">核 ③</div>
+      <div class="title">観光・文化核</div>
+      <div class="desc">後楽園・岡山城<br>遠方からの目的地型</div>
+    </div>
+    <div class="step-box">
+      <div class="num">核 ④</div>
+      <div class="title">行政・住宅核</div>
+      <div class="desc">内山下・中山下<br>平日昼型の構造</div>
+    </div>
+    <div class="step-box">
+      <div class="num">核 ⑤</div>
+      <div class="title">商店街核</div>
+      <div class="desc">表町・磨屋町<br>週末昼に集中</div>
+    </div>
+  </div>
+
+  <p>この5種類の核は、それぞれ異なる論理で人が動いています。問題は、<span class="em">核と核の間をつなぐ「リンク」が壊れている</span>こと。特に「交通核（駅）→商店街核（表町）」のルートに大きな断絶があります。</p>
+</section>
+
+<!-- ══ 6. 介入優先度 ══ -->
+<section>
+  <h2>📊 どこを直すと効果が高いか</h2>
+
+  <p>4種類の問題（①引力があるのに人流が少ない、②歩行者に開かれた店が少ない、③駐車場・壁面が多い、④隣エリアとの人流落差が大きい）を組み合わせて「介入優先スコア」を算出しました。</p>
+
+  <table class="rank-table">
+    <thead>
+      <tr>
+        <th>順位</th>
+        <th>エリア</th>
+        <th>スコア</th>
+        <th>主な問題</th>
+        <th>優先度</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1位</td>
+        <td><strong>岡山駅周辺</strong></td>
+        <td>
+          <div class="score-bar"><div class="score-fill" style="width:100%"></div></div>
+          0.572
+        </td>
+        <td>歩道向き店舗6.7%、全ルートの起点</td>
+        <td><span class="badge badge-red">最優先</span></td>
+      </tr>
+      <tr>
+        <td>2位</td>
+        <td>天神町</td>
+        <td>
+          <div class="score-bar"><div class="score-fill" style="width:95%"></div></div>
+          0.541
+        </td>
+        <td>引力大・人流低、西側孤立</td>
+        <td><span class="badge badge-red">最優先</span></td>
+      </tr>
+      <tr>
+        <td>3位</td>
+        <td>岩田町</td>
+        <td>
+          <div class="score-bar"><div class="score-fill" style="width:76%"></div></div>
+          0.435
+        </td>
+        <td>駅→表町ルート中間断絶点</td>
+        <td><span class="badge badge-red">要対策</span></td>
+      </tr>
+      <tr>
+        <td>4位</td>
+        <td>寿町</td>
+        <td>
+          <div class="score-bar"><div class="score-fill" style="width:72%"></div></div>
+          0.413
+        </td>
+        <td>駐車場集中、歩行者動線弱</td>
+        <td><span class="badge badge-yellow">対策検討</span></td>
+      </tr>
+      <tr>
+        <td>5位</td>
+        <td>奉還町</td>
+        <td>
+          <div class="score-bar"><div class="score-fill" style="width:68%"></div></div>
+          0.391
+        </td>
+        <td>駅西側の引力過小評価懸念</td>
+        <td><span class="badge badge-yellow">対策検討</span></td>
+      </tr>
+      <tr>
+        <td colspan="2">（良好）磨屋町・表町</td>
+        <td>
+          <div class="score-bar"><div class="score-fill" style="width:16%"></div></div>
+          0.094
+        </td>
+        <td>店舗充実・歩行者開放性高</td>
+        <td><span class="badge badge-green">維持</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>ルート別でも深刻なのは「駅まわり」</h3>
+  <p>5つの主要ルートの断絶度合いを比較すると：</p>
+  <ul style="list-style:none;padding:0;margin:12px 0;">
+    <li style="padding:6px 0;border-bottom:1px solid #eee;font-size:14px;">🔴 <strong>ルートE「桑田町接続」</strong>：最も断絶（0.379）— 交通核と宿泊核の間のつなぎが機能していない</li>
+    <li style="padding:6px 0;border-bottom:1px solid #eee;font-size:14px;">🔴 <strong>ルートC「駅→本町北上」</strong>：断絶度高（0.350）— 駅から北への回遊がほぼ生まれていない</li>
+    <li style="padding:6px 0;border-bottom:1px solid #eee;font-size:14px;">🟡 <strong>ルートA「駅→西川→表町」</strong>：中程度（0.314）— 最重要ルートだが途中で落ちる</li>
+    <li style="padding:6px 0;border-bottom:1px solid #eee;font-size:14px;">🟡 <strong>ルートD「西川→内山下」</strong>：比較的良好（0.270）</li>
+    <li style="padding:6px 0;font-size:14px;">🟢 <strong>ルートB「表町→県庁軸」</strong>：最も連続性あり（0.234）</li>
+  </ul>
+</section>
+
+<!-- ══ 7. 政策提言 ══ -->
+<section>
+  <h2>🎯 これからの岡山へ——分析から見えた方向性</h2>
+
+  <div class="insight-box">
+    <div class="icon">🔑</div>
+    <p>「エリア全体を底上げする」より<br>「核と核を結ぶ100m区間を集中的につなぐ」</p>
+    <div class="sub">面的整備より点・線の外科的介入</div>
+  </div>
+
+  <ul class="policy-list">
+    <li>
+      <div class="pol-body">
+        <div class="pol-title">岡山駅東口〜西川の間を「歩いて楽しい100m」に変える</div>
+        <div class="pol-desc">駅と西川緑道の間（约400m）のうち、現在は駐車場や壁面が続く区間が多い。ここに仮設のマルシェ・キッチンカー・緑化などを配置するだけで、人の足が止まり始める。建替え・大規模整備を待たずにできる即効策。</div>
+      </div>
+    </li>
+    <li>
+      <div class="pol-body">
+        <div class="pol-title">天神町の「西側孤立」を解消する動線整備</div>
+        <div class="pol-desc">天神町は重力モデル上は高ポテンシャルなのに人流が少ない。駅からのアクセス導線が弱いため、サインや歩道整備で「こっちに行けばどこに出るか」をわかりやすくする。</div>
+      </div>
+    </li>
+    <li>
+      <div class="pol-body">
+        <div class="pol-title">核ごとに違う「誘客ロジック」で設計する</div>
+        <div class="pol-desc">交通核（駅周辺）・宿泊飲食核（桑田町）・観光文化核（後楽園）・商店街核（表町）は動く論理が違う。一律の活性化策ではなく、それぞれの性格に合わせた政策を組み合わせる必要がある。</div>
+      </div>
+    </li>
+    <li>
+      <div class="pol-body">
+        <div class="pol-title">「空き店舗・閉業」の実態把握を急ぐ（磨屋町等）</div>
+        <div class="pol-desc">地図データ上は充実しているのに人流が少ないエリアがある。データと現実のギャップは「閉業した店が地図に残っている」可能性がある。現地調査でどれだけ営業中かを確認することが先決。</div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<!-- ══ 8. 分析の限界 ══ -->
+<section>
+  <h2>⚠️ この分析の限界——正直な自己評価</h2>
+
+  <div class="limitation">
+    <strong>データの欠損：</strong>22エリアのうち8エリアで人流がゼロ。実態が空洞なのではなく、測定されていない可能性が高い。実際に人がいないエリアはほとんどないはずで、データ整備が先決。
+  </div>
+  <div class="limitation">
+    <strong>地図データの鮮度：</strong>OpenStreetMapは市民が更新するボランティア型。閉業した店が残っている、新規開店が未登録など、実態と乖離している場合がある。磨屋町の分析矛盾はこれが原因の可能性がある。
+  </div>
+  <div class="limitation">
+    <strong>n=22の統計的限界：</strong>22エリアという小さいサンプルでの相関分析のため、統計的有意性は限定的。方向性の参考にはなるが、確定的な結論とは言えない。
+  </div>
+  <div class="limitation">
+    <strong>「歩道向き店舗比率」の測定問題：</strong>岡山駅周辺のスコアが異常に低い（6.7%）のは、本当に歩けない環境なのか、測定方法の問題なのか、現地確認が必要。
+  </div>
+
+  <p style="margin-top:20px;">これらの限界があるため、今回の分析は「方向性の仮説提示」として使い、具体的な政策決定の前には現地調査・より精度の高いデータによる補完が必要です。</p>
+</section>
+
+<!-- ══ 9. 用語集 ══ -->
+<section>
+  <h2>📖 この分析で使った言葉の説明</h2>
+
+  <div class="glossary-grid">
+    <div class="glossary-card">
+      <div class="term">回遊ポテンシャル</div>
+      <div class="plain">→ 「来るはずの人数」</div>
+      <div class="definition">そのエリアに理論上何人来てもおかしくないか、を計算した指標。実際の人流と比較してギャップを見る。</div>
+    </div>
+    <div class="glossary-card">
+      <div class="term">Active Frontage（AF）<br>アクティブ・フロンテージ</div>
+      <div class="plain">→ 「道路向き店舗比率」</div>
+      <div class="definition">道路（歩道）に面してお店や施設が並んでいる割合。高いほど「歩いていて楽しい街」。低いと駐車場・壁面ばかり。</div>
+    </div>
+    <div class="glossary-card">
+      <div class="term">重力モデル</div>
+      <div class="plain">→ 「引力計算」</div>
+      <div class="definition">大きな施設は遠くからでも人を引き付け、近いほど引力が強い、という物理の重力を模した計算式。</div>
+    </div>
+    <div class="glossary-card">
+      <div class="term">人流クリフ</div>
+      <div class="plain">→ 「人の断崖絶壁」</div>
+      <div class="definition">隣り合うエリアの間で急激に人が少なくなる境界のこと。崖（クリフ）のように人流がガクッと落ちる場所。</div>
+    </div>
+    <div class="glossary-card">
+      <div class="term">ギャップ分析</div>
+      <div class="plain">→ 「期待外れ度」</div>
+      <div class="definition">「来るはず」と「実際に来た」の差。プラスなら「損失している場所」、マイナスなら「想定以上に人が来ている場所」。</div>
+    </div>
+    <div class="glossary-card">
+      <div class="term">多核構造</div>
+      <div class="plain">→ 「複数の顔を持つ街」</div>
+      <div class="definition">中心市街地が一つの目的地ではなく、それぞれ性格の違う複数の「核」から成り立っているという都市構造の見方。</div>
+    </div>
+    <div class="glossary-card">
+      <div class="term">LOO分析</div>
+      <div class="plain">→ 「一つ抜いて試す」</div>
+      <div class="definition">Leave-One-Outの略。一つのエリアを除外して計算し、それでも同じ結論が出るかを確認する信頼性チェック。</div>
+    </div>
+    <div class="glossary-card">
+      <div class="term">感度分析</div>
+      <div class="plain">→ 「設定を変えて再計算」</div>
+      <div class="definition">計算の前提条件を少し変えて同じ分析をやり直し、結果が大きく変わるかを確認すること。変わらなければ信頼性が高い。</div>
+    </div>
+    <div class="glossary-card">
+      <div class="term">OSM（OpenStreetMap）</div>
+      <div class="plain">→ 「世界地図のWikipedia」</div>
+      <div class="definition">世界中のボランティアが作るオープンな地図。誰でも編集でき、商業施設・駐車場・公園などの詳細情報が含まれる。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 10. まとめ ══ -->
+<section>
+  <h2>🏁 まとめ——この分析で言えること</h2>
+
+  <p>岡山市中心市街地には、後楽園・岡山城・表町商店街・西川緑道・岡山駅と、全国でも稀なほど充実したコンテンツが密集しています。しかし<span class="em">それらをつなぐ「回廊」が機能していない</span>。</p>
+
+  <p>最大の構造問題は<span class="em">岡山駅周辺の「歩行者に閉じた空間」</span>です。駅に来る人が多いほど、そこから先の街への「入口」が機能しないことのダメージは大きくなります。</p>
+
+  <p>今回の分析で提案できる最もシンプルな方針は：</p>
+
+  <div class="insight-box">
+    <div class="icon">🎯</div>
+    <p>岡山駅〜西川緑道〜表町を結ぶ<br>「途切れない1.5km」をつくる</p>
+    <div class="sub">大規模整備より、まず「人が立ち止まる100m」を複数箇所つくることが先</div>
+  </div>
+
+  <p>もちろん今回の分析は第一歩に過ぎません。現地調査・より精度の高いデータ・住民や商業者へのヒアリングを重ねながら、仮説を検証していくことが重要です。この分析は「どこを見るべきか」の地図として使ってください。</p>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <p>岡山市中心市街地GIS人流分析 — 4サイクル分析まとめ　|　2026年6月</p>
+  <p style="margin-top:8px;">使用データ：人流データ（個票集計）/ OpenStreetMap / GTFS（両備・岡電）　|　分析ツール：Python / ChatGPT</p>
+</footer>
+
+</body>
+</html>

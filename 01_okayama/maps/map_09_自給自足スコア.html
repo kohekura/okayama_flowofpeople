@@ -1,0 +1,47 @@
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8"><title>新考察C：生活自給自足スコア（徒歩300m圏）</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+body{margin:0;padding:0;background:#0f0e17;font-family:"Noto Sans JP",sans-serif}
+#hdr{background:#0f0e17;color:#f5a623;padding:10px 18px;font-size:1.15rem;font-weight:bold;border-bottom:1px solid #222}
+#sub{background:#0f0e17;color:#a8dadc;padding:2px 18px 8px;font-size:.8rem}
+#map{height:calc(100vh - 72px)}
+.lbl{background:transparent!important;border:none!important;box-shadow:none!important;
+  color:#fff;font-size:9px;font-weight:bold;text-shadow:0 0 3px #000}
+#leg{position:absolute;bottom:28px;right:10px;background:rgba(15,14,23,.92);
+  color:#e0e0e0;padding:10px 14px;border-radius:8px;font-size:.78rem;
+  min-width:155px;z-index:999;border:1px solid #333;line-height:1.6}
+#leg h4{margin:0 0 5px;color:#f5a623;font-size:.85rem}
+</style></head><body>
+<div id="hdr">新考察C：生活自給自足スコア（徒歩300m圏）</div>
+<div id="sub">6つの生活要素（食・買・交・緑・仕・夜）が300m圏内に揃うかをスコア化。緑＝充実、赤＝不足。</div>
+<div id="map"></div>
+<div id="leg"><h4>自給自足スコア（/6点）</h4><div style='background:linear-gradient(to right,#a50026,#fdae61,#006837);height:10px;border-radius:4px;margin:4px 0'></div><div style='display:flex;justify-content:space-between'><span>0点</span><span>6点</span></div><hr style='border-color:#333;margin:5px 0'><small>コンパクトシティ指標<br>緑＝高自給・赤＝低自給</small></div>
+<script>
+var map=L.map("map").setView([34.661,133.924],15);
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+  {attribution:"&copy; OpenStreetMap contributors",maxZoom:19}).addTo(map);
+L.circle([34.6555,133.9115],{radius:220,fillColor:"#1a9850",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>奉還町</b><br>自給自足スコア: 5/6<br>食料・飲食・交通・緑地・仕事・夜間が300m内に揃うか`).bindTooltip("奉還町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.657,133.915],{radius:220,fillColor:"#66bd63",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>寿町</b><br>自給自足スコア: 4/6<br>食料・飲食・交通・緑地・仕事・夜間が300m内に揃うか`).bindTooltip("寿町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6545,133.9215],{radius:220,fillColor:"#006837",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>駅元町</b><br>自給自足スコア: 6/6<br>食料・飲食・交通・緑地・仕事・夜間が300m内に揃うか`).bindTooltip("駅元町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6549,133.9183],{radius:220,fillColor:"#66bd63",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>岡山駅</b><br>自給自足スコア: 4/6<br>食料・飲食・交通・緑地・仕事・夜間が300m内に揃うか`).bindTooltip("岡山駅",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6513,133.922],{radius:220,fillColor:"#006837",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>下石井</b><br>自給自足スコア: 6/6<br>食料・飲食・交通・緑地・仕事・夜間が300m内に揃うか`).bindTooltip("下石井",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.66,133.9235],{radius:220,fillColor:"#1a9850",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>桑田町</b><br>自給自足スコア: 5/6<br>食料・飲食・交通・緑地・仕事・夜間が300m内に揃うか`).bindTooltip("桑田町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6563,133.92],{radius:220,fillColor:"#66bd63",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>岩田町</b><br>自給自足スコア: 4/6<br>食料・飲食・交通・緑地・仕事・夜間が300m内に揃うか`).bindTooltip("岩田町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6621,133.92],{radius:220,fillColor:"#006837",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>本町</b><br>自給自足スコア: 6/6<br>食料・飲食・交通・緑地・仕事・夜間が300m内に揃うか`).bindTooltip("本町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.66,133.9225],{radius:220,fillColor:"#1a9850",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>幸町</b><br>自給自足スコア: 5/6<br>食料・飲食・交通・緑地・仕事・夜間が300m内に揃うか`).bindTooltip("幸町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6617,133.9255],{radius:220,fillColor:"#006837",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>柳町</b><br>自給自足スコア: 6/6<br>食料・飲食・交通・緑地・仕事・夜間が300m内に揃うか`).bindTooltip("柳町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6575,133.925],{radius:220,fillColor:"#006837",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>野田屋町</b><br>自給自足スコア: 6/6<br>食料・飲食・交通・緑地・仕事・夜間が300m内に揃うか`).bindTooltip("野田屋町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6593,133.928],{radius:220,fillColor:"#1a9850",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>磨屋町</b><br>自給自足スコア: 5/6<br>食料・飲食・交通・緑地・仕事・夜間が300m内に揃うか`).bindTooltip("磨屋町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.661,133.929],{radius:220,fillColor:"#006837",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>田町</b><br>自給自足スコア: 6/6<br>食料・飲食・交通・緑地・仕事・夜間が300m内に揃うか`).bindTooltip("田町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6632,133.9255],{radius:220,fillColor:"#006837",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>中央町</b><br>自給自足スコア: 6/6<br>食料・飲食・交通・緑地・仕事・夜間が300m内に揃うか`).bindTooltip("中央町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6585,133.916],{radius:220,fillColor:"#66bd63",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>天神町</b><br>自給自足スコア: 4/6<br>食料・飲食・交通・緑地・仕事・夜間が300m内に揃うか`).bindTooltip("天神町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6562,133.926],{radius:220,fillColor:"#1a9850",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>中山下</b><br>自給自足スコア: 5/6<br>食料・飲食・交通・緑地・仕事・夜間が300m内に揃うか`).bindTooltip("中山下",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6593,133.9305],{radius:220,fillColor:"#006837",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>表町</b><br>自給自足スコア: 6/6<br>食料・飲食・交通・緑地・仕事・夜間が300m内に揃うか`).bindTooltip("表町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.659,133.9348],{radius:220,fillColor:"#1a9850",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>西大寺町</b><br>自給自足スコア: 5/6<br>食料・飲食・交通・緑地・仕事・夜間が300m内に揃うか`).bindTooltip("西大寺町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.662,133.9315],{radius:220,fillColor:"#006837",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>出石町</b><br>自給自足スコア: 6/6<br>食料・飲食・交通・緑地・仕事・夜間が300m内に揃うか`).bindTooltip("出石町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6657,133.9342],{radius:220,fillColor:"#66bd63",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>後楽園</b><br>自給自足スコア: 4/6<br>食料・飲食・交通・緑地・仕事・夜間が300m内に揃うか`).bindTooltip("後楽園",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6625,133.937],{radius:220,fillColor:"#66bd63",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>岡山城</b><br>自給自足スコア: 4/6<br>食料・飲食・交通・緑地・仕事・夜間が300m内に揃うか`).bindTooltip("岡山城",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6555,133.933],{radius:220,fillColor:"#fdae61",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>内山下</b><br>自給自足スコア: 3/6<br>食料・飲食・交通・緑地・仕事・夜間が300m内に揃うか`).bindTooltip("内山下",{permanent:true,direction:"center",className:"lbl"});
+</script></body></html>

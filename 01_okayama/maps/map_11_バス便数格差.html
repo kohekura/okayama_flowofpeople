@@ -1,0 +1,47 @@
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8"><title>新考察E：バス便数の地域格差（ジニ係数=0.445）</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+body{margin:0;padding:0;background:#0f0e17;font-family:"Noto Sans JP",sans-serif}
+#hdr{background:#0f0e17;color:#f5a623;padding:10px 18px;font-size:1.15rem;font-weight:bold;border-bottom:1px solid #222}
+#sub{background:#0f0e17;color:#a8dadc;padding:2px 18px 8px;font-size:.8rem}
+#map{height:calc(100vh - 72px)}
+.lbl{background:transparent!important;border:none!important;box-shadow:none!important;
+  color:#fff;font-size:9px;font-weight:bold;text-shadow:0 0 3px #000}
+#leg{position:absolute;bottom:28px;right:10px;background:rgba(15,14,23,.92);
+  color:#e0e0e0;padding:10px 14px;border-radius:8px;font-size:.78rem;
+  min-width:155px;z-index:999;border:1px solid #333;line-height:1.6}
+#leg h4{margin:0 0 5px;color:#f5a623;font-size:.85rem}
+</style></head><body>
+<div id="hdr">新考察E：バス便数の地域格差（ジニ係数=0.445）</div>
+<div id="sub">幹線沿い（駅前・桃太郎大通り）に交通が集中。周辺エリアとの格差が昼間人流格差にも影響。</div>
+<div id="map"></div>
+<div id="leg"><h4>バス平均便数格差</h4><div style='background:linear-gradient(to right,#d73027,#fee08b,#1a9850);height:10px;border-radius:4px;margin:4px 0'></div><div style='display:flex;justify-content:space-between'><span>低便数</span><span>高便数</span></div><hr style='border-color:#333;margin:5px 0'><small>ジニ係数: 0.445<br>0=平等 1=完全不平等</small></div>
+<script>
+var map=L.map("map").setView([34.661,133.924],15);
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+  {attribution:"&copy; OpenStreetMap contributors",maxZoom:19}).addTo(map);
+L.circle([34.6555,133.9115],{radius:220,fillColor:"#d22b26",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>奉還町</b><br>バス平均便数(200m): 17便/停<br>ジニ係数（全体）: 0.445`).bindTooltip("奉還町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.657,133.915],{radius:220,fillColor:"#d22b26",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>寿町</b><br>バス平均便数(200m): 17便/停<br>ジニ係数（全体）: 0.445`).bindTooltip("寿町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6545,133.9215],{radius:220,fillColor:"#c21c26",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>駅元町</b><br>バス平均便数(200m): 12便/停<br>ジニ係数（全体）: 0.445`).bindTooltip("駅元町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6549,133.9183],{radius:220,fillColor:"#006837",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>岡山駅</b><br>バス平均便数(200m): 187便/停<br>ジニ係数（全体）: 0.445`).bindTooltip("岡山駅",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6513,133.922],{radius:220,fillColor:"#6dc063",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>下石井</b><br>バス平均便数(200m): 147便/停<br>ジニ係数（全体）: 0.445`).bindTooltip("下石井",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.66,133.9235],{radius:220,fillColor:"#fa9a58",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>桑田町</b><br>バス平均便数(200m): 51便/停<br>ジニ係数（全体）: 0.445`).bindTooltip("桑田町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6563,133.92],{radius:220,fillColor:"#e7f59f",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>岩田町</b><br>バス平均便数(200m): 105便/停<br>ジニ係数（全体）: 0.445`).bindTooltip("岩田町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6621,133.92],{radius:220,fillColor:"#a9da6b",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>本町</b><br>バス平均便数(200m): 129便/停<br>ジニ係数（全体）: 0.445`).bindTooltip("本町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.66,133.9225],{radius:220,fillColor:"#fa9a58",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>幸町</b><br>バス平均便数(200m): 51便/停<br>ジニ係数（全体）: 0.445`).bindTooltip("幸町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6617,133.9255],{radius:220,fillColor:"#fef1a7",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>柳町</b><br>バス平均便数(200m): 85便/停<br>ジニ係数（全体）: 0.445`).bindTooltip("柳町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6575,133.925],{radius:220,fillColor:"#f99354",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>野田屋町</b><br>バス平均便数(200m): 48便/停<br>ジニ係数（全体）: 0.445`).bindTooltip("野田屋町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6593,133.928],{radius:220,fillColor:"#e1f297",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>磨屋町</b><br>バス平均便数(200m): 108便/停<br>ジニ係数（全体）: 0.445`).bindTooltip("磨屋町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.661,133.929],{radius:220,fillColor:"#b1dd71",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>田町</b><br>バス平均便数(200m): 127便/停<br>ジニ係数（全体）: 0.445`).bindTooltip("田町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6632,133.9255],{radius:220,fillColor:"#fefab7",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>中央町</b><br>バス平均便数(200m): 91便/停<br>ジニ係数（全体）: 0.445`).bindTooltip("中央町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6585,133.916],{radius:220,fillColor:"#a50026",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>天神町</b><br>バス平均便数(200m): 0便/停<br>ジニ係数（全体）: 0.445`).bindTooltip("天神町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6562,133.926],{radius:220,fillColor:"#f88b51",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>中山下</b><br>バス平均便数(200m): 46便/停<br>ジニ係数（全体）: 0.445`).bindTooltip("中山下",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6593,133.9305],{radius:220,fillColor:"#fdc877",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>表町</b><br>バス平均便数(200m): 66便/停<br>ジニ係数（全体）: 0.445`).bindTooltip("表町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.659,133.9348],{radius:220,fillColor:"#f89053",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>西大寺町</b><br>バス平均便数(200m): 48便/停<br>ジニ係数（全体）: 0.445`).bindTooltip("西大寺町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.662,133.9315],{radius:220,fillColor:"#d9ef8b",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>出石町</b><br>バス平均便数(200m): 112便/停<br>ジニ係数（全体）: 0.445`).bindTooltip("出石町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6657,133.9342],{radius:220,fillColor:"#a50026",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>後楽園</b><br>バス平均便数(200m): 0便/停<br>ジニ係数（全体）: 0.445`).bindTooltip("後楽園",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6625,133.937],{radius:220,fillColor:"#a50026",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>岡山城</b><br>バス平均便数(200m): 0便/停<br>ジニ係数（全体）: 0.445`).bindTooltip("岡山城",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6555,133.933],{radius:220,fillColor:"#c62026",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>内山下</b><br>バス平均便数(200m): 12便/停<br>ジニ係数（全体）: 0.445`).bindTooltip("内山下",{permanent:true,direction:"center",className:"lbl"});
+</script></body></html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8"><title>新考察B：昼型 vs 夜型 施設バランス</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+body{margin:0;padding:0;background:#0f0e17;font-family:"Noto Sans JP",sans-serif}
+#hdr{background:#0f0e17;color:#f5a623;padding:10px 18px;font-size:1.15rem;font-weight:bold;border-bottom:1px solid #222}
+#sub{background:#0f0e17;color:#a8dadc;padding:2px 18px 8px;font-size:.8rem}
+#map{height:calc(100vh - 72px)}
+.lbl{background:transparent!important;border:none!important;box-shadow:none!important;
+  color:#fff;font-size:9px;font-weight:bold;text-shadow:0 0 3px #000}
+#leg{position:absolute;bottom:28px;right:10px;background:rgba(15,14,23,.92);
+  color:#e0e0e0;padding:10px 14px;border-radius:8px;font-size:.78rem;
+  min-width:155px;z-index:999;border:1px solid #333;line-height:1.6}
+#leg h4{margin:0 0 5px;color:#f5a623;font-size:.85rem}
+</style></head><body>
+<div id="hdr">新考察B：昼型 vs 夜型 施設バランス</div>
+<div id="sub">バー・カフェ比率でエリアの活動時間帯を類型化。赤＝夜型、青＝昼型。</div>
+<div id="map"></div>
+<div id="leg"><h4>夜型比率（バー+カフェ）</h4><div style='background:linear-gradient(to right,#2166ac,#f7f7f7,#b2182b);height:10px;border-radius:4px;margin:4px 0'></div><div style='display:flex;justify-content:space-between'><span>昼型</span><span>夜型</span></div><hr style='border-color:#333;margin:5px 0'><small>赤＝夜型優位<br>青＝昼型優位</small></div>
+<script>
+var map=L.map("map").setView([34.661,133.924],15);
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+  {attribution:"&copy; OpenStreetMap contributors",maxZoom:19}).addTo(map);
+L.circle([34.6555,133.9115],{radius:220,fillColor:"#053061",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>奉還町</b><br>夜型比率: 0.00<br>昼型施設: 16件 / 夜型施設: 0件`).bindTooltip("奉還町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.657,133.915],{radius:220,fillColor:"#053061",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>寿町</b><br>夜型比率: 0.00<br>昼型施設: 7件 / 夜型施設: 0件`).bindTooltip("寿町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6545,133.9215],{radius:220,fillColor:"#a7cfe4",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>駅元町</b><br>夜型比率: 0.17<br>昼型施設: 10件 / 夜型施設: 2件`).bindTooltip("駅元町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6549,133.9183],{radius:220,fillColor:"#2971b1",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>岡山駅</b><br>夜型比率: 0.06<br>昼型施設: 15件 / 夜型施設: 1件`).bindTooltip("岡山駅",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6513,133.922],{radius:220,fillColor:"#87beda",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>下石井</b><br>夜型比率: 0.14<br>昼型施設: 6件 / 夜型施設: 1件`).bindTooltip("下石井",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.66,133.9235],{radius:220,fillColor:"#77b4d5",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>桑田町</b><br>夜型比率: 0.13<br>昼型施設: 26件 / 夜型施設: 4件`).bindTooltip("桑田町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6563,133.92],{radius:220,fillColor:"#2c75b3",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>岩田町</b><br>夜型比率: 0.07<br>昼型施設: 14件 / 夜型施設: 1件`).bindTooltip("岩田町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6621,133.92],{radius:220,fillColor:"#4c98c6",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>本町</b><br>夜型比率: 0.11<br>昼型施設: 50件 / 夜型施設: 6件`).bindTooltip("本町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.66,133.9225],{radius:220,fillColor:"#3783ba",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>幸町</b><br>夜型比率: 0.08<br>昼型施設: 22件 / 夜型施設: 2件`).bindTooltip("幸町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6617,133.9255],{radius:220,fillColor:"#d1e5f0",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>柳町</b><br>夜型比率: 0.20<br>昼型施設: 28件 / 夜型施設: 7件`).bindTooltip("柳町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6575,133.925],{radius:220,fillColor:"#307ab6",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>野田屋町</b><br>夜型比率: 0.07<br>昼型施設: 25件 / 夜型施設: 2件`).bindTooltip("野田屋町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6593,133.928],{radius:220,fillColor:"#74b2d3",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>磨屋町</b><br>夜型比率: 0.13<br>昼型施設: 33件 / 夜型施設: 5件`).bindTooltip("磨屋町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.661,133.929],{radius:220,fillColor:"#aed3e6",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>田町</b><br>夜型比率: 0.17<br>昼型施設: 43件 / 夜型施設: 9件`).bindTooltip("田町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6632,133.9255],{radius:220,fillColor:"#559ec9",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>中央町</b><br>夜型比率: 0.11<br>昼型施設: 47件 / 夜型施設: 6件`).bindTooltip("中央町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6585,133.916],{radius:220,fillColor:"#053061",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>天神町</b><br>夜型比率: 0.00<br>昼型施設: 2件 / 夜型施設: 0件`).bindTooltip("天神町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6562,133.926],{radius:220,fillColor:"#2f78b5",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>中山下</b><br>夜型比率: 0.07<br>昼型施設: 13件 / 夜型施設: 1件`).bindTooltip("中山下",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6593,133.9305],{radius:220,fillColor:"#dbe9f1",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>表町</b><br>夜型比率: 0.21<br>昼型施設: 33件 / 夜型施設: 9件`).bindTooltip("表町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.659,133.9348],{radius:220,fillColor:"#67001f",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>西大寺町</b><br>夜型比率: 0.50<br>昼型施設: 0件 / 夜型施設: 0件`).bindTooltip("西大寺町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.662,133.9315],{radius:220,fillColor:"#bddaea",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>出石町</b><br>夜型比率: 0.19<br>昼型施設: 22件 / 夜型施設: 5件`).bindTooltip("出石町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6657,133.9342],{radius:220,fillColor:"#67001f",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>後楽園</b><br>夜型比率: 0.50<br>昼型施設: 1件 / 夜型施設: 1件`).bindTooltip("後楽園",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6625,133.937],{radius:220,fillColor:"#67001f",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>岡山城</b><br>夜型比率: 0.50<br>昼型施設: 0件 / 夜型施設: 0件`).bindTooltip("岡山城",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6555,133.933],{radius:220,fillColor:"#67001f",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>内山下</b><br>夜型比率: 0.50<br>昼型施設: 0件 / 夜型施設: 0件`).bindTooltip("内山下",{permanent:true,direction:"center",className:"lbl"});
+</script></body></html>

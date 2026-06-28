@@ -1,0 +1,47 @@
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8"><title>考察1：緑地件数と昼間人流（r=+0.45）</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+body{margin:0;padding:0;background:#0f0e17;font-family:"Noto Sans JP",sans-serif}
+#hdr{background:#0f0e17;color:#f5a623;padding:10px 18px;font-size:1.15rem;font-weight:bold;border-bottom:1px solid #222}
+#sub{background:#0f0e17;color:#a8dadc;padding:2px 18px 8px;font-size:.8rem}
+#map{height:calc(100vh - 72px)}
+.lbl{background:transparent!important;border:none!important;box-shadow:none!important;
+  color:#fff;font-size:9px;font-weight:bold;text-shadow:0 0 3px #000}
+#leg{position:absolute;bottom:28px;right:10px;background:rgba(15,14,23,.92);
+  color:#e0e0e0;padding:10px 14px;border-radius:8px;font-size:.78rem;
+  min-width:155px;z-index:999;border:1px solid #333;line-height:1.6}
+#leg h4{margin:0 0 5px;color:#f5a623;font-size:.85rem}
+</style></head><body>
+<div id="hdr">考察1：緑地件数と昼間人流（r=+0.45）</div>
+<div id="sub">小さな緑地が多いエリアほど昼間人流が多い（色が濃い＝緑地多い）</div>
+<div id="map"></div>
+<div id="leg"><h4>緑地件数（200m）</h4><div style='background:linear-gradient(to right,#ffffe5,#41ab5d,#004529);height:10px;border-radius:4px;margin:4px 0'></div><div style='display:flex;justify-content:space-between'><span>少</span><span>多</span></div><hr style='border-color:#333;margin:5px 0'><small>r=+0.45（正相関）<br>小公園多い = 賑わい</small></div>
+<script>
+var map=L.map("map").setView([34.661,133.924],15);
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+  {attribution:"&copy; OpenStreetMap contributors",maxZoom:19}).addTo(map);
+L.circle([34.6555,133.9115],{radius:220,fillColor:"#ceeb9e",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>奉還町</b><br>緑地件数(200m): 39件<br>昼間人流: 106`).bindTooltip("奉還町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.657,133.915],{radius:220,fillColor:"#fcfdd5",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>寿町</b><br>緑地件数(200m): 12件<br>昼間人流: 92`).bindTooltip("寿町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6545,133.9215],{radius:220,fillColor:"#45ad5f",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>駅元町</b><br>緑地件数(200m): 77件<br>昼間人流: 129`).bindTooltip("駅元町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6549,133.9183],{radius:220,fillColor:"#54b466",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>岡山駅</b><br>緑地件数(200m): 73件<br>昼間人流: 228`).bindTooltip("岡山駅",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6513,133.922],{radius:220,fillColor:"#d1ec9f",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>下石井</b><br>緑地件数(200m): 38件<br>昼間人流: 279`).bindTooltip("下石井",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.66,133.9235],{radius:220,fillColor:"#004529",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>桑田町</b><br>緑地件数(200m): 121件<br>昼間人流: 281`).bindTooltip("桑田町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6563,133.92],{radius:220,fillColor:"#278a47",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>岩田町</b><br>緑地件数(200m): 90件<br>昼間人流: 141`).bindTooltip("岩田町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6621,133.92],{radius:220,fillColor:"#38a055",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>本町</b><br>緑地件数(200m): 82件<br>昼間人流: 207`).bindTooltip("本町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.66,133.9225],{radius:220,fillColor:"#016837",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>幸町</b><br>緑地件数(200m): 106件<br>昼間人流: 117`).bindTooltip("幸町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6617,133.9255],{radius:220,fillColor:"#77c578",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>柳町</b><br>緑地件数(200m): 64件<br>昼間人流: 56`).bindTooltip("柳町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6575,133.925],{radius:220,fillColor:"#41ab5d",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>野田屋町</b><br>緑地件数(200m): 78件<br>昼間人流: 99`).bindTooltip("野田屋町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6593,133.928],{radius:220,fillColor:"#8ecf81",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>磨屋町</b><br>緑地件数(200m): 58件<br>昼間人流: 83`).bindTooltip("磨屋町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.661,133.929],{radius:220,fillColor:"#82ca7d",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>田町</b><br>緑地件数(200m): 61件<br>昼間人流: 57`).bindTooltip("田町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6632,133.9255],{radius:220,fillColor:"#9dd687",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>中央町</b><br>緑地件数(200m): 54件<br>昼間人流: 21`).bindTooltip("中央町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6585,133.916],{radius:220,fillColor:"#ffffe5",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>天神町</b><br>緑地件数(200m): 7件<br>昼間人流: 72`).bindTooltip("天神町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6562,133.926],{radius:220,fillColor:"#9dd687",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>中山下</b><br>緑地件数(200m): 54件<br>昼間人流: 150`).bindTooltip("中山下",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6593,133.9305],{radius:220,fillColor:"#73c376",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>表町</b><br>緑地件数(200m): 65件<br>昼間人流: 176`).bindTooltip("表町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.659,133.9348],{radius:220,fillColor:"#f1f9b4",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>西大寺町</b><br>緑地件数(200m): 24件<br>昼間人流: 38`).bindTooltip("西大寺町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.662,133.9315],{radius:220,fillColor:"#b2df90",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>出石町</b><br>緑地件数(200m): 48件<br>昼間人流: 32`).bindTooltip("出石町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6657,133.9342],{radius:220,fillColor:"#b6e092",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>後楽園</b><br>緑地件数(200m): 47件<br>昼間人流: 22`).bindTooltip("後楽園",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6625,133.937],{radius:220,fillColor:"#c8e89a",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>岡山城</b><br>緑地件数(200m): 41件<br>昼間人流: 65`).bindTooltip("岡山城",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6555,133.933],{radius:220,fillColor:"#f9fcc6",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>内山下</b><br>緑地件数(200m): 17件<br>昼間人流: 106`).bindTooltip("内山下",{permanent:true,direction:"center",className:"lbl"});
+</script></body></html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+<meta charset="UTF-8">
+<title>回遊分断リスクスコア – 岡山市</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+body{margin:0;background:#0f0e17;font-family:sans-serif}
+#map{height:100vh}
+.legend{background:rgba(15,14,23,0.93);padding:10px 14px;border-radius:8px;
+         color:#ddd;font-size:11px;line-height:1.9;border:1px solid #333}
+.leaflet-popup-content-wrapper{background:#1a1a2e;color:#eee;border:1px solid #444}
+.leaflet-popup-tip{background:#1a1a2e}
+#ctrl{position:fixed;top:60px;right:10px;z-index:1000;
+       background:rgba(15,14,23,0.93);padding:10px 14px;border-radius:8px;
+       color:#ddd;font-size:11px;border:1px solid #333}
+</style></head><body>
+<div id="map"></div>
+<div id="ctrl">
+  <b>表示モード</b><br>
+  <label><input type="radio" name="mode" value="risk" checked> 分断リスク</label><br>
+  <label><input type="radio" name="mode" value="diversity"> 業種多様性</label><br>
+  <label><input type="radio" name="mode" value="daytime"> 昼間型業種比</label><br>
+  <label><input type="radio" name="mode" value="evening"> 夜間型業種比</label>
+</div>
+<script>
+const D={"奉還町": {"lat": 34.6555, "lon": 133.9115, "risk_norm": 0.0, "risk_raw": 0.0, "gap": -0.328, "wide": 0.103, "active": 0.141, "evening": 0.0, "flow": 106.15000000000002, "poi_total": 39, "entropy": 0.653, "daytime_r": 0.359, "allday_r": 0.641, "evening_r": 0.0}, "寿町": {"lat": 34.657, "lon": 133.915, "risk_norm": 0.0, "risk_raw": 0.0, "gap": -0.035, "wide": 0.169, "active": 0.1, "evening": 0.0, "flow": 92.40729166666667, "poi_total": 42, "entropy": 0.675, "daytime_r": 0.405, "allday_r": 0.595, "evening_r": 0.0}, "駅元町": {"lat": 34.6545, "lon": 133.9215, "risk_norm": 0.14, "risk_raw": 0.062, "gap": 0.138, "wide": 0.022, "active": 0.333, "evening": 0.027, "flow": 129.07812500000003, "poi_total": 75, "entropy": 0.635, "daytime_r": 0.213, "allday_r": 0.76, "evening_r": 0.027}, "岡山駅": {"lat": 34.6549, "lon": 133.9183, "risk_norm": 0.0, "risk_raw": 0.0, "gap": -0.07, "wide": 0.243, "active": 0.221, "evening": 0.0, "flow": 228.28229166666665, "poi_total": 62, "entropy": 0.659, "daytime_r": 0.371, "allday_r": 0.629, "evening_r": 0.0}, "下石井": {"lat": 34.6513, "lon": 133.922, "risk_norm": 0.0, "risk_raw": 0.0, "gap": -0.772, "wide": 0.07, "active": 0.15, "evening": 0.048, "flow": 279.2572916666667, "poi_total": 42, "entropy": 0.633, "daytime_r": 0.167, "allday_r": 0.786, "evening_r": 0.048}, "桑田町": {"lat": 34.66, "lon": 133.9235, "risk_norm": 0.0, "risk_raw": 0.0, "gap": -0.554, "wide": 0.0, "active": 0.262, "evening": 0.095, "flow": 281.17395833333325, "poi_total": 190, "entropy": 0.594, "daytime_r": 0.084, "allday_r": 0.821, "evening_r": 0.095}, "岩田町": {"lat": 34.6563, "lon": 133.92, "risk_norm": 0.368, "risk_raw": 0.1634, "gap": 0.23, "wide": 0.213, "active": 0.186, "evening": 0.062, "flow": 140.75208333333327, "poi_total": 97, "entropy": 0.802, "daytime_r": 0.278, "allday_r": 0.66, "evening_r": 0.062}, "本町": {"lat": 34.6621, "lon": 133.92, "risk_norm": 0.0, "risk_raw": 0.0, "gap": -0.006, "wide": 0.016, "active": 0.177, "evening": 0.082, "flow": 206.6916666666668, "poi_total": 499, "entropy": 0.64, "daytime_r": 0.12, "allday_r": 0.798, "evening_r": 0.082}, "幸町": {"lat": 34.66, "lon": 133.9225, "risk_norm": 0.024, "risk_raw": 0.0106, "gap": 0.033, "wide": 0.0, "active": 0.541, "evening": 0.086, "flow": 117.18541666666664, "poi_total": 209, "entropy": 0.714, "daytime_r": 0.158, "allday_r": 0.756, "evening_r": 0.086}, "柳町": {"lat": 34.6617, "lon": 133.9255, "risk_norm": 0.463, "risk_raw": 0.2056, "gap": 0.641, "wide": 0.0, "active": 0.549, "evening": 0.047, "flow": 56.209374999999994, "poi_total": 387, "entropy": 0.366, "daytime_r": 0.044, "allday_r": 0.91, "evening_r": 0.047}, "野田屋町": {"lat": 34.6575, "lon": 133.925, "risk_norm": 0.149, "risk_raw": 0.0663, "gap": 0.158, "wide": 0.109, "active": 0.497, "evening": 0.056, "flow": 98.69062500000001, "poi_total": 108, "entropy": 0.34, "daytime_r": 0.028, "allday_r": 0.917, "evening_r": 0.056}, "磨屋町": {"lat": 34.6593, "lon": 133.928, "risk_norm": 0.426, "risk_raw": 0.189, "gap": 0.561, "wide": 0.0, "active": 0.518, "evening": 0.038, "flow": 82.80624999999996, "poi_total": 262, "entropy": 0.224, "daytime_r": 0.011, "allday_r": 0.95, "evening_r": 0.038}, "田町": {"lat": 34.661, "lon": 133.929, "risk_norm": 0.339, "risk_raw": 0.1507, "gap": 0.826, "wide": 0.059, "active": 0.871, "evening": 0.026, "flow": 56.68437499999998, "poi_total": 386, "entropy": 0.275, "daytime_r": 0.036, "allday_r": 0.938, "evening_r": 0.026}, "中央町": {"lat": 34.6632, "lon": 133.9255, "risk_norm": 0.804, "risk_raw": 0.3568, "gap": 0.77, "wide": 0.057, "active": 0.356, "evening": 0.045, "flow": 20.658333333333335, "poi_total": 536, "entropy": 0.426, "daytime_r": 0.067, "allday_r": 0.888, "evening_r": 0.045}, "天神町": {"lat": 34.6585, "lon": 133.916, "risk_norm": 0.081, "risk_raw": 0.036, "gap": 0.062, "wide": 0.001, "active": 0.045, "evening": 0.0, "flow": 72.24583333333332, "poi_total": 73, "entropy": 0.693, "daytime_r": 0.507, "allday_r": 0.493, "evening_r": 0.0}, "中山下": {"lat": 34.6562, "lon": 133.926, "risk_norm": 0.0, "risk_raw": 0.0, "gap": -0.078, "wide": 0.053, "active": 0.207, "evening": 0.037, "flow": 150.42187499999997, "poi_total": 82, "entropy": 0.271, "daytime_r": 0.024, "allday_r": 0.939, "evening_r": 0.037}, "表町": {"lat": 34.6593, "lon": 133.9305, "risk_norm": 0.102, "risk_raw": 0.0453, "gap": 0.072, "wide": 0.326, "active": 0.433, "evening": 0.031, "flow": 176.40937499999998, "poi_total": 228, "entropy": 0.258, "daytime_r": 0.026, "allday_r": 0.943, "evening_r": 0.031}, "西大寺町": {"lat": 34.659, "lon": 133.9348, "risk_norm": 0.355, "risk_raw": 0.1577, "gap": 0.2, "wide": 0.255, "active": 0.141, "evening": 0.051, "flow": 37.7125, "poi_total": 39, "entropy": 0.698, "daytime_r": 0.205, "allday_r": 0.744, "evening_r": 0.051}, "出石町": {"lat": 34.662, "lon": 133.9315, "risk_norm": 1.0, "risk_raw": 0.444, "gap": 0.956, "wide": 0.14, "active": 0.469, "evening": 0.027, "flow": 32.06979166666668, "poi_total": 328, "entropy": 0.282, "daytime_r": 0.037, "allday_r": 0.936, "evening_r": 0.027}, "後楽園": {"lat": 34.6657, "lon": 133.9342, "risk_norm": 0.101, "risk_raw": 0.0448, "gap": 0.066, "wide": 0.114, "active": 0.09, "evening": 0.036, "flow": 22.03854166666666, "poi_total": 55, "entropy": 0.565, "daytime_r": 0.145, "allday_r": 0.818, "evening_r": 0.036}, "岡山城": {"lat": 34.6625, "lon": 133.937, "risk_norm": 0.05, "risk_raw": 0.0221, "gap": 0.031, "wide": 0.1, "active": 0.029, "evening": 0.0, "flow": 64.83854166666667, "poi_total": 28, "entropy": 0.562, "daytime_r": 0.25, "allday_r": 0.75, "evening_r": 0.0}, "内山下": {"lat": 34.6555, "lon": 133.933, "risk_norm": 0.0, "risk_raw": 0.0, "gap": -0.286, "wide": 0.098, "active": 0.053, "evening": 0.13, "flow": 105.54583333333336, "poi_total": 23, "entropy": 0.67, "daytime_r": 0.087, "allday_r": 0.783, "evening_r": 0.13}};
+const map=L.map('map').setView([34.659,133.926],15);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+  {attribution:'&copy; OSM &copy; CARTO',maxZoom:20}).addTo(map);
+
+function riskColor(v){
+  // 赤（リスク高）→黄→緑（リスク低）
+  if(v>0.7) return '#cc0000';
+  if(v>0.5) return '#e63946';
+  if(v>0.3) return '#f4a261';
+  if(v>0.15)return '#ffd700';
+  return '#2ec4b6';
+}
+function heatColor(v,lo='#1a1a2e',hi='#e63946'){
+  const r=Math.round(parseInt(hi.slice(1,3),16)*v+parseInt(lo.slice(1,3),16)*(1-v));
+  const g=Math.round(parseInt(hi.slice(3,5),16)*v+parseInt(lo.slice(3,5),16)*(1-v));
+  const b=Math.round(parseInt(hi.slice(5,7),16)*v+parseInt(lo.slice(5,7),16)*(1-v));
+  return `rgb(${r},${g},${b})`;
+}
+
+let circles={};
+let mode='risk';
+
+function getStyle(d,m){
+  switch(m){
+    case 'risk':      return [riskColor(d.risk_norm), Math.max(20,d.risk_norm*90+15)];
+    case 'diversity': return [heatColor(Math.min(1,d.entropy/1.1),'#1a1a2e','#2ec4b6'),
+                              Math.max(20,d.entropy/1.1*70+15)];
+    case 'daytime':   return [heatColor(d.daytime_r,'#1a1a2e','#f4a261'),
+                              Math.max(20,d.daytime_r*70+15)];
+    case 'evening':   return [heatColor(d.evening_r,'#1a1a2e','#e63946'),
+                              Math.max(20,d.evening_r*5*70+15)];
+  }
+}
+
+function makePopup(nm,d){
+  const rc=riskColor(d.risk_norm);
+  const bar=n=>{
+    const pct=Math.round(n*100);
+    return `<div style="background:#333;border-radius:2px;height:8px;width:100%;margin:2px 0">
+            <div style="background:#2ec4b6;height:8px;width:${pct}%;border-radius:2px"></div></div>`;
+  };
+  return `<div style="min-width:230px;font-size:12px">
+    <b style="font-size:14px">${nm}</b>
+    <hr style="border-color:#444;margin:4px 0">
+    <span style="color:${rc}">▌ 分断リスク: <b>${(d.risk_norm*100).toFixed(0)}pt</b></span><br>
+    人流ギャップ: ${d.gap>0?'+':''}${d.gap.toFixed(3)}<br>
+    昼間人流: ${d.flow.toFixed(0)}<br>
+    <hr style="border-color:#444;margin:4px 0">
+    <b>業種多様性</b> Shannon H=${d.entropy.toFixed(2)}<br>
+    <span style="color:#f4a261">昼間型</span>: ${(d.daytime_r*100).toFixed(0)}%
+    ${bar(d.daytime_r)}
+    <span style="color:#2ec4b6">終日型</span>: ${(d.allday_r*100).toFixed(0)}%
+    ${bar(d.allday_r)}
+    <span style="color:#e63946">夜間型</span>: ${(d.evening_r*100).toFixed(0)}%
+    ${bar(d.evening_r)}
+    <hr style="border-color:#444;margin:4px 0">
+    幹線道路: ${(d.wide*100).toFixed(0)}%
+    Active Frontage: ${(d.active*100).toFixed(0)}%
+  </div>`;
+}
+
+Object.entries(D).forEach(([nm,d])=>{
+  const [col,r]=getStyle(d,mode);
+  const c=L.circle([d.lat,d.lon],{
+    radius:r,color:col,weight:1.5,fillColor:col,fillOpacity:0.7
+  }).bindPopup(makePopup(nm,d)).addTo(map);
+  circles[nm]={circle:c,data:d};
+  L.tooltip({permanent:true,direction:'center',offset:[0,0]})
+   .setContent(`<b style="font-size:9px;color:#fff">${nm.slice(0,3)}</b>`)
+   .setLatLng([d.lat,d.lon]).addTo(map);
+});
+
+function updateMap(){
+  Object.entries(circles).forEach(([nm,obj])=>{
+    const [col,r]=getStyle(obj.data,mode);
+    obj.circle.setStyle({color:col,fillColor:col,radius:r});
+  });
+}
+document.querySelectorAll('input[name=mode]').forEach(el=>{
+  el.addEventListener('change',e=>{ mode=e.target.value; updateMap(); });
+});
+
+const leg=L.control({position:'bottomleft'});
+leg.onAdd=()=>{
+  const d=L.DomUtil.create('div','legend');
+  d.innerHTML=`<b>回遊分断リスク</b><br>
+    <span style="color:#cc0000">●</span> 極高（>70pt）<br>
+    <span style="color:#e63946">●</span> 高（>50pt）<br>
+    <span style="color:#f4a261">●</span> 中（>30pt）<br>
+    <span style="color:#ffd700">●</span> 低（>15pt）<br>
+    <span style="color:#2ec4b6">●</span> 均衡・問題なし<br>
+    <hr style="border-color:#333;margin:4px 0">
+    <span style="font-size:10px;color:#aaa">
+    リスク = ギャップ × 幹線道路 × 前面閉鎖度</span>`;
+  return d;
+};
+leg.addTo(map);
+</script></body></html>

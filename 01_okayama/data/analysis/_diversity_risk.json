@@ -1,0 +1,446 @@
+{
+  "diversity": {
+    "奉還町": {
+      "total_poi": 39,
+      "daytime_n": 14,
+      "allday_n": 25,
+      "evening_n": 0,
+      "entropy": 0.653,
+      "daytime_ratio": 0.359,
+      "evening_ratio": 0.0,
+      "allday_ratio": 0.641,
+      "balance_score": 0.85
+    },
+    "寿町": {
+      "total_poi": 42,
+      "daytime_n": 17,
+      "allday_n": 25,
+      "evening_n": 0,
+      "entropy": 0.675,
+      "daytime_ratio": 0.405,
+      "evening_ratio": 0.0,
+      "allday_ratio": 0.595,
+      "balance_score": 0.85
+    },
+    "駅元町": {
+      "total_poi": 75,
+      "daytime_n": 16,
+      "allday_n": 57,
+      "evening_n": 2,
+      "entropy": 0.635,
+      "daytime_ratio": 0.213,
+      "evening_ratio": 0.027,
+      "allday_ratio": 0.76,
+      "balance_score": 0.79
+    },
+    "岡山駅": {
+      "total_poi": 62,
+      "daytime_n": 23,
+      "allday_n": 39,
+      "evening_n": 0,
+      "entropy": 0.659,
+      "daytime_ratio": 0.371,
+      "evening_ratio": 0.0,
+      "allday_ratio": 0.629,
+      "balance_score": 0.85
+    },
+    "下石井": {
+      "total_poi": 42,
+      "daytime_n": 7,
+      "allday_n": 33,
+      "evening_n": 2,
+      "entropy": 0.633,
+      "daytime_ratio": 0.167,
+      "evening_ratio": 0.048,
+      "allday_ratio": 0.786,
+      "balance_score": 0.764
+    },
+    "桑田町": {
+      "total_poi": 190,
+      "daytime_n": 16,
+      "allday_n": 156,
+      "evening_n": 18,
+      "entropy": 0.594,
+      "daytime_ratio": 0.084,
+      "evening_ratio": 0.095,
+      "allday_ratio": 0.821,
+      "balance_score": 0.729
+    },
+    "岩田町": {
+      "total_poi": 97,
+      "daytime_n": 27,
+      "allday_n": 64,
+      "evening_n": 6,
+      "entropy": 0.802,
+      "daytime_ratio": 0.278,
+      "evening_ratio": 0.062,
+      "allday_ratio": 0.66,
+      "balance_score": 0.89
+    },
+    "本町": {
+      "total_poi": 499,
+      "daytime_n": 60,
+      "allday_n": 398,
+      "evening_n": 41,
+      "entropy": 0.64,
+      "daytime_ratio": 0.12,
+      "evening_ratio": 0.082,
+      "allday_ratio": 0.798,
+      "balance_score": 0.752
+    },
+    "幸町": {
+      "total_poi": 209,
+      "daytime_n": 33,
+      "allday_n": 158,
+      "evening_n": 18,
+      "entropy": 0.714,
+      "daytime_ratio": 0.158,
+      "evening_ratio": 0.086,
+      "allday_ratio": 0.756,
+      "balance_score": 0.794
+    },
+    "柳町": {
+      "total_poi": 387,
+      "daytime_n": 17,
+      "allday_n": 352,
+      "evening_n": 18,
+      "entropy": 0.366,
+      "daytime_ratio": 0.044,
+      "evening_ratio": 0.047,
+      "allday_ratio": 0.91,
+      "balance_score": 0.64
+    },
+    "野田屋町": {
+      "total_poi": 108,
+      "daytime_n": 3,
+      "allday_n": 99,
+      "evening_n": 6,
+      "entropy": 0.34,
+      "daytime_ratio": 0.028,
+      "evening_ratio": 0.056,
+      "allday_ratio": 0.917,
+      "balance_score": 0.633
+    },
+    "磨屋町": {
+      "total_poi": 262,
+      "daytime_n": 3,
+      "allday_n": 249,
+      "evening_n": 10,
+      "entropy": 0.224,
+      "daytime_ratio": 0.011,
+      "evening_ratio": 0.038,
+      "allday_ratio": 0.95,
+      "balance_score": 0.6
+    },
+    "田町": {
+      "total_poi": 386,
+      "daytime_n": 14,
+      "allday_n": 362,
+      "evening_n": 10,
+      "entropy": 0.275,
+      "daytime_ratio": 0.036,
+      "evening_ratio": 0.026,
+      "allday_ratio": 0.938,
+      "balance_score": 0.612
+    },
+    "中央町": {
+      "total_poi": 536,
+      "daytime_n": 36,
+      "allday_n": 476,
+      "evening_n": 24,
+      "entropy": 0.426,
+      "daytime_ratio": 0.067,
+      "evening_ratio": 0.045,
+      "allday_ratio": 0.888,
+      "balance_score": 0.662
+    },
+    "天神町": {
+      "total_poi": 73,
+      "daytime_n": 37,
+      "allday_n": 36,
+      "evening_n": 0,
+      "entropy": 0.693,
+      "daytime_ratio": 0.507,
+      "evening_ratio": 0.0,
+      "allday_ratio": 0.493,
+      "balance_score": 0.793
+    },
+    "中山下": {
+      "total_poi": 82,
+      "daytime_n": 2,
+      "allday_n": 77,
+      "evening_n": 3,
+      "entropy": 0.271,
+      "daytime_ratio": 0.024,
+      "evening_ratio": 0.037,
+      "allday_ratio": 0.939,
+      "balance_score": 0.611
+    },
+    "表町": {
+      "total_poi": 228,
+      "daytime_n": 6,
+      "allday_n": 215,
+      "evening_n": 7,
+      "entropy": 0.258,
+      "daytime_ratio": 0.026,
+      "evening_ratio": 0.031,
+      "allday_ratio": 0.943,
+      "balance_score": 0.607
+    },
+    "西大寺町": {
+      "total_poi": 39,
+      "daytime_n": 8,
+      "allday_n": 29,
+      "evening_n": 2,
+      "entropy": 0.698,
+      "daytime_ratio": 0.205,
+      "evening_ratio": 0.051,
+      "allday_ratio": 0.744,
+      "balance_score": 0.806
+    },
+    "出石町": {
+      "total_poi": 328,
+      "daytime_n": 12,
+      "allday_n": 307,
+      "evening_n": 9,
+      "entropy": 0.282,
+      "daytime_ratio": 0.037,
+      "evening_ratio": 0.027,
+      "allday_ratio": 0.936,
+      "balance_score": 0.614
+    },
+    "後楽園": {
+      "total_poi": 55,
+      "daytime_n": 8,
+      "allday_n": 45,
+      "evening_n": 2,
+      "entropy": 0.565,
+      "daytime_ratio": 0.145,
+      "evening_ratio": 0.036,
+      "allday_ratio": 0.818,
+      "balance_score": 0.732
+    },
+    "岡山城": {
+      "total_poi": 28,
+      "daytime_n": 7,
+      "allday_n": 21,
+      "evening_n": 0,
+      "entropy": 0.562,
+      "daytime_ratio": 0.25,
+      "evening_ratio": 0.0,
+      "allday_ratio": 0.75,
+      "balance_score": 0.8
+    },
+    "内山下": {
+      "total_poi": 23,
+      "daytime_n": 2,
+      "allday_n": 18,
+      "evening_n": 3,
+      "entropy": 0.67,
+      "daytime_ratio": 0.087,
+      "evening_ratio": 0.13,
+      "allday_ratio": 0.783,
+      "balance_score": 0.767
+    }
+  },
+  "risk": {
+    "奉還町": {
+      "risk_score": 0.0,
+      "gap": -0.328,
+      "wide_road": 0.103,
+      "active_front": 0.141,
+      "evening_ratio": 0.0,
+      "flow_actual": 106.15000000000002,
+      "risk_norm": 0.0
+    },
+    "寿町": {
+      "risk_score": 0.0,
+      "gap": -0.035,
+      "wide_road": 0.169,
+      "active_front": 0.1,
+      "evening_ratio": 0.0,
+      "flow_actual": 92.40729166666667,
+      "risk_norm": 0.0
+    },
+    "駅元町": {
+      "risk_score": 0.062,
+      "gap": 0.138,
+      "wide_road": 0.022,
+      "active_front": 0.333,
+      "evening_ratio": 0.027,
+      "flow_actual": 129.07812500000003,
+      "risk_norm": 0.14
+    },
+    "岡山駅": {
+      "risk_score": 0.0,
+      "gap": -0.07,
+      "wide_road": 0.243,
+      "active_front": 0.221,
+      "evening_ratio": 0.0,
+      "flow_actual": 228.28229166666665,
+      "risk_norm": 0.0
+    },
+    "下石井": {
+      "risk_score": 0.0,
+      "gap": -0.772,
+      "wide_road": 0.07,
+      "active_front": 0.15,
+      "evening_ratio": 0.048,
+      "flow_actual": 279.2572916666667,
+      "risk_norm": 0.0
+    },
+    "桑田町": {
+      "risk_score": 0.0,
+      "gap": -0.554,
+      "wide_road": 0.0,
+      "active_front": 0.262,
+      "evening_ratio": 0.095,
+      "flow_actual": 281.17395833333325,
+      "risk_norm": 0.0
+    },
+    "岩田町": {
+      "risk_score": 0.1634,
+      "gap": 0.23,
+      "wide_road": 0.213,
+      "active_front": 0.186,
+      "evening_ratio": 0.062,
+      "flow_actual": 140.75208333333327,
+      "risk_norm": 0.368
+    },
+    "本町": {
+      "risk_score": 0.0,
+      "gap": -0.006,
+      "wide_road": 0.016,
+      "active_front": 0.177,
+      "evening_ratio": 0.082,
+      "flow_actual": 206.6916666666668,
+      "risk_norm": 0.0
+    },
+    "幸町": {
+      "risk_score": 0.0106,
+      "gap": 0.033,
+      "wide_road": 0.0,
+      "active_front": 0.541,
+      "evening_ratio": 0.086,
+      "flow_actual": 117.18541666666664,
+      "risk_norm": 0.024
+    },
+    "柳町": {
+      "risk_score": 0.2056,
+      "gap": 0.641,
+      "wide_road": 0.0,
+      "active_front": 0.549,
+      "evening_ratio": 0.047,
+      "flow_actual": 56.209374999999994,
+      "risk_norm": 0.463
+    },
+    "野田屋町": {
+      "risk_score": 0.0663,
+      "gap": 0.158,
+      "wide_road": 0.109,
+      "active_front": 0.497,
+      "evening_ratio": 0.056,
+      "flow_actual": 98.69062500000001,
+      "risk_norm": 0.149
+    },
+    "磨屋町": {
+      "risk_score": 0.189,
+      "gap": 0.561,
+      "wide_road": 0.0,
+      "active_front": 0.518,
+      "evening_ratio": 0.038,
+      "flow_actual": 82.80624999999996,
+      "risk_norm": 0.426
+    },
+    "田町": {
+      "risk_score": 0.1507,
+      "gap": 0.826,
+      "wide_road": 0.059,
+      "active_front": 0.871,
+      "evening_ratio": 0.026,
+      "flow_actual": 56.68437499999998,
+      "risk_norm": 0.339
+    },
+    "中央町": {
+      "risk_score": 0.3568,
+      "gap": 0.77,
+      "wide_road": 0.057,
+      "active_front": 0.356,
+      "evening_ratio": 0.045,
+      "flow_actual": 20.658333333333335,
+      "risk_norm": 0.804
+    },
+    "天神町": {
+      "risk_score": 0.036,
+      "gap": 0.062,
+      "wide_road": 0.001,
+      "active_front": 0.045,
+      "evening_ratio": 0.0,
+      "flow_actual": 72.24583333333332,
+      "risk_norm": 0.081
+    },
+    "中山下": {
+      "risk_score": 0.0,
+      "gap": -0.078,
+      "wide_road": 0.053,
+      "active_front": 0.207,
+      "evening_ratio": 0.037,
+      "flow_actual": 150.42187499999997,
+      "risk_norm": 0.0
+    },
+    "表町": {
+      "risk_score": 0.0453,
+      "gap": 0.072,
+      "wide_road": 0.326,
+      "active_front": 0.433,
+      "evening_ratio": 0.031,
+      "flow_actual": 176.40937499999998,
+      "risk_norm": 0.102
+    },
+    "西大寺町": {
+      "risk_score": 0.1577,
+      "gap": 0.2,
+      "wide_road": 0.255,
+      "active_front": 0.141,
+      "evening_ratio": 0.051,
+      "flow_actual": 37.7125,
+      "risk_norm": 0.355
+    },
+    "出石町": {
+      "risk_score": 0.444,
+      "gap": 0.956,
+      "wide_road": 0.14,
+      "active_front": 0.469,
+      "evening_ratio": 0.027,
+      "flow_actual": 32.06979166666668,
+      "risk_norm": 1.0
+    },
+    "後楽園": {
+      "risk_score": 0.0448,
+      "gap": 0.066,
+      "wide_road": 0.114,
+      "active_front": 0.09,
+      "evening_ratio": 0.036,
+      "flow_actual": 22.03854166666666,
+      "risk_norm": 0.101
+    },
+    "岡山城": {
+      "risk_score": 0.0221,
+      "gap": 0.031,
+      "wide_road": 0.1,
+      "active_front": 0.029,
+      "evening_ratio": 0.0,
+      "flow_actual": 64.83854166666667,
+      "risk_norm": 0.05
+    },
+    "内山下": {
+      "risk_score": 0.0,
+      "gap": -0.286,
+      "wide_road": 0.098,
+      "active_front": 0.053,
+      "evening_ratio": 0.13,
+      "flow_actual": 105.54583333333336,
+      "risk_norm": 0.0
+    }
+  }
+}

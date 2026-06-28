@@ -1,0 +1,402 @@
+{
+  "park": {
+    "奉還町": {
+      "XS_n": 0,
+      "S_n": 1,
+      "M_n": 3,
+      "L_n": 0,
+      "small_n": 1,
+      "large_n": 3,
+      "nearest_small": 193.71112484741732,
+      "nearest_large": 102.21443895464652,
+      "park_area_sum": 10564.9
+    },
+    "寿町": {
+      "XS_n": 0,
+      "S_n": 1,
+      "M_n": 0,
+      "L_n": 0,
+      "small_n": 1,
+      "large_n": 0,
+      "nearest_small": 233.32762743073698,
+      "nearest_large": NaN,
+      "park_area_sum": 1132.4
+    },
+    "駅元町": {
+      "XS_n": 0,
+      "S_n": 0,
+      "M_n": 2,
+      "L_n": 0,
+      "small_n": 0,
+      "large_n": 2,
+      "nearest_small": NaN,
+      "nearest_large": 157.8780886367347,
+      "park_area_sum": 12433.0
+    },
+    "岡山駅": {
+      "XS_n": 0,
+      "S_n": 1,
+      "M_n": 1,
+      "L_n": 0,
+      "small_n": 1,
+      "large_n": 1,
+      "nearest_small": 75.87624569051277,
+      "nearest_large": 108.76955889627992,
+      "park_area_sum": 4964.1
+    },
+    "下石井": {
+      "XS_n": 0,
+      "S_n": 0,
+      "M_n": 1,
+      "L_n": 0,
+      "small_n": 0,
+      "large_n": 1,
+      "nearest_small": NaN,
+      "nearest_large": 265.9131613902326,
+      "park_area_sum": 8199.0
+    },
+    "桑田町": {
+      "XS_n": 0,
+      "S_n": 0,
+      "M_n": 1,
+      "L_n": 0,
+      "small_n": 0,
+      "large_n": 1,
+      "nearest_small": NaN,
+      "nearest_large": 143.5066526103756,
+      "park_area_sum": 7096.9
+    },
+    "岩田町": {
+      "XS_n": 0,
+      "S_n": 0,
+      "M_n": 2,
+      "L_n": 0,
+      "small_n": 0,
+      "large_n": 2,
+      "nearest_small": NaN,
+      "nearest_large": 220.3259711010431,
+      "park_area_sum": 12433.0
+    },
+    "本町": {
+      "XS_n": 0,
+      "S_n": 1,
+      "M_n": 1,
+      "L_n": 1,
+      "small_n": 1,
+      "large_n": 2,
+      "nearest_small": 177.25485915237326,
+      "nearest_large": 251.23689621267798,
+      "park_area_sum": 34408.899999999994
+    },
+    "幸町": {
+      "XS_n": 0,
+      "S_n": 0,
+      "M_n": 1,
+      "L_n": 0,
+      "small_n": 0,
+      "large_n": 1,
+      "nearest_small": NaN,
+      "nearest_large": 90.2729002012727,
+      "park_area_sum": 7096.9
+    },
+    "柳町": {
+      "XS_n": 0,
+      "S_n": 0,
+      "M_n": 1,
+      "L_n": 0,
+      "small_n": 0,
+      "large_n": 1,
+      "nearest_small": NaN,
+      "nearest_large": 312.76366866909956,
+      "park_area_sum": 7096.9
+    },
+    "野田屋町": {
+      "XS_n": 0,
+      "S_n": 0,
+      "M_n": 0,
+      "L_n": 0,
+      "small_n": 0,
+      "large_n": 0,
+      "nearest_small": NaN,
+      "nearest_large": NaN,
+      "park_area_sum": 0
+    },
+    "磨屋町": {
+      "XS_n": 0,
+      "S_n": 0,
+      "M_n": 0,
+      "L_n": 0,
+      "small_n": 0,
+      "large_n": 0,
+      "nearest_small": NaN,
+      "nearest_large": NaN,
+      "park_area_sum": 0
+    },
+    "田町": {
+      "XS_n": 0,
+      "S_n": 0,
+      "M_n": 0,
+      "L_n": 0,
+      "small_n": 0,
+      "large_n": 0,
+      "nearest_small": NaN,
+      "nearest_large": NaN,
+      "park_area_sum": 0
+    },
+    "中央町": {
+      "XS_n": 0,
+      "S_n": 0,
+      "M_n": 1,
+      "L_n": 0,
+      "small_n": 0,
+      "large_n": 1,
+      "nearest_small": NaN,
+      "nearest_large": 399.12536162129237,
+      "park_area_sum": 7096.9
+    },
+    "天神町": {
+      "XS_n": 0,
+      "S_n": 0,
+      "M_n": 0,
+      "L_n": 0,
+      "small_n": 0,
+      "large_n": 0,
+      "nearest_small": NaN,
+      "nearest_large": NaN,
+      "park_area_sum": 0
+    },
+    "中山下": {
+      "XS_n": 0,
+      "S_n": 0,
+      "M_n": 0,
+      "L_n": 0,
+      "small_n": 0,
+      "large_n": 0,
+      "nearest_small": NaN,
+      "nearest_large": NaN,
+      "park_area_sum": 0
+    },
+    "表町": {
+      "XS_n": 0,
+      "S_n": 1,
+      "M_n": 0,
+      "L_n": 0,
+      "small_n": 1,
+      "large_n": 0,
+      "nearest_small": 194.14301854611668,
+      "nearest_large": NaN,
+      "park_area_sum": 1480.6
+    },
+    "西大寺町": {
+      "XS_n": 0,
+      "S_n": 0,
+      "M_n": 0,
+      "L_n": 1,
+      "small_n": 0,
+      "large_n": 1,
+      "nearest_small": NaN,
+      "nearest_large": 599.1146716048568,
+      "park_area_sum": 60490.5
+    },
+    "出石町": {
+      "XS_n": 0,
+      "S_n": 1,
+      "M_n": 0,
+      "L_n": 1,
+      "small_n": 1,
+      "large_n": 1,
+      "nearest_small": 212.85248944406143,
+      "nearest_large": 459.22527003963535,
+      "park_area_sum": 61971.1
+    },
+    "後楽園": {
+      "XS_n": 1,
+      "S_n": 3,
+      "M_n": 0,
+      "L_n": 2,
+      "small_n": 4,
+      "large_n": 2,
+      "nearest_small": 144.5500936786837,
+      "nearest_large": 199.58117506610031,
+      "park_area_sum": 171560.5
+    },
+    "岡山城": {
+      "XS_n": 0,
+      "S_n": 1,
+      "M_n": 1,
+      "L_n": 2,
+      "small_n": 1,
+      "large_n": 3,
+      "nearest_small": 219.01914907225353,
+      "nearest_large": 239.42094375192366,
+      "park_area_sum": 176414.1
+    },
+    "内山下": {
+      "XS_n": 0,
+      "S_n": 0,
+      "M_n": 0,
+      "L_n": 0,
+      "small_n": 0,
+      "large_n": 0,
+      "nearest_small": NaN,
+      "nearest_large": NaN,
+      "park_area_sum": 0
+    }
+  },
+  "car_dep": {
+    "奉還町": {
+      "bus_freq": 10.33,
+      "bus_norm": 0.005,
+      "car_score": 0.225,
+      "car_norm": 0.378,
+      "transit_vs_car": -0.373
+    },
+    "寿町": {
+      "bus_freq": 8.33,
+      "bus_norm": 0.0,
+      "car_score": 0.357,
+      "car_norm": 0.599,
+      "transit_vs_car": -0.599
+    },
+    "駅元町": {
+      "bus_freq": 94.67,
+      "bus_norm": 0.23,
+      "car_score": 0.104,
+      "car_norm": 0.175,
+      "transit_vs_car": 0.055
+    },
+    "岡山駅": {
+      "bus_freq": 173.08,
+      "bus_norm": 0.438,
+      "car_score": 0.39,
+      "car_norm": 0.655,
+      "transit_vs_car": -0.216
+    },
+    "下石井": {
+      "bus_freq": 95.58,
+      "bus_norm": 0.232,
+      "car_score": 0.157,
+      "car_norm": 0.263,
+      "transit_vs_car": -0.031
+    },
+    "桑田町": {
+      "bus_freq": 64.08,
+      "bus_norm": 0.148,
+      "car_score": 0.057,
+      "car_norm": 0.095,
+      "transit_vs_car": 0.053
+    },
+    "岩田町": {
+      "bus_freq": 122.5,
+      "bus_norm": 0.304,
+      "car_score": 0.466,
+      "car_norm": 0.783,
+      "transit_vs_car": -0.479
+    },
+    "本町": {
+      "bus_freq": 151.25,
+      "bus_norm": 0.38,
+      "car_score": 0.128,
+      "car_norm": 0.214,
+      "transit_vs_car": 0.166
+    },
+    "幸町": {
+      "bus_freq": 42.0,
+      "bus_norm": 0.09,
+      "car_score": 0.072,
+      "car_norm": 0.122,
+      "transit_vs_car": -0.032
+    },
+    "柳町": {
+      "bus_freq": 341.0,
+      "bus_norm": 0.885,
+      "car_score": 0.066,
+      "car_norm": 0.111,
+      "transit_vs_car": 0.774
+    },
+    "野田屋町": {
+      "bus_freq": 161.25,
+      "bus_norm": 0.407,
+      "car_score": 0.209,
+      "car_norm": 0.35,
+      "transit_vs_car": 0.056
+    },
+    "磨屋町": {
+      "bus_freq": 323.83,
+      "bus_norm": 0.839,
+      "car_score": 0.0,
+      "car_norm": 0.0,
+      "transit_vs_car": 0.839
+    },
+    "田町": {
+      "bus_freq": 367.5,
+      "bus_norm": 0.955,
+      "car_score": 0.177,
+      "car_norm": 0.297,
+      "transit_vs_car": 0.658
+    },
+    "中央町": {
+      "bus_freq": 384.25,
+      "bus_norm": 1.0,
+      "car_score": 0.141,
+      "car_norm": 0.237,
+      "transit_vs_car": 0.763
+    },
+    "天神町": {
+      "bus_freq": 69.33,
+      "bus_norm": 0.162,
+      "car_score": 0.1,
+      "car_norm": 0.168,
+      "transit_vs_car": -0.006
+    },
+    "中山下": {
+      "bus_freq": 155.5,
+      "bus_norm": 0.391,
+      "car_score": 0.131,
+      "car_norm": 0.22,
+      "transit_vs_car": 0.172
+    },
+    "表町": {
+      "bus_freq": 216.25,
+      "bus_norm": 0.553,
+      "car_score": 0.596,
+      "car_norm": 1.0,
+      "transit_vs_car": -0.447
+    },
+    "西大寺町": {
+      "bus_freq": 31.5,
+      "bus_norm": 0.062,
+      "car_score": 0.468,
+      "car_norm": 0.786,
+      "transit_vs_car": -0.724
+    },
+    "出石町": {
+      "bus_freq": 265.0,
+      "bus_norm": 0.683,
+      "car_score": 0.3,
+      "car_norm": 0.503,
+      "transit_vs_car": 0.179
+    },
+    "後楽園": {
+      "bus_freq": 10.83,
+      "bus_norm": 0.007,
+      "car_score": 0.259,
+      "car_norm": 0.434,
+      "transit_vs_car": -0.428
+    },
+    "岡山城": {
+      "bus_freq": 29.17,
+      "bus_norm": 0.055,
+      "car_score": 0.219,
+      "car_norm": 0.368,
+      "transit_vs_car": -0.313
+    },
+    "内山下": {
+      "bus_freq": 17.5,
+      "bus_norm": 0.024,
+      "car_score": 0.196,
+      "car_norm": 0.329,
+      "transit_vs_car": -0.305
+    }
+  }
+}

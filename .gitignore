@@ -1,0 +1,31 @@
+# 依存関係・ビルド成果物
+node_modules/
+.next/
+.next-map/
+.npm-cache/
+tsconfig.tsbuildinfo
+*.tsbuildinfo
+
+# 大容量キャッシュ（OSMデータ）
+01_okayama/data/osm_cache/
+01_okayama/data/plateau/
+
+# 大容量HTML（旧バージョン）
+01_okayama/_archive/
+
+# PLATEAUのCityGML生データ（巨大）
+99_sonota/plateau_citygml/
+99_sonota/plateau_citygml_done.txt
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 一時ファイル
+*.log
+*.tmp

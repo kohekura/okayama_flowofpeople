@@ -1,0 +1,226 @@
+{
+  "frontage": {
+    "奉還町": {
+      "total_road_m": 239649.5,
+      "seg_count": 7529,
+      "active_frontage_ratio": 0.1405,
+      "pedestrian_ratio": 0.0088,
+      "wide_road_ratio": 0.1028,
+      "mean_barrier_score": 1.36,
+      "mean_est_width": 5.94
+    },
+    "寿町": {
+      "total_road_m": 4259.4,
+      "seg_count": 145,
+      "active_frontage_ratio": 0.0995,
+      "pedestrian_ratio": 0.0,
+      "wide_road_ratio": 0.1691,
+      "mean_barrier_score": 1.549,
+      "mean_est_width": 6.52
+    },
+    "駅元町": {
+      "total_road_m": 4620.6,
+      "seg_count": 160,
+      "active_frontage_ratio": 0.333,
+      "pedestrian_ratio": 0.0,
+      "wide_road_ratio": 0.0216,
+      "mean_barrier_score": 1.227,
+      "mean_est_width": 5.48
+    },
+    "岡山駅": {
+      "total_road_m": 6787.5,
+      "seg_count": 253,
+      "active_frontage_ratio": 0.2214,
+      "pedestrian_ratio": 0.0,
+      "wide_road_ratio": 0.2431,
+      "mean_barrier_score": 1.609,
+      "mean_est_width": 6.45
+    },
+    "下石井": {
+      "total_road_m": 244260.0,
+      "seg_count": 7026,
+      "active_frontage_ratio": 0.1496,
+      "pedestrian_ratio": 0.0072,
+      "wide_road_ratio": 0.0695,
+      "mean_barrier_score": 1.241,
+      "mean_est_width": 5.63
+    },
+    "桑田町": {
+      "total_road_m": 1743.6,
+      "seg_count": 65,
+      "active_frontage_ratio": 0.2618,
+      "pedestrian_ratio": 0.0,
+      "wide_road_ratio": 0.0,
+      "mean_barrier_score": 1.131,
+      "mean_est_width": 5.26
+    },
+    "岩田町": {
+      "total_road_m": 4089.3,
+      "seg_count": 186,
+      "active_frontage_ratio": 0.1858,
+      "pedestrian_ratio": 0.0899,
+      "wide_road_ratio": 0.2127,
+      "mean_barrier_score": 1.588,
+      "mean_est_width": 7.05
+    },
+    "本町": {
+      "total_road_m": 114477.2,
+      "seg_count": 4840,
+      "active_frontage_ratio": 0.1767,
+      "pedestrian_ratio": 0.0173,
+      "wide_road_ratio": 0.0161,
+      "mean_barrier_score": 1.14,
+      "mean_est_width": 5.65
+    },
+    "幸町": {
+      "total_road_m": 3222.2,
+      "seg_count": 143,
+      "active_frontage_ratio": 0.541,
+      "pedestrian_ratio": 0.0,
+      "wide_road_ratio": 0.0,
+      "mean_barrier_score": 1.092,
+      "mean_est_width": 5.36
+    },
+    "柳町": {
+      "total_road_m": 1397.9,
+      "seg_count": 53,
+      "active_frontage_ratio": 0.549,
+      "pedestrian_ratio": 0.0,
+      "wide_road_ratio": 0.0,
+      "mean_barrier_score": 1.158,
+      "mean_est_width": 5.32
+    },
+    "野田屋町": {
+      "total_road_m": 2538.6,
+      "seg_count": 107,
+      "active_frontage_ratio": 0.4974,
+      "pedestrian_ratio": 0.0,
+      "wide_road_ratio": 0.1091,
+      "mean_barrier_score": 1.327,
+      "mean_est_width": 5.81
+    },
+    "磨屋町": {
+      "total_road_m": 2269.5,
+      "seg_count": 64,
+      "active_frontage_ratio": 0.518,
+      "pedestrian_ratio": 0.2822,
+      "wide_road_ratio": 0.0,
+      "mean_barrier_score": 0.515,
+      "mean_est_width": 4.9
+    },
+    "田町": {
+      "total_road_m": 2430.5,
+      "seg_count": 77,
+      "active_frontage_ratio": 0.8711,
+      "pedestrian_ratio": 0.124,
+      "wide_road_ratio": 0.059,
+      "mean_barrier_score": 1.129,
+      "mean_est_width": 5.8
+    },
+    "中央町": {
+      "total_road_m": 35044.6,
+      "seg_count": 1409,
+      "active_frontage_ratio": 0.3561,
+      "pedestrian_ratio": 0.0116,
+      "wide_road_ratio": 0.0565,
+      "mean_barrier_score": 1.231,
+      "mean_est_width": 5.58
+    },
+    "天神町": {
+      "total_road_m": 24699.8,
+      "seg_count": 931,
+      "active_frontage_ratio": 0.0448,
+      "pedestrian_ratio": 0.0156,
+      "wide_road_ratio": 0.0014,
+      "mean_barrier_score": 1.107,
+      "mean_est_width": 5.53
+    },
+    "中山下": {
+      "total_road_m": 6081.5,
+      "seg_count": 187,
+      "active_frontage_ratio": 0.2069,
+      "pedestrian_ratio": 0.009,
+      "wide_road_ratio": 0.0527,
+      "mean_barrier_score": 1.203,
+      "mean_est_width": 5.53
+    },
+    "表町": {
+      "total_road_m": 3901.0,
+      "seg_count": 173,
+      "active_frontage_ratio": 0.4331,
+      "pedestrian_ratio": 0.0308,
+      "wide_road_ratio": 0.3262,
+      "mean_barrier_score": 1.98,
+      "mean_est_width": 7.44
+    },
+    "西大寺町": {
+      "total_road_m": 13572.8,
+      "seg_count": 573,
+      "active_frontage_ratio": 0.1412,
+      "pedestrian_ratio": 0.0,
+      "wide_road_ratio": 0.2554,
+      "mean_barrier_score": 1.827,
+      "mean_est_width": 6.9
+    },
+    "出石町": {
+      "total_road_m": 6128.1,
+      "seg_count": 256,
+      "active_frontage_ratio": 0.4688,
+      "pedestrian_ratio": 0.0629,
+      "wide_road_ratio": 0.1402,
+      "mean_barrier_score": 1.499,
+      "mean_est_width": 6.27
+    },
+    "後楽園": {
+      "total_road_m": 126118.6,
+      "seg_count": 4497,
+      "active_frontage_ratio": 0.0901,
+      "pedestrian_ratio": 0.0045,
+      "wide_road_ratio": 0.1138,
+      "mean_barrier_score": 1.443,
+      "mean_est_width": 6.11
+    },
+    "岡山城": {
+      "total_road_m": 32730.8,
+      "seg_count": 1172,
+      "active_frontage_ratio": 0.0286,
+      "pedestrian_ratio": 0.0,
+      "wide_road_ratio": 0.1004,
+      "mean_barrier_score": 1.375,
+      "mean_est_width": 5.91
+    },
+    "内山下": {
+      "total_road_m": 96469.2,
+      "seg_count": 3610,
+      "active_frontage_ratio": 0.0535,
+      "pedestrian_ratio": 0.0,
+      "wide_road_ratio": 0.0982,
+      "mean_barrier_score": 1.319,
+      "mean_est_width": 5.77
+    }
+  },
+  "flow": {
+    "奉還町": 106.15000000000002,
+    "寿町": 92.40729166666667,
+    "駅元町": 129.07812500000003,
+    "岡山駅": 228.28229166666665,
+    "下石井": 279.2572916666667,
+    "桑田町": 281.17395833333325,
+    "岩田町": 140.75208333333327,
+    "本町": 206.6916666666668,
+    "幸町": 117.18541666666664,
+    "柳町": 56.209374999999994,
+    "野田屋町": 98.69062500000001,
+    "磨屋町": 82.80624999999996,
+    "田町": 56.68437499999998,
+    "中央町": 20.658333333333335,
+    "天神町": 72.24583333333332,
+    "中山下": 150.42187499999997,
+    "表町": 176.40937499999998,
+    "西大寺町": 37.7125,
+    "出石町": 32.06979166666668,
+    "後楽園": 22.03854166666666,
+    "岡山城": 64.83854166666667,
+    "内山下": 105.54583333333336
+  }
+}

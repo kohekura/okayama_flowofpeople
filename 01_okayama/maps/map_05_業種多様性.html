@@ -1,0 +1,47 @@
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8"><title>考察4：業種多様性（Shannon H）と昼間人流（r=+0.31）</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+body{margin:0;padding:0;background:#0f0e17;font-family:"Noto Sans JP",sans-serif}
+#hdr{background:#0f0e17;color:#f5a623;padding:10px 18px;font-size:1.15rem;font-weight:bold;border-bottom:1px solid #222}
+#sub{background:#0f0e17;color:#a8dadc;padding:2px 18px 8px;font-size:.8rem}
+#map{height:calc(100vh - 72px)}
+.lbl{background:transparent!important;border:none!important;box-shadow:none!important;
+  color:#fff;font-size:9px;font-weight:bold;text-shadow:0 0 3px #000}
+#leg{position:absolute;bottom:28px;right:10px;background:rgba(15,14,23,.92);
+  color:#e0e0e0;padding:10px 14px;border-radius:8px;font-size:.78rem;
+  min-width:155px;z-index:999;border:1px solid #333;line-height:1.6}
+#leg h4{margin:0 0 5px;color:#f5a623;font-size:.85rem}
+</style></head><body>
+<div id="hdr">考察4：業種多様性（Shannon H）と昼間人流（r=+0.31）</div>
+<div id="sub">業種が多様に揃う地区ほど人流が多い。効果は100mより500mスケールで顕著。</div>
+<div id="map"></div>
+<div id="leg"><h4>業種多様性H（シャノン）</h4><div style='background:linear-gradient(to right,#0d0887,#cc4778,#f0f921);height:10px;border-radius:4px;margin:4px 0'></div><div style='display:flex;justify-content:space-between'><span>低</span><span>高</span></div><hr style='border-color:#333;margin:5px 0'><small>r=+0.31（正相関）<br>面的多様性が効く</small></div>
+<script>
+var map=L.map("map").setView([34.661,133.924],15);
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+  {attribution:"&copy; OpenStreetMap contributors",maxZoom:19}).addTo(map);
+L.circle([34.6555,133.9115],{radius:220,fillColor:"#fba238",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>奉還町</b><br>業種多様性H(200m): 1.406<br>飲食:6 カフェ:0 バー:0 オフィス:8<br>昼間人流: 106`).bindTooltip("奉還町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.657,133.915],{radius:220,fillColor:"#9a159e",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>寿町</b><br>業種多様性H(200m): 0.592<br>飲食:1 カフェ:0 バー:0 オフィス:6<br>昼間人流: 92`).bindTooltip("寿町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6545,133.9215],{radius:220,fillColor:"#eff821",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>駅元町</b><br>業種多様性H(200m): 1.784<br>飲食:5 カフェ:2 バー:0 オフィス:4<br>昼間人流: 129`).bindTooltip("駅元町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6549,133.9183],{radius:220,fillColor:"#f38748",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>岡山駅</b><br>業種多様性H(200m): 1.272<br>飲食:7 カフェ:1 バー:0 オフィス:8<br>昼間人流: 228`).bindTooltip("岡山駅",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6513,133.922],{radius:220,fillColor:"#e87158",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>下石井</b><br>業種多様性H(200m): 1.149<br>飲食:5 カフェ:1 バー:0 オフィス:1<br>昼間人流: 279`).bindTooltip("下石井",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.66,133.9235],{radius:220,fillColor:"#b93388",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>桑田町</b><br>業種多様性H(200m): 0.770<br>飲食:25 カフェ:0 バー:4 オフィス:0<br>昼間人流: 281`).bindTooltip("桑田町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6563,133.92],{radius:220,fillColor:"#cc4876",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>岩田町</b><br>業種多様性H(200m): 0.906<br>飲食:2 カフェ:1 バー:0 オフィス:12<br>昼間人流: 141`).bindTooltip("岩田町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6621,133.92],{radius:220,fillColor:"#f6e425",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>本町</b><br>業種多様性H(200m): 1.699<br>飲食:24 カフェ:4 バー:2 オフィス:24<br>昼間人流: 207`).bindTooltip("本町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.66,133.9225],{radius:220,fillColor:"#a72197",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>幸町</b><br>業種多様性H(200m): 0.658<br>飲食:21 カフェ:0 バー:2 オフィス:0<br>昼間人流: 117`).bindTooltip("幸町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6617,133.9255],{radius:220,fillColor:"#f7e024",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>柳町</b><br>業種多様性H(200m): 1.686<br>飲食:21 カフェ:4 バー:3 オフィス:6<br>昼間人流: 56`).bindTooltip("柳町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6575,133.925],{radius:220,fillColor:"#6f00a8",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>野田屋町</b><br>業種多様性H(200m): 0.381<br>飲食:25 カフェ:0 バー:2 オフィス:0<br>昼間人流: 99`).bindTooltip("野田屋町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6593,133.928],{radius:220,fillColor:"#c43f7e",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>磨屋町</b><br>業種多様性H(200m): 0.848<br>飲食:31 カフェ:0 バー:5 オフィス:0<br>昼間人流: 83`).bindTooltip("磨屋町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.661,133.929],{radius:220,fillColor:"#fba238",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>田町</b><br>業種多様性H(200m): 1.402<br>飲食:37 カフェ:8 バー:1 オフィス:1<br>昼間人流: 57`).bindTooltip("田町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6632,133.9255],{radius:220,fillColor:"#fca735",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>中央町</b><br>業種多様性H(200m): 1.434<br>飲食:35 カフェ:4 バー:2 オフィス:11<br>昼間人流: 21`).bindTooltip("中央町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6585,133.916],{radius:220,fillColor:"#d8586a",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>天神町</b><br>業種多様性H(200m): 1.000<br>飲食:1 カフェ:0 バー:0 オフィス:0<br>昼間人流: 72`).bindTooltip("天神町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6562,133.926],{radius:220,fillColor:"#6d00a8",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>中山下</b><br>業種多様性H(200m): 0.371<br>飲食:13 カフェ:0 バー:1 オフィス:0<br>昼間人流: 150`).bindTooltip("中山下",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6593,133.9305],{radius:220,fillColor:"#fcad31",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>表町</b><br>業種多様性H(200m): 1.460<br>飲食:29 カフェ:3 バー:6 オフィス:2<br>昼間人流: 176`).bindTooltip("表町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.659,133.9348],{radius:220,fillColor:"#0c0786",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>西大寺町</b><br>業種多様性H(200m): 0.000<br>飲食:0 カフェ:0 バー:0 オフィス:0<br>昼間人流: 38`).bindTooltip("西大寺町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.662,133.9315],{radius:220,fillColor:"#f2844b",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>出石町</b><br>業種多様性H(200m): 1.249<br>飲食:18 カフェ:5 バー:0 オフィス:4<br>昼間人流: 32`).bindTooltip("出石町",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6657,133.9342],{radius:220,fillColor:"#d8586a",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>後楽園</b><br>業種多様性H(200m): 1.000<br>飲食:1 カフェ:1 バー:0 オフィス:0<br>昼間人流: 22`).bindTooltip("後楽園",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6625,133.937],{radius:220,fillColor:"#0c0786",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>岡山城</b><br>業種多様性H(200m): 0.000<br>飲食:0 カフェ:0 バー:0 オフィス:0<br>昼間人流: 65`).bindTooltip("岡山城",{permanent:true,direction:"center",className:"lbl"});
+L.circle([34.6555,133.933],{radius:220,fillColor:"#0c0786",color:"#fff",weight:1.5,fillOpacity:0.82,opacity:0.95}).addTo(map).bindPopup(`<b>内山下</b><br>業種多様性H(200m): 0.000<br>飲食:0 カフェ:0 バー:0 オフィス:0<br>昼間人流: 106`).bindTooltip("内山下",{permanent:true,direction:"center",className:"lbl"});
+</script></body></html>

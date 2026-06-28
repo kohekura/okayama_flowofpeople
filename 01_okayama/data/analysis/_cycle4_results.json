@@ -1,0 +1,290 @@
+{
+  "intervention_scores": {
+    "奉還町": {
+      "score": 0.3907,
+      "grav_gap": -0.4388,
+      "af_problem": 0.9772,
+      "parking": 0.401,
+      "cliff": 0.1153,
+      "flow": 97.8879,
+      "af_ratio": 0.0497,
+      "total_pois": 503
+    },
+    "寿町": {
+      "score": 0.4128,
+      "grav_gap": -0.3074,
+      "af_problem": 0.9797,
+      "parking": 0.4854,
+      "cliff": 0.1452,
+      "flow": 84.6559,
+      "af_ratio": 0.0488,
+      "total_pois": 512
+    },
+    "駅元町": {
+      "score": 0.3799,
+      "grav_gap": -0.2428,
+      "af_problem": 0.856,
+      "parking": 0.3941,
+      "cliff": 0.2952,
+      "flow": 102.4326,
+      "af_ratio": 0.0925,
+      "total_pois": 584
+    },
+    "岡山駅": {
+      "score": 0.5718,
+      "grav_gap": 0.4074,
+      "af_problem": 0.9295,
+      "parking": 0.5966,
+      "cliff": 0.2072,
+      "flow": 126.331,
+      "af_ratio": 0.0665,
+      "total_pois": 571
+    },
+    "下石井": {
+      "score": 0.3417,
+      "grav_gap": -0.681,
+      "af_problem": 0.8831,
+      "parking": 0.2319,
+      "cliff": 0.2023,
+      "flow": 159.6512,
+      "af_ratio": 0.0829,
+      "total_pois": 410
+    },
+    "桑田町": {
+      "score": 0.3818,
+      "grav_gap": -0.9819,
+      "af_problem": 0.5809,
+      "parking": 0.2874,
+      "cliff": 1.0,
+      "flow": 213.1874,
+      "af_ratio": 0.1896,
+      "total_pois": 728
+    },
+    "岩田町": {
+      "score": 0.4346,
+      "grav_gap": -0.2676,
+      "af_problem": 0.8739,
+      "parking": 0.594,
+      "cliff": 0.3574,
+      "flow": 105.9565,
+      "af_ratio": 0.0862,
+      "total_pois": 673
+    },
+    "本町": {
+      "score": 0.243,
+      "grav_gap": 0.0085,
+      "af_problem": 0.3177,
+      "parking": 0.7233,
+      "cliff": 0.0,
+      "flow": 0,
+      "af_ratio": 0.2824,
+      "total_pois": 1179
+    },
+    "幸町": {
+      "score": 0.3747,
+      "grav_gap": 0.0204,
+      "af_problem": 0.6248,
+      "parking": 0.5844,
+      "cliff": 0.4216,
+      "flow": 0,
+      "af_ratio": 0.1741,
+      "total_pois": 810
+    },
+    "柳町": {
+      "score": 0.0825,
+      "grav_gap": 0.0115,
+      "af_problem": 0.095,
+      "parking": 0.25,
+      "cliff": 0.0,
+      "flow": 0,
+      "af_ratio": 0.361,
+      "total_pois": 878
+    },
+    "野田屋町": {
+      "score": 0.2937,
+      "grav_gap": -0.383,
+      "af_problem": 0.6662,
+      "parking": 0.0453,
+      "cliff": 0.5653,
+      "flow": 87.366,
+      "af_ratio": 0.1594,
+      "total_pois": 577
+    },
+    "磨屋町": {
+      "score": 0.0936,
+      "grav_gap": 0.041,
+      "af_problem": 0.1849,
+      "parking": 0.0267,
+      "cliff": 0.1226,
+      "flow": 0,
+      "af_ratio": 0.3293,
+      "total_pois": 747
+    },
+    "田町": {
+      "score": 0.0695,
+      "grav_gap": 0.0685,
+      "af_problem": 0.0,
+      "parking": 0.1952,
+      "cliff": 0.0431,
+      "flow": 0,
+      "af_ratio": 0.3946,
+      "total_pois": 882
+    },
+    "中央町": {
+      "score": 0.1239,
+      "grav_gap": 0.0054,
+      "af_problem": 0.0996,
+      "parking": 0.4607,
+      "cliff": 0.0,
+      "flow": 0,
+      "af_ratio": 0.3594,
+      "total_pois": 1138
+    },
+    "天神町": {
+      "score": 0.5412,
+      "grav_gap": -0.2109,
+      "af_problem": 0.9463,
+      "parking": 1.0,
+      "cliff": 0.382,
+      "flow": 57.3447,
+      "af_ratio": 0.0606,
+      "total_pois": 561
+    },
+    "中山下": {
+      "score": 0.2703,
+      "grav_gap": 0.0245,
+      "af_problem": 0.7395,
+      "parking": 0.0236,
+      "cliff": 0.2344,
+      "flow": 0,
+      "af_ratio": 0.1336,
+      "total_pois": 524
+    },
+    "表町": {
+      "score": 0.2297,
+      "grav_gap": 0.3262,
+      "af_problem": 0.2391,
+      "parking": 0.1029,
+      "cliff": 0.1549,
+      "flow": 0,
+      "af_ratio": 0.3102,
+      "total_pois": 677
+    },
+    "西大寺町": {
+      "score": 0.3675,
+      "grav_gap": 0.0415,
+      "af_problem": 0.9265,
+      "parking": 0.22,
+      "cliff": 0.2067,
+      "flow": 0,
+      "af_ratio": 0.0676,
+      "total_pois": 429
+    },
+    "出石町": {
+      "score": 0.0758,
+      "grav_gap": -0.0641,
+      "af_problem": 0.0528,
+      "parking": 0.1802,
+      "cliff": 0.1596,
+      "flow": 30.691,
+      "af_ratio": 0.3759,
+      "total_pois": 798
+    },
+    "後楽園": {
+      "score": 0.2712,
+      "grav_gap": -0.0715,
+      "af_problem": 0.7459,
+      "parking": 0.1982,
+      "cliff": 0.0521,
+      "flow": 15.2323,
+      "af_ratio": 0.1313,
+      "total_pois": 335
+    },
+    "岡山城": {
+      "score": 0.3606,
+      "grav_gap": -0.1614,
+      "af_problem": 0.9042,
+      "parking": 0.3787,
+      "cliff": 0.091,
+      "flow": 36.9225,
+      "af_ratio": 0.0755,
+      "total_pois": 265
+    },
+    "内山下": {
+      "score": 0.3503,
+      "grav_gap": -0.3647,
+      "af_problem": 1.0,
+      "parking": 0.0,
+      "cliff": 0.3354,
+      "flow": 79.7029,
+      "af_ratio": 0.0417,
+      "total_pois": 432
+    }
+  },
+  "route_summaries": {
+    "A_駅→西川→表町": {
+      "avg_score": 0.3138,
+      "weak_links": [
+        "岡山駅",
+        "駅元町",
+        "野田屋町",
+        "表町"
+      ]
+    },
+    "B_表町→県庁軸": {
+      "avg_score": 0.2343,
+      "weak_links": [
+        "表町",
+        "後楽園",
+        "岡山城"
+      ]
+    },
+    "C_駅→本町北上": {
+      "avg_score": 0.3496,
+      "weak_links": [
+        "岡山駅",
+        "岩田町",
+        "幸町",
+        "本町"
+      ]
+    },
+    "D_西川→内山下": {
+      "avg_score": 0.2704,
+      "weak_links": [
+        "中山下",
+        "内山下",
+        "西大寺町"
+      ]
+    },
+    "E_桑田町接続": {
+      "avg_score": 0.3788,
+      "weak_links": [
+        "駅元町",
+        "桑田町",
+        "幸町"
+      ]
+    }
+  },
+  "top_priority": [
+    {
+      "area": "岡山駅",
+      "score": 0.5718
+    },
+    {
+      "area": "天神町",
+      "score": 0.5412
+    },
+    {
+      "area": "岩田町",
+      "score": 0.4346
+    },
+    {
+      "area": "寿町",
+      "score": 0.4128
+    },
+    {
+      "area": "奉還町",
+      "score": 0.3907
+    }
+  ]
+}
