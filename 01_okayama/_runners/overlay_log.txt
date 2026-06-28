@@ -1,0 +1,6 @@
+人中心軸フィーチャ: 52 件 (pedestrian/arcade)
+駐車場の近接判定中...
+  軸に張り付く駐車場: 78 件 (5.2%)
+  その他            : 1421 件
+
+保存完了: C:\Users\rd006\Documents\projectGIS_2026\01_personspace\overlay_parking_green.html

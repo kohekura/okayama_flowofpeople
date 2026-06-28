@@ -1,0 +1,118 @@
+const fs = require("fs");
+const path = require("path");
+
+const placesPath = path.join(process.cwd(), "public", "data", "places.geojson");
+const areasPath = path.join(process.cwd(), "public", "data", "areas.json");
+const places = JSON.parse(fs.readFileSync(placesPath, "utf8"));
+const areas = JSON.parse(fs.readFileSync(areasPath, "utf8"));
+
+const confirmedStatus = "\u51fa\u5178\u78ba\u8a8d\u6e08\u307f";
+const sourceProgram = "\u0054\u0042\u0053\u30c6\u30ec\u30d3\u300c\u30d9\u30b9\u30b3\u30f3\u30b0\u30eb\u30e1\u300d";
+const sourceMemo = "\u0054\u0042\u0053\u516c\u5f0f\u30da\u30fc\u30b8\u3067\u756a\u7d44\u56de\u30fb\u30b2\u30b9\u30c8\u30fb\u5e97\u540d\u30fb\u4f4f\u6240\u3092\u78ba\u8a8d";
+
+const clues = [
+  {
+    id: "b001",
+    name: "\u4eac\u306e\u83ef",
+    catch: "\u5c0f\u6749\u3055\u3093\u3068\u5ddd\u5cf6\u3055\u3093\u304c\u6b69\u3044\u3066\u8f38\u3063\u305f\u3001\u65e5\u66ae\u91cc\u306e\u53f0\u6e7e\u30b0\u30eb\u30e1",
+    category: "\u4e2d\u83ef",
+    area: "\u65e5\u66ae\u91cc",
+    coordinates: [139.7722, 35.7283],
+    heLevel: 4,
+    address: "\u6771\u4eac\u90fd\u8352\u5ddd\u533a\u897f\u65e5\u66ae\u91cc2-22-1 \u30b9\u30c6\u30fc\u30b7\u30e7\u30f3\u30d7\u30e9\u30b6\u30bf\u30ef\u30fc105",
+    googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=%E4%BA%AC%E3%81%AE%E8%8F%AF%20%E6%97%A5%E6%9A%AE%E9%87%8C",
+    tags: ["#\u30d9\u30b9\u30b3\u30f3\u30b0\u30eb\u30e1", "#\u5c0f\u6749\u7adc\u4e00", "#\u9e92\u9e9f\u5ddd\u5cf6", "#\u65e5\u66ae\u91cc"],
+    relatedComedians: ["\u9e92\u9e9f \u5ddd\u5cf6\u660e", "\u30d6\u30e9\u30c3\u30af\u30de\u30e8\u30cd\u30fc\u30ba \u5c0f\u6749\u7adc\u4e00"],
+    sourceEpisode: "2026\u5e745\u670831\u65e5\u653e\u9001 \u753a\u5c4b\u301c\u65e5\u66ae\u91cc\u7de8",
+    sourceDate: "2026\u5e745\u670831\u65e5",
+    sourceUrl: "https://www.tbs.co.jp/bescon_gurume/archive/202605311/",
+    talkSummary: "\u756a\u7d44\u516c\u5f0f\u30da\u30fc\u30b8\u3067\u3001\u5ddd\u5cf6\u3055\u3093\u3001\u4e0a\u5ddd\u9686\u4e5f\u3055\u3093\u3001\u30d6\u30e9\u30c3\u30af\u30de\u30e8\u30cd\u30fc\u30ba\u5c0f\u6749\u3055\u3093\u304c\u753a\u5c4b\u301c\u65e5\u66ae\u91cc\u3092\u6b69\u304d\u3001\u300c\u4eac\u306e\u83ef\u300d\u3067\u53f0\u6e7e\u8178\u8a70\u3081\u7092\u98ef\u3068\u713c\u5c0f\u7c60\u5305\u3092\u5473\u308f\u3063\u305f\u3053\u3068\u304c\u63b2\u8f09\u3055\u308c\u3066\u3044\u308b\u3002",
+    scene: "\u82b8\u4eba\u306e\u884c\u304d\u3064\u3051\u3067\u306f\u306a\u3044\u304c\u3001\u82b8\u4eba\u304c\u756a\u7d44\u3067\u5b9f\u969b\u306b\u6b69\u3044\u3066\u305f\u3069\u308a\u7740\u3044\u305f\u5e97\u3002\u5730\u56f3\u4f53\u9a13\u3068\u306e\u76f8\u6027\u304c\u9ad8\u3044\u3002",
+    story: "\u65e5\u66ae\u91cc\u99c5\u3059\u3050\u306e\u53f0\u6e7e\u30b0\u30eb\u30e1\u3002\u6b69\u3044\u305f\u5f8c\u306b\u98df\u3079\u308b\u756a\u7d44\u306e\u6e29\u5ea6\u304c\u4f1d\u308f\u308a\u3084\u3059\u3044\u3002"
+  },
+  {
+    id: "b002",
+    name: "\u30a4\u30f3\u30c9\u5bae\u5ef7\u6599\u7406\u30de\u30b7\u30e3\u30fc\u30eb",
+    catch: "\u30b6\u30ad\u30e4\u30de\u3055\u3093\u3068\u5ddd\u5cf6\u3055\u3093\u304c\u76ee\u6307\u3057\u305f\u3001\u5927\u68ee\u306e\u30d0\u30bf\u30fc\u30c1\u30ad\u30f3",
+    category: "\u30ab\u30ec\u30fc",
+    area: "\u5927\u68ee",
+    coordinates: [139.7296, 35.5888],
+    heLevel: 4,
+    address: "\u6771\u4eac\u90fd\u5927\u7530\u533a\u5927\u68ee\u53171-10-14 Luz\u5927\u68ee 3F",
+    googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=%E3%82%A4%E3%83%B3%E3%83%89%E5%AE%AE%E5%BB%B7%E6%96%99%E7%90%86%E3%83%9E%E3%82%B7%E3%83%A3%E3%83%BC%E3%83%AB",
+    tags: ["#\u30d9\u30b9\u30b3\u30f3\u30b0\u30eb\u30e1", "#\u30a2\u30f3\u30bf\u30c3\u30c1\u30e3\u30d6\u30eb\u5c71\u5d0e", "#\u9e92\u9e9f\u5ddd\u5cf6", "#\u5927\u68ee"],
+    relatedComedians: ["\u9e92\u9e9f \u5ddd\u5cf6\u660e", "\u30a2\u30f3\u30bf\u30c3\u30c1\u30e3\u30d6\u30eb \u5c71\u5d0e\u5f18\u4e5f"],
+    sourceEpisode: "2026\u5e746\u670821\u65e5\u653e\u9001 \u5e73\u548c\u5cf6\u301c\u5927\u68ee\u7de8",
+    sourceDate: "2026\u5e746\u670821\u65e5",
+    sourceUrl: "https://www.tbs.co.jp/bescon_gurume/archive/202606211/",
+    talkSummary: "\u756a\u7d44\u516c\u5f0f\u30da\u30fc\u30b8\u3067\u3001\u5ddd\u5cf6\u3055\u3093\u3001\u30b4\u30b9\u30da\u30e9\u30fc\u30ba\u9ed2\u6ca2\u3055\u3093\u3001\u30a2\u30f3\u30bf\u30c3\u30c1\u30e3\u30d6\u30eb\u5c71\u5d0e\u3055\u3093\u304c\u5e73\u548c\u5cf6\u301c\u5927\u68ee\u3092\u6b69\u304d\u3001\u300c\u30a4\u30f3\u30c9\u5bae\u5ef7\u6599\u7406\u30de\u30b7\u30e3\u30fc\u30eb\u300d\u3067\u30d0\u30bf\u30fc\u30c1\u30ad\u30f3\u30ab\u30ec\u30fc\u3092\u5473\u308f\u3063\u305f\u3053\u3068\u304c\u63b2\u8f09\u3055\u308c\u3066\u3044\u308b\u3002",
+    scene: "\u756a\u7d44\u306e\u6b69\u3044\u305f\u8ddd\u96e2\u3084\u76ee\u7684\u5730\u304c\u516c\u5f0f\u306b\u6b8b\u308b\u306e\u3067\u3001\u30de\u30c3\u30d7\u306b\u843d\u3068\u3057\u8fbc\u3080\u3068\u201c\u8ffd\u4f53\u9a13\u201d\u3057\u3084\u3059\u3044\u3002",
+    story: "\u6b69\u3044\u305f\u5f8c\u306e\u30ab\u30ec\u30fc\u3068\u30d3\u30fc\u30eb\u306e\u7d44\u307f\u5408\u308f\u305b\u304c\u5f37\u3044\u3002\u5927\u68ee\u30a8\u30ea\u30a2\u306e\u5f15\u304d\u306b\u306a\u308b\u3002"
+  },
+  {
+    id: "b003",
+    name: "\u98df\u9152\u5c4b \u308b\u308a\u5bb6",
+    catch: "\u4e95\u6238\u7530\u3055\u3093\u3068\u6625\u65e5\u3055\u3093\u304c\u4e0a\u7530\u3067\u5473\u308f\u3063\u305f\u7f8e\u5473\u3060\u308c\u713c\u304d\u9ce5",
+    category: "\u5c45\u9152\u5c4b",
+    area: "\u4e0a\u7530",
+    coordinates: [138.2508, 36.4021],
+    heLevel: 4,
+    address: "\u9577\u91ce\u770c\u4e0a\u7530\u5e02\u4e2d\u592e2-4-2",
+    googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=%E9%A3%9F%E9%85%92%E5%B1%8B%20%E3%82%8B%E3%82%8A%E5%AE%B6%20%E4%B8%8A%E7%94%B0",
+    tags: ["#\u30d9\u30b9\u30b3\u30f3\u30b0\u30eb\u30e1", "#\u30b9\u30d4\u30fc\u30c9\u30ef\u30b4\u30f3\u4e95\u6238\u7530", "#\u30aa\u30fc\u30c9\u30ea\u30fc\u6625\u65e5", "#\u4e0a\u7530"],
+    relatedComedians: ["\u30aa\u30fc\u30c9\u30ea\u30fc \u6625\u65e5\u4fca\u5f70", "\u30b9\u30d4\u30fc\u30c9\u30ef\u30b4\u30f3 \u4e95\u6238\u7530\u6f64"],
+    sourceEpisode: "2026\u5e746\u670814\u65e5\u653e\u9001 \u4e0a\u7530\u5468\u904a\u7de8",
+    sourceDate: "2026\u5e746\u670814\u65e5",
+    sourceUrl: "https://www.tbs.co.jp/bescon_gurume/archive/202606141/",
+    talkSummary: "\u756a\u7d44\u516c\u5f0f\u30da\u30fc\u30b8\u3067\u3001\u6625\u65e5\u3055\u3093\u3001\u5c71\u5d0e\u80b2\u4e09\u90ce\u3055\u3093\u3001\u30b9\u30d4\u30fc\u30c9\u30ef\u30b4\u30f3\u4e95\u6238\u7530\u3055\u3093\u304c\u4e0a\u7530\u5468\u904a\u3092\u6b69\u304d\u3001\u300c\u98df\u9152\u5c4b \u308b\u308a\u5bb6\u300d\u3067\u7f8e\u5473\u3060\u308c\u713c\u304d\u9ce5\u306a\u3069\u3092\u5473\u308f\u3063\u305f\u3053\u3068\u304c\u63b2\u8f09\u3055\u308c\u3066\u3044\u308b\u3002",
+    scene: "\u6771\u4eac\u3060\u3051\u3067\u306a\u304f\u3001\u82b8\u4eba\u30ed\u30b1\u304c\u5730\u65b9\u306e\u8857\u306b\u5149\u3092\u5f53\u3066\u308b\u4f8b\u3068\u3057\u3066\u4f7f\u3048\u308b\u3002\u8857\u6b69\u304d\u306e\u30a2\u30d7\u30ea\u3068\u76f8\u6027\u304c\u3044\u3044\u3002",
+    story: "\u4e0a\u7530\u306e\u540d\u7269\u3092\u6b69\u3044\u305f\u5f8c\u306b\u5473\u308f\u3046\u30ab\u30fc\u30c9\u3002\u5730\u56f3\u306e\u5e83\u304c\u308a\u304c\u51fa\u308b\u3002"
+  }
+];
+
+const areasToAdd = [
+  { id: "nippori", name: "\u65e5\u66ae\u91cc", center: [139.7722, 35.7283], zoom: 15, vibe: "\u753a\u5c4b\u304b\u3089\u6b69\u3044\u3066\u305f\u3069\u308a\u7740\u304f\u3001\u756a\u7d44\u30ed\u30b1\u306e\u5c0e\u7dda\u304c\u898b\u3048\u308b\u8857\u3002" },
+  { id: "omori", name: "\u5927\u68ee", center: [139.7296, 35.5888], zoom: 15, vibe: "\u5e73\u548c\u5cf6\u304b\u3089\u6b69\u304f\u30b0\u30eb\u30e1\u30ed\u30b1\u306e\u7a7a\u6c17\u3092\u62fe\u3048\u308b\u8857\u3002" },
+  { id: "ueda", name: "\u4e0a\u7530", center: [138.2508, 36.4021], zoom: 14, vibe: "\u5730\u65b9\u30ed\u30b1\u3068\u82b8\u4eba\u306e\u98df\u30c8\u30fc\u30af\u3092\u5730\u56f3\u3067\u8ffd\u3048\u308b\u63a2\u7d22\u30a8\u30ea\u30a2\u3002" }
+];
+
+const existingPlaceIds = new Set(places.features.map((feature) => feature.properties.id));
+for (const clue of clues) {
+  if (existingPlaceIds.has(clue.id)) continue;
+
+  places.features.push({
+    type: "Feature",
+    geometry: { type: "Point", coordinates: clue.coordinates },
+    properties: {
+      id: clue.id,
+      name: clue.name,
+      catch: clue.catch,
+      category: clue.category,
+      area: clue.area,
+      role: "clue",
+      importance: "high",
+      heLevel: clue.heLevel,
+      address: clue.address,
+      googleMapsUrl: clue.googleMapsUrl,
+      tags: clue.tags,
+      relatedComedians: clue.relatedComedians,
+      scene: clue.scene,
+      sourceStatus: confirmedStatus,
+      sourceProgram,
+      sourceEpisode: clue.sourceEpisode,
+      sourceDate: clue.sourceDate,
+      sourceUrl: clue.sourceUrl,
+      talkSummary: clue.talkSummary,
+      story: clue.story,
+      sourceMemo
+    }
+  });
+}
+
+const existingAreaIds = new Set(areas.map((area) => area.id));
+for (const area of areasToAdd) {
+  if (!existingAreaIds.has(area.id)) areas.push(area);
+}
+
+fs.writeFileSync(placesPath, `${JSON.stringify(places, null, 2)}\n`, "utf8");
+fs.writeFileSync(areasPath, `${JSON.stringify(areas, null, 2)}\n`, "utf8");

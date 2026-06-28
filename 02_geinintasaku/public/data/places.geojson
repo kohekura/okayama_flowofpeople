@@ -1,0 +1,2650 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.7014,
+          35.6897
+        ]
+      },
+      "properties": {
+        "id": "p001",
+        "name": "ルミネtheよしもと",
+        "catch": "新宿の笑いを読むなら、まずここを起点に",
+        "category": "劇場",
+        "area": "新宿",
+        "heLevel": 5,
+        "address": "東京都新宿区新宿3-38-2 ルミネ2 7F",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E3%83%AB%E3%83%9F%E3%83%8Dthe%E3%82%88%E3%81%97%E3%82%82%E3%81%A8",
+        "tags": [
+          "#劇場",
+          "#新宿",
+          "#吉本",
+          "#ライブ前後"
+        ],
+        "relatedComedians": [
+          "令和ロマン",
+          "オズワルド",
+          "ニューヨーク"
+        ],
+        "story": "新宿駅直結で、初めてでも立ち寄りやすい劇場。公演前後に周辺の飲食店や書店へ流れる導線まで含めて見ると面白い。",
+        "sourceMemo": "公式劇場情報・公開スケジュールを確認",
+        "scene": "ライブ前後に人の流れができる場所。ここから新宿駅東口、新宿三丁目、思い出横丁方面へ広げて見ると、街の“お笑い濃度”が読みやすい。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "ルミネtheよしもと公式サイト",
+        "sourceEpisode": "公演スケジュール・劇場情報",
+        "talkSummary": "吉本興業の劇場として、公演スケジュールと出演者情報が公式に公開されている場所。芸人の私的な行動ではなく、仕事で訪れる起点として扱う。",
+        "role": "anchor",
+        "importance": "anchor",
+        "sourceDate": "公式サイト参照",
+        "sourceUrl": "https://lumine.yoshimoto.co.jp/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.7011,
+          35.689
+        ]
+      },
+      "properties": {
+        "id": "p002",
+        "name": "麺屋 海神 新宿店",
+        "catch": "ライブ後のラーメン欲に刺さる駅近の一杯",
+        "category": "ラーメン",
+        "area": "新宿",
+        "heLevel": 4,
+        "address": "東京都新宿区新宿3-35-7 さんらくビル2F",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E9%BA%BA%E5%B1%8B%20%E6%B5%B7%E7%A5%9E%20%E6%96%B0%E5%AE%BF%E5%BA%97",
+        "tags": [
+          "#ラーメン",
+          "#劇場帰り",
+          "#新宿",
+          "#終演後"
+        ],
+        "relatedComedians": [
+          "令和ロマン",
+          "オズワルド"
+        ],
+        "story": "魚介系の澄んだ一杯が名物。新宿で重すぎず締めたい時にちょうどよく、ライブ帰りの余韻にも合う。",
+        "sourceMemo": "店舗情報・公開口コミで確認できる範囲をもとにした候補",
+        "scene": "劇場から近く、終演後に“軽く一杯ならぬ一杯の麺”へ流れやすい距離感がある。",
+        "sourceStatus": "要確認メモ",
+        "sourceProgram": "例：かまいたち出演のグルメ番組 / YouTube / ラジオ",
+        "sourceEpisode": "「劇場帰りに寄った」「新宿で好きなラーメン」といった発言が確認できたら掲載",
+        "talkSummary": "現状は候補。理想形は『かまいたちが○○という番組で、終演後に寄りたくなる店として話していた』のように、番組名と発言内容をセットで出す。",
+        "role": "clue",
+        "importance": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.7063,
+          35.6901
+        ]
+      },
+      "properties": {
+        "id": "p003",
+        "name": "どん底",
+        "catch": "文化人と芸人の境目がゆるむ新宿三丁目の酒場",
+        "category": "居酒屋",
+        "area": "新宿",
+        "heLevel": 4,
+        "address": "東京都新宿区新宿3-10-2",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%A9%E3%82%93%E5%BA%95%20%E6%96%B0%E5%AE%BF",
+        "tags": [
+          "#居酒屋",
+          "#新宿三丁目",
+          "#老舗",
+          "#文化人"
+        ],
+        "relatedComedians": [
+          "又吉直樹",
+          "千原ジュニア"
+        ],
+        "story": "老舗らしい空気が残る一軒。新宿の夜を少し大人っぽく味わえる、街歩きのアクセントになる店。",
+        "sourceMemo": "店舗の公開情報・街の文化的文脈をもとにした編集メモ",
+        "scene": "新宿三丁目の古い酒場は、芸人の反省会や先輩後輩の話が似合う。派手すぎない濃さがある。",
+        "sourceStatus": "要確認メモ",
+        "sourceProgram": "例：芸人の酒場トーク / 街ブラ番組",
+        "sourceEpisode": "店名が出た放送回・動画タイトルを確認してから断定掲載",
+        "talkSummary": "『○○が新宿三丁目で飲むならここ、と話していた』のような形にできると強い。現状は老舗酒場としての文脈メモ。",
+        "role": "clue",
+        "importance": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.6993,
+          35.6937
+        ]
+      },
+      "properties": {
+        "id": "p004",
+        "name": "思い出横丁",
+        "catch": "反省会も打ち上げも似合う新宿の細い路地",
+        "category": "街",
+        "area": "新宿",
+        "heLevel": 4,
+        "address": "東京都新宿区西新宿1丁目",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E6%80%9D%E3%81%84%E5%87%BA%E6%A8%AA%E4%B8%81",
+        "tags": [
+          "#横丁",
+          "#新宿",
+          "#飲み歩き",
+          "#反省会"
+        ],
+        "relatedComedians": [
+          "千鳥",
+          "かまいたち"
+        ],
+        "story": "新宿駅近くで雰囲気を味わいやすい横丁。短時間でも“新宿らしさ”を強く感じられる。",
+        "sourceMemo": "観光情報・公開店舗情報をもとにした編集メモ",
+        "scene": "狭い路地、近い席、店ごとの個性。芸人の飲み話や街ブラのツッコミどころが自然に生まれる場所。",
+        "sourceStatus": "要確認メモ",
+        "sourceProgram": "例：かまいたち出演の街ブラ番組",
+        "sourceEpisode": "思い出横丁を歩いた回、または飲み屋街として触れた発言を確認したい",
+        "talkSummary": "理想は『かまいたちが○○で、思い出横丁を歩きながら“この狭さがいい”と話していた』のような粒度。出典確認後に差し替える。",
+        "role": "clue",
+        "importance": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.706,
+          35.6904
+        ]
+      },
+      "properties": {
+        "id": "p005",
+        "name": "新宿末廣亭",
+        "catch": "寄席の明かりが残す、新宿三丁目のもう一つの起点",
+        "category": "劇場",
+        "area": "新宿",
+        "heLevel": 5,
+        "address": "東京都新宿区新宿3-6-12",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E5%AE%BF%E6%9C%AB%E5%BB%A3%E4%BA%AD",
+        "tags": [
+          "#寄席",
+          "#落語",
+          "#漫才",
+          "#新宿三丁目",
+          "#行きつけ系"
+        ],
+        "relatedComedians": [
+          "春風亭一之輔",
+          "ナイツ",
+          "爆笑問題"
+        ],
+        "story": "建物の存在感も含めて、新宿三丁目を歩く理由になる寄席。夜の街の中に古典芸能の灯りが残っているのがいい。",
+        "sourceMemo": "公式劇場情報・公開公演情報を確認",
+        "scene": "テレビやライブハウスとは違う笑いの時間が流れる場所。新宿三丁目で飲食店の手がかりを探す前に、街の温度を合わせる起点になる。",
+        "role": "clue",
+        "importance": "high",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "新宿末廣亭公式サイト",
+        "sourceEpisode": "寄席・公演情報",
+        "sourceDate": "公式サイト参照",
+        "sourceUrl": "https://suehirotei.com/",
+        "talkSummary": "落語・漫才・講談などの寄席公演が行われる劇場として公式情報が公開されている。若手芸人の行きつけ発言ではなく、笑いの仕事場としての起点。"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.7036,
+          35.6911
+        ]
+      },
+      "properties": {
+        "id": "p006",
+        "name": "紀伊國屋書店 新宿本店",
+        "catch": "芸人エッセイを探すなら外せない大型書店",
+        "category": "書店",
+        "area": "新宿",
+        "heLevel": 3,
+        "address": "東京都新宿区新宿3-17-7",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E7%B4%80%E4%BC%8A%E5%9C%8B%E5%B1%8B%E6%9B%B8%E5%BA%97%20%E6%96%B0%E5%AE%BF%E6%9C%AC%E5%BA%97",
+        "tags": [
+          "#書店",
+          "#芸人本",
+          "#エッセイ",
+          "#新宿"
+        ],
+        "relatedComedians": [
+          "又吉直樹",
+          "若林正恭",
+          "バカリズム"
+        ],
+        "story": "品揃えが広く、ライブ前の時間調整にも優秀。気になる芸人の本を探すだけで楽しい。",
+        "sourceMemo": "店舗情報・公開書籍情報をもとにした候補",
+        "scene": "芸人のエッセイ、ラジオ本、演芸本が集まる大型書店。言葉を仕事にする人が吸い寄せられる理由がある。",
+        "role": "column",
+        "importance": "low"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.7048,
+          35.6918
+        ]
+      },
+      "properties": {
+        "id": "p007",
+        "name": "新宿ピカデリー",
+        "catch": "芸人が映画側に回った時の楽しみを拾える場所",
+        "category": "映画館",
+        "area": "新宿",
+        "heLevel": 3,
+        "address": "東京都新宿区新宿3-15-15",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E5%AE%BF%E3%83%94%E3%82%AB%E3%83%87%E3%83%AA%E3%83%BC",
+        "tags": [
+          "#映画館",
+          "#舞台挨拶",
+          "#芸人映画",
+          "#新宿"
+        ],
+        "relatedComedians": [
+          "バカリズム",
+          "劇団ひとり",
+          "シソンヌ"
+        ],
+        "story": "新宿の大型映画館として使いやすく、周辺スポットとの回遊もしやすい。予定に組み込みやすい一館。",
+        "sourceMemo": "映画館情報・公開イベント情報をもとにした候補",
+        "scene": "芸人は舞台だけでなく、映画、脚本、舞台挨拶にも現れる。劇場外の仕事を拾える場所。",
+        "role": "column",
+        "importance": "low"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.6976,
+          35.6596
+        ]
+      },
+      "properties": {
+        "id": "p101",
+        "name": "ヨシモト∞ホール",
+        "catch": "渋谷で若手芸人の現在地を追うならここ",
+        "category": "劇場",
+        "area": "渋谷",
+        "heLevel": 5,
+        "address": "東京都渋谷区宇田川町31-2 渋谷ビーム内",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E3%83%A8%E3%82%B7%E3%83%A2%E3%83%88%E2%88%9E%E3%83%9B%E3%83%BC%E3%83%AB",
+        "tags": [
+          "#劇場",
+          "#渋谷",
+          "#若手芸人",
+          "#ライブ"
+        ],
+        "relatedComedians": [
+          "ニューヨーク",
+          "男性ブランコ",
+          "そいつどいつ"
+        ],
+        "story": "渋谷の中心に近く、ライブ後に周辺へ展開しやすい劇場。若手芸人の名前を追い始める入口として使いやすい。",
+        "sourceMemo": "公式劇場情報・公開スケジュールを確認",
+        "scene": "渋谷の飲食店・トークイベント・劇場をつなぐ時の起点。ここから宇田川町や円山町側へ歩くと、芸人カルチャーの濃い夜の動線が見えてくる。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "ヨシモト∞ホール公式サイト",
+        "sourceEpisode": "公演スケジュール・劇場情報",
+        "talkSummary": "若手芸人のライブが行われる劇場として、公演情報が公式に公開されている。私的な行動ではなく、仕事で訪れる場所として扱う。",
+        "role": "anchor",
+        "importance": "anchor",
+        "sourceDate": "公式サイト参照",
+        "sourceUrl": "https://mugendai.yoshimoto.co.jp/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.6994,
+          35.6614
+        ]
+      },
+      "properties": {
+        "id": "p102",
+        "name": "LOFT9 Shibuya",
+        "catch": "渋谷で“素の話”がこぼれやすいトークの箱",
+        "category": "カフェ",
+        "area": "渋谷",
+        "heLevel": 4,
+        "address": "東京都渋谷区円山町1-5 KINOHAUS 1F",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=LOFT9%20Shibuya",
+        "tags": [
+          "#トークライブ",
+          "#渋谷",
+          "#イベント",
+          "#カルチャー"
+        ],
+        "relatedComedians": [
+          "Aマッソ",
+          "ラランド",
+          "真空ジェシカ"
+        ],
+        "story": "円山町寄りの渋谷で、トークとカルチャーの温度がある場所。夜の探索に混ぜると、地図が一気に番組外の空気になる。",
+        "sourceMemo": "公式イベント情報・会場情報を確認",
+        "scene": "劇場より少し近い距離で話を聞けるタイプの箱。芸人の“好きなもの”“最近の話”がイベントタイトルに出てくることがあり、次の手がかりを拾いやすい。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "LOFT9 Shibuya公式サイト",
+        "sourceEpisode": "イベントスケジュール・会場情報",
+        "talkSummary": "トークイベントや配信イベントが行われる会場として、公式にイベント情報が公開されている。芸人の番組外の言葉を追う時に候補へ入れたい場所。",
+        "role": "clue",
+        "importance": "high",
+        "sourceDate": "公式サイト参照",
+        "sourceUrl": "https://www.loft-prj.co.jp/loft9/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.6956,
+          35.6607
+        ]
+      },
+      "properties": {
+        "id": "p103",
+        "name": "ユーロスペース",
+        "catch": "芸人が映画を語る夜に、名前が出てきそうなミニシアター",
+        "category": "映画館",
+        "area": "渋谷",
+        "heLevel": 3,
+        "address": "東京都渋谷区円山町1-5 KINOHAUS 3F",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E3%83%A6%E3%83%BC%E3%83%AD%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9",
+        "tags": [
+          "#映画館",
+          "#ミニシアター",
+          "#渋谷",
+          "#映画好き芸人"
+        ],
+        "relatedComedians": [
+          "劇団ひとり",
+          "バカリズム",
+          "又吉直樹"
+        ],
+        "story": "大きすぎない劇場で、作品選びにも色がある。映画好きの発言を追う時、街の文脈として効く場所。",
+        "sourceMemo": "公式劇場情報・上映情報を確認",
+        "scene": "映画、単独ライブ、ラジオの話題はつながりやすい。芸人が映画を語った時に、渋谷の文化圏として置いておくと見え方が広がる。",
+        "role": "column",
+        "importance": "low",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "ユーロスペース公式サイト",
+        "sourceEpisode": "劇場情報・上映情報",
+        "sourceDate": "公式サイト参照",
+        "sourceUrl": "https://www.eurospace.co.jp/",
+        "talkSummary": "渋谷のミニシアターとして上映情報が公式に公開されている。特定芸人の発言確認済みではなく、映画好き芸人の文脈を拾うコラム寄りスポット。"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.7006,
+          35.6616
+        ]
+      },
+      "properties": {
+        "id": "p104",
+        "name": "渋谷センター街",
+        "catch": "街ブラロケの“何か起きそう感”が濃い渋谷の中心",
+        "category": "街",
+        "area": "渋谷",
+        "heLevel": 3,
+        "address": "東京都渋谷区宇田川町周辺",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E6%B8%8B%E8%B0%B7%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E8%A1%97",
+        "tags": [
+          "#街ブラ",
+          "#渋谷",
+          "#若者文化",
+          "#ロケ"
+        ],
+        "relatedComedians": [
+          "霜降り明星",
+          "EXIT",
+          "かまいたち"
+        ],
+        "story": "渋谷らしさを短時間で浴びられる中心地。街ブラ気分で歩くだけでもネタになる。",
+        "sourceMemo": "観光情報・街歩き情報をもとにした編集メモ",
+        "scene": "人も看板も音も多く、芸人なら何か拾って話にできそうな情報量がある。",
+        "role": "column",
+        "importance": "low"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.7619,
+          35.6956
+        ]
+      },
+      "properties": {
+        "id": "p201",
+        "name": "神保町よしもと漫才劇場",
+        "catch": "神保町の“劇場と本の街”をつなぐ中心点",
+        "category": "劇場",
+        "area": "神保町",
+        "heLevel": 5,
+        "address": "東京都千代田区神田神保町1-23 神保町シアタービル2F",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E7%A5%9E%E4%BF%9D%E7%94%BA%E3%82%88%E3%81%97%E3%82%82%E3%81%A8%E6%BC%AB%E6%89%8D%E5%8A%87%E5%A0%B4",
+        "tags": [
+          "#劇場",
+          "#漫才",
+          "#神保町",
+          "#若手芸人"
+        ],
+        "relatedComedians": [
+          "ナイチンゲールダンス",
+          "9番街レトロ",
+          "令和ロマン"
+        ],
+        "story": "神保町らしい知的な街並みと、若手漫才の熱が近い距離で重なる場所。観劇前後の寄り道まで含めて楽しめる。",
+        "sourceMemo": "公式劇場情報・公開スケジュールを確認",
+        "scene": "劇場、古書店、喫茶店が徒歩圏に重なる街。芸人の言葉や本の話が出てきた時に、周辺の手がかりへつなげやすい。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "神保町よしもと漫才劇場公式サイト",
+        "sourceEpisode": "公演スケジュール・劇場情報",
+        "talkSummary": "若手漫才師の公演が行われる劇場として、公式にスケジュールが公開されている。神保町の古書店・喫茶店へ広げる探索の起点。",
+        "role": "anchor",
+        "importance": "anchor",
+        "sourceDate": "公式サイト参照",
+        "sourceUrl": "https://jimbocho-manzaigekijyo.yoshimoto.co.jp/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.7606,
+          35.6952
+        ]
+      },
+      "properties": {
+        "id": "p202",
+        "name": "三省堂書店 神保町本店",
+        "catch": "芸人の本棚を想像しながら寄りたい神保町の大型書店",
+        "category": "書店",
+        "area": "神保町",
+        "heLevel": 5,
+        "address": "東京都千代田区神田神保町1丁目",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E4%B8%89%E7%9C%81%E5%A0%82%E6%9B%B8%E5%BA%97%20%E7%A5%9E%E4%BF%9D%E7%94%BA",
+        "tags": [
+          "#書店",
+          "#芸人本",
+          "#神保町",
+          "#ライブ帰り",
+          "#行きつけ系"
+        ],
+        "relatedComedians": [
+          "又吉直樹",
+          "若林正恭",
+          "山里亮太"
+        ],
+        "story": "本を探すだけでなく、街の気分を切り替える場所。神保町の探索に厚みを出してくれる。",
+        "sourceMemo": "公式店舗情報を確認",
+        "scene": "神保町よしもと漫才劇場と本の街が近いこと自体が面白い。ネタ作り、エッセイ、ラジオ本の話が出た時に寄り道先として自然に浮かぶ。",
+        "role": "clue",
+        "importance": "high",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "三省堂書店公式サイト",
+        "sourceEpisode": "店舗情報",
+        "sourceDate": "公式サイト参照",
+        "sourceUrl": "https://www.books-sanseido.co.jp/",
+        "talkSummary": "神保町の書店として公式に店舗情報が公開されている。芸人個人の行きつけ断定ではなく、劇場前後に本や言葉の手がかりへ広げる場所。"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.7598,
+          35.6954
+        ]
+      },
+      "properties": {
+        "id": "p203",
+        "name": "さぼうる",
+        "catch": "ネタ作り前の沈黙まで想像できる喫茶店",
+        "category": "カフェ",
+        "area": "神保町",
+        "heLevel": 4,
+        "address": "東京都千代田区神田神保町1-11",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%95%E3%81%BC%E3%81%86%E3%82%8B%20%E7%A5%9E%E4%BF%9D%E7%94%BA",
+        "tags": [
+          "#喫茶店",
+          "#神保町",
+          "#レトロ",
+          "#ネタ作り"
+        ],
+        "relatedComedians": [
+          "又吉直樹",
+          "マヂカルラブリー",
+          "空気階段"
+        ],
+        "story": "レトロな雰囲気が魅力の喫茶店。古書店街を歩いた後の休憩にぴったり。",
+        "sourceMemo": "店舗情報・街歩き情報をもとにした編集メモ",
+        "scene": "喫茶店はネタ作り、読書、打ち合わせが似合う。神保町の落ち着きが芸人の言葉と相性いい。",
+        "role": "clue",
+        "importance": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.7585,
+          35.6961
+        ]
+      },
+      "properties": {
+        "id": "p204",
+        "name": "神保町古書店街",
+        "catch": "言葉好き芸人の頭の中を歩くみたいな古書店街",
+        "category": "街",
+        "area": "神保町",
+        "heLevel": 4,
+        "address": "東京都千代田区神田神保町周辺",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E7%A5%9E%E4%BF%9D%E7%94%BA%E5%8F%A4%E6%9B%B8%E5%BA%97%E8%A1%97",
+        "tags": [
+          "#古書店",
+          "#言葉",
+          "#神保町",
+          "#読書"
+        ],
+        "relatedComedians": [
+          "又吉直樹",
+          "カズレーザー",
+          "若林正恭"
+        ],
+        "story": "歩くだけで楽しい古書店街。棚を眺めているだけでも時間が溶ける。",
+        "sourceMemo": "観光情報・公開店舗情報をもとにした編集メモ",
+        "scene": "本と言葉の密度が高く、ラジオやエッセイで語られそうな引っかかりが多い。",
+        "role": "clue",
+        "importance": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.6659,
+          35.7061
+        ]
+      },
+      "properties": {
+        "id": "p301",
+        "name": "中野ブロードウェイ",
+        "catch": "サブカル好き芸人の話が一気に立体になる迷宮",
+        "category": "街",
+        "area": "中野",
+        "heLevel": 4,
+        "address": "東京都中野区中野5-52-15",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E4%B8%AD%E9%87%8E%E3%83%96%E3%83%AD%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A4",
+        "tags": [
+          "#中野",
+          "#サブカル",
+          "#漫画",
+          "#趣味"
+        ],
+        "relatedComedians": [
+          "バカリズム",
+          "ケンドーコバヤシ",
+          "空気階段"
+        ],
+        "story": "中野を代表するサブカルスポット。目的なく入っても、何かしら見つかる迷宮感がいい。",
+        "sourceMemo": "観光情報・公開店舗情報をもとにした編集メモ",
+        "scene": "漫画、特撮、ゲーム、ホビー。趣味を深く語る芸人が好きそうな濃度がある。",
+        "role": "clue",
+        "importance": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.6664,
+          35.7075
+        ]
+      },
+      "properties": {
+        "id": "p302",
+        "name": "中野サンモール商店街",
+        "catch": "芸人の何気ない日常トークが似合う商店街",
+        "category": "街",
+        "area": "中野",
+        "heLevel": 3,
+        "address": "東京都中野区中野5丁目",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E4%B8%AD%E9%87%8E%E3%82%B5%E3%83%B3%E3%83%A2%E3%83%BC%E3%83%AB%E5%95%86%E5%BA%97%E8%A1%97",
+        "tags": [
+          "#商店街",
+          "#中野",
+          "#日常",
+          "#街ブラ"
+        ],
+        "relatedComedians": [
+          "マヂカルラブリー",
+          "オードリー",
+          "アルコ&ピース"
+        ],
+        "story": "駅から歩きやすく、食べ歩きもしやすい。中野の入口として使いやすい商店街。",
+        "sourceMemo": "商店街情報・街歩き情報をもとにした候補",
+        "scene": "日常感のある商店街は、ラジオのフリートークに出てきそうな出来事が起きやすい。",
+        "role": "column",
+        "importance": "low"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.6648,
+          35.7086
+        ]
+      },
+      "properties": {
+        "id": "p303",
+        "name": "まんだらけ 中野店",
+        "catch": "趣味が濃い芸人ほど長居しそうな棚の密度",
+        "category": "書店",
+        "area": "中野",
+        "heLevel": 4,
+        "address": "東京都中野区中野5-52-15 中野ブロードウェイ内",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%BE%E3%82%93%E3%81%A0%E3%82%89%E3%81%91%20%E4%B8%AD%E9%87%8E",
+        "tags": [
+          "#漫画",
+          "#ホビー",
+          "#中野",
+          "#サブカル"
+        ],
+        "relatedComedians": [
+          "ケンドーコバヤシ",
+          "ハライチ岩井",
+          "バカリズム"
+        ],
+        "story": "漫画やホビーの密度が高い名店。好きなジャンルがある人にはかなり刺さる。",
+        "sourceMemo": "店舗情報・公開カルチャー情報をもとにした候補",
+        "scene": "趣味の深掘りトークが強い芸人ほど、棚の前で長く語れそうな場所。",
+        "role": "clue",
+        "importance": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.6689,
+          35.7071
+        ]
+      },
+      "properties": {
+        "id": "p304",
+        "name": "中野レンガ坂",
+        "catch": "ラジオ終わりの飲み話が似合う中野の坂",
+        "category": "居酒屋",
+        "area": "中野",
+        "heLevel": 3,
+        "address": "東京都中野区中野3丁目周辺",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E4%B8%AD%E9%87%8E%E3%83%AC%E3%83%B3%E3%82%AC%E5%9D%82",
+        "tags": [
+          "#居酒屋",
+          "#中野",
+          "#飲み歩き",
+          "#ラジオ"
+        ],
+        "relatedComedians": [
+          "オードリー",
+          "アルコ&ピース",
+          "空気階段"
+        ],
+        "story": "中野らしい飲食エリア。派手すぎず、ふらっと一杯にちょうどいい雰囲気。",
+        "sourceMemo": "街歩き情報・公開店舗情報をもとにした編集メモ",
+        "scene": "飲み屋が近い距離で並び、芸人同士の普通の会話や反省会が似合う。",
+        "role": "clue",
+        "importance": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.6672,
+          35.6616
+        ]
+      },
+      "properties": {
+        "id": "p401",
+        "name": "本多劇場",
+        "catch": "下北沢の舞台カルチャーを読むための大きな起点",
+        "category": "劇場",
+        "area": "下北沢",
+        "heLevel": 5,
+        "address": "東京都世田谷区北沢2-10-15",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E6%9C%AC%E5%A4%9A%E5%8A%87%E5%A0%B4",
+        "tags": [
+          "#劇場",
+          "#下北沢",
+          "#演劇",
+          "#コント"
+        ],
+        "relatedComedians": [
+          "シソンヌ",
+          "東京03",
+          "バカリズム"
+        ],
+        "story": "街の中心に近く、観劇前後の飲食や古着屋めぐりにも流れやすい。下北沢らしい余白がある劇場。",
+        "sourceMemo": "公式劇場情報・公演情報を確認",
+        "scene": "テレビの芸人像とは違う、舞台側の顔が見えやすい場所。下北沢で“芸人と演劇”の線を引くならここから始めたい。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "本多劇場グループ公式サイト",
+        "sourceEpisode": "本多劇場・公演情報",
+        "talkSummary": "演劇公演が行われる劇場として、公式に公演情報が公開されている。コント師や俳優仕事をする芸人の文脈を追う起点。",
+        "role": "anchor",
+        "importance": "anchor",
+        "sourceDate": "公式サイト参照",
+        "sourceUrl": "https://www.honda-geki.com/honda/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.6676,
+          35.6612
+        ]
+      },
+      "properties": {
+        "id": "p402",
+        "name": "駅前劇場",
+        "catch": "小劇場の距離感で、コントの気配を拾う場所",
+        "category": "劇場",
+        "area": "下北沢",
+        "heLevel": 4,
+        "address": "東京都世田谷区北沢2-11-8 TAROビル3F",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E9%A7%85%E5%89%8D%E5%8A%87%E5%A0%B4%20%E4%B8%8B%E5%8C%97%E6%B2%A2",
+        "tags": [
+          "#小劇場",
+          "#下北沢",
+          "#舞台",
+          "#コント"
+        ],
+        "relatedComedians": [
+          "ラーメンズ",
+          "東京03",
+          "かもめんたる"
+        ],
+        "story": "駅から近く、ふらっと街歩きにも組み込みやすい。劇場が街の日常に溶けている感じがいい。",
+        "sourceMemo": "公式劇場情報・公演情報を確認",
+        "scene": "客席との距離が近い劇場は、芸人の芝居・コント・単独ライブの温度を想像しやすい。下北沢の手がかりとして強い。",
+        "role": "anchor",
+        "importance": "anchor",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "本多劇場グループ公式サイト",
+        "sourceEpisode": "駅前劇場・公演情報",
+        "sourceDate": "公式サイト参照",
+        "sourceUrl": "https://www.honda-geki.com/ekimae/",
+        "talkSummary": "駅前劇場の公演情報は公式サイトで公開されている。特定の目撃情報ではなく、舞台出演・小劇場文化の起点として扱う。"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.6692,
+          35.6602
+        ]
+      },
+      "properties": {
+        "id": "p403",
+        "name": "BONUS TRACK",
+        "catch": "芸人のエッセイに出てきそうな下北沢の休憩地",
+        "category": "カフェ",
+        "area": "下北沢",
+        "heLevel": 3,
+        "address": "東京都世田谷区代田2-36-15",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=BONUS%20TRACK%20%E4%B8%8B%E5%8C%97%E6%B2%A2",
+        "tags": [
+          "#カフェ",
+          "#下北沢",
+          "#カルチャー",
+          "#寄り道"
+        ],
+        "relatedComedians": [
+          "又吉直樹",
+          "Aマッソ",
+          "ラランド"
+        ],
+        "story": "下北沢散歩の休憩地として優秀。店の並びに余白があって、歩いていて気持ちいい。",
+        "sourceMemo": "施設情報・公開イベント情報をもとにした候補",
+        "scene": "本、食、音楽、イベントが混ざる場所は、芸人の雑談やエッセイの舞台になりやすい。",
+        "role": "column",
+        "importance": "low"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.6665,
+          35.6623
+        ]
+      },
+      "properties": {
+        "id": "p404",
+        "name": "下北沢古着屋エリア",
+        "catch": "私服いじりとサブカル雑談が似合う下北沢の通り",
+        "category": "街",
+        "area": "下北沢",
+        "heLevel": 3,
+        "address": "東京都世田谷区北沢2丁目周辺",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E4%B8%8B%E5%8C%97%E6%B2%A2%20%E5%8F%A4%E7%9D%80%E5%B1%8B",
+        "tags": [
+          "#古着",
+          "#下北沢",
+          "#街ブラ",
+          "#私服"
+        ],
+        "relatedComedians": [
+          "蛙亭",
+          "空気階段",
+          "ラランド"
+        ],
+        "story": "下北沢らしい古着屋エリア。見るだけでも楽しく、寄り道感がちょうどいい。",
+        "sourceMemo": "街歩き情報・公開店舗情報をもとにした編集メモ",
+        "scene": "古着、私服、センスの話は芸人の余談になりやすい。街ブラの軽い引っかかりが多い。",
+        "role": "column",
+        "importance": "low"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.7356,
+          35.6721
+        ]
+      },
+      "properties": {
+        "id": "p901",
+        "name": "TBS放送センター",
+        "catch": "番組で芸人が集まる、赤坂の仕事場",
+        "category": "テレビ局",
+        "area": "赤坂",
+        "heLevel": 4,
+        "address": "東京都港区赤坂5-3-6",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=TBS%E6%94%BE%E9%80%81%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC",
+        "tags": [
+          "#テレビ局",
+          "#赤坂",
+          "#番組",
+          "#バラエティ"
+        ],
+        "relatedComedians": [
+          "有吉弘行",
+          "バナナマン",
+          "麒麟川島"
+        ],
+        "story": "赤坂のランドマーク。番組名から手がかりを探す時の出発点として、地図上にあるだけで文脈が立つ。",
+        "sourceMemo": "公式施設情報を確認",
+        "scene": "グルメ番組やトーク番組の発言をたどる時、赤坂という街そのものが文脈になる。劇場とは別系統の芸人導線として置いておきたい。",
+        "role": "anchor",
+        "importance": "anchor",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBS公式サイト",
+        "sourceEpisode": "TBS放送センター所在地・施設情報",
+        "sourceDate": "公式サイト参照",
+        "sourceUrl": "https://www.tbs.co.jp/",
+        "talkSummary": "テレビ番組の収録・制作と結びつく放送局。芸人の現在地ではなく、番組発言の背景にある仕事場として見るための起点。"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.5059,
+          34.6652
+        ]
+      },
+      "properties": {
+        "id": "p902",
+        "name": "裏なんばの串揚げ店（店名要確認）",
+        "catch": "濱家さんが番組で巡った、裏なんばの記憶",
+        "category": "居酒屋",
+        "area": "裏なんば",
+        "heLevel": 5,
+        "address": "大阪府大阪市中央区難波千日前周辺",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E8%A3%8F%E3%81%AA%E3%82%93%E3%81%B0%20%E4%B8%B2%E6%8F%9A%E3%81%92",
+        "tags": [
+          "#かまいたち",
+          "#濱家",
+          "#行きつけ",
+          "#裏なんば",
+          "#番組発言",
+          "#行きつけ系"
+        ],
+        "relatedComedians": [
+          "かまいたち",
+          "濱家隆一",
+          "山内健司",
+          "見取り図リリー"
+        ],
+        "story": "店名は記事本文だけでは特定しきらないため要確認。ただ、裏なんば全体の飲食店密度と劇場文化の近さが伝わる、かなり強い探索ポイント。",
+        "sourceMemo": "スポニチ記事で番組名・エリア・発言文脈を確認。店名は記事本文から特定できないため要確認。",
+        "scene": "“劇場出演後や出演の合間に来ていた”という文脈があるため、ただの人気店ではなく、芸人の大阪時代の導線を想像できる手がかりになる。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "MBSテレビ「かまいたちの知らんけど」",
+        "sourceEpisode": "濱家さんが大阪・裏なんばの思い出の店を巡った回",
+        "sourceDate": "スポニチ記事公開：2023年2月18日",
+        "sourceUrl": "https://www.sponichi.co.jp/entertainment/news/2023/02/18/kiji/20230218s00041000238000c.html",
+        "talkSummary": "スポニチ記事では、濱家さんが大阪・裏なんばの思い出の店を巡り、1軒目の串揚げ店について、劇場出演後や出演の合間に見取り図リリーさんらと来ていたと紹介されている。",
+        "role": "clue",
+        "importance": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.7061,
+          35.6905
+        ]
+      },
+      "properties": {
+        "id": "c001",
+        "name": "新宿三丁目の芸人飲み候補（店名確認中）",
+        "catch": "番組・ラジオで出がちな“新宿で飲むなら”枠",
+        "category": "居酒屋",
+        "area": "新宿",
+        "role": "clue",
+        "importance": "medium",
+        "heLevel": 3,
+        "address": "東京都新宿区新宿3丁目周辺",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E5%AE%BF%E4%B8%89%E4%B8%81%E7%9B%AE%20%E5%B1%85%E9%85%92%E5%B1%8B",
+        "tags": [
+          "#発言候補",
+          "#新宿三丁目",
+          "#居酒屋",
+          "#要確認"
+        ],
+        "relatedComedians": [
+          "千鳥",
+          "かまいたち",
+          "ニューヨーク"
+        ],
+        "scene": "ルミネtheよしもと、新宿末廣亭、歌舞伎町に近く、芸人のライブ後トークと結びつきやすいエリア。番組名と店名が揃えば強いカードになる。",
+        "sourceStatus": "要確認メモ",
+        "sourceProgram": "調査候補：テレビ番組・ラジオ・YouTubeの飲みトーク",
+        "sourceEpisode": "「新宿でよく行く」「劇場帰りに飲む」系の発言確認待ち",
+        "talkSummary": "現時点では店名・番組回を未確定。新宿三丁目は劇場導線と飲食店密度が高いため、発言ありカード化の優先調査枠として置いておく。",
+        "story": "古い酒場から深夜営業の店まで選択肢が多く、街としての説得力がある。候補段階でも探索の導線としてはかなり面白い。",
+        "sourceMemo": "番組名・店名・発言内容・出典URLの確認待ち"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.7039,
+          35.6946
+        ]
+      },
+      "properties": {
+        "id": "c002",
+        "name": "歌舞伎町の深夜メシ候補（店名確認中）",
+        "catch": "収録後・ライブ後の“もう一軒”を探す枠",
+        "category": "ラーメン",
+        "area": "新宿",
+        "role": "clue",
+        "importance": "medium",
+        "heLevel": 3,
+        "address": "東京都新宿区歌舞伎町周辺",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E6%AD%8C%E8%88%9E%E4%BC%8E%E7%94%BA%20%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3",
+        "tags": [
+          "#発言候補",
+          "#歌舞伎町",
+          "#深夜メシ",
+          "#要確認"
+        ],
+        "relatedComedians": [
+          "さらば青春の光",
+          "鬼越トマホーク",
+          "ニューヨーク"
+        ],
+        "scene": "新宿の夜の文脈が強く、劇場・テレビ・飲食の話が接続しやすい。軽く見えるが、出典が取れるとかなり強い手がかりになる。",
+        "sourceStatus": "要確認メモ",
+        "sourceProgram": "調査候補：深夜番組・YouTube・ラジオの食事トーク",
+        "sourceEpisode": "「深夜に行く」「仕事終わりに寄る」系の発言確認待ち",
+        "talkSummary": "歌舞伎町の具体店名は未確定。芸人の深夜メシ発言が拾えたら、店名確定後に発言ありカードへ昇格させる。",
+        "story": "地図上で光らせると、探索感が出るエリア。断定せず候補として持っておく価値がある。",
+        "sourceMemo": "番組名・店名・発言内容・出典URLの確認待ち"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.6977,
+          35.6621
+        ]
+      },
+      "properties": {
+        "id": "c003",
+        "name": "渋谷・宇田川町のトーク後ごはん候補",
+        "catch": "若手芸人のライブ後トークに出てきそうな渋谷の夜",
+        "category": "居酒屋",
+        "area": "渋谷",
+        "role": "clue",
+        "importance": "medium",
+        "heLevel": 3,
+        "address": "東京都渋谷区宇田川町周辺",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E6%B8%8B%E8%B0%B7%20%E5%AE%87%E7%94%B0%E5%B7%9D%E7%94%BA%20%E5%B1%85%E9%85%92%E5%B1%8B",
+        "tags": [
+          "#発言候補",
+          "#渋谷",
+          "#宇田川町",
+          "#要確認"
+        ],
+        "relatedComedians": [
+          "令和ロマン",
+          "男性ブランコ",
+          "ニューヨーク"
+        ],
+        "scene": "ヨシモト∞ホールやLOFT9 Shibuyaから動きやすい。発言の断片が拾えれば、街の導線としてかなり使いやすい。",
+        "sourceStatus": "要確認メモ",
+        "sourceProgram": "調査候補：劇場ライブ後のラジオ・YouTube・インタビュー",
+        "sourceEpisode": "ヨシモト∞ホール周辺の食事・飲み発言確認待ち",
+        "talkSummary": "若手芸人の渋谷周辺発言を集めるための候補ピン。出典が取れるまでは店名を断定しない。",
+        "story": "渋谷の中心部で、ライブ・トーク・食事が近い距離でつながる。候補棚として置いておくと調査が進めやすい。",
+        "sourceMemo": "番組名・店名・発言内容・出典URLの確認待ち"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.7584,
+          35.6957
+        ]
+      },
+      "properties": {
+        "id": "c004",
+        "name": "神保町の喫茶店トーク候補（店名確認中）",
+        "catch": "漫才師の本・ネタ作り話と相性がいい喫茶枠",
+        "category": "カフェ",
+        "area": "神保町",
+        "role": "clue",
+        "importance": "medium",
+        "heLevel": 3,
+        "address": "東京都千代田区神田神保町周辺",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E7%A5%9E%E4%BF%9D%E7%94%BA%20%E5%96%AB%E8%8C%B6%E5%BA%97",
+        "tags": [
+          "#発言候補",
+          "#神保町",
+          "#喫茶店",
+          "#要確認"
+        ],
+        "relatedComedians": [
+          "オズワルド",
+          "令和ロマン",
+          "ナイチンゲールダンス"
+        ],
+        "scene": "劇場、本屋、喫茶店が近く、漫才師の言葉やネタ作りの話と相性がいい。発言あり化するとかなり味のあるカードになる。",
+        "sourceStatus": "要確認メモ",
+        "sourceProgram": "調査候補：神保町芸人のラジオ・インタビュー・劇場配信",
+        "sourceEpisode": "劇場前後に使う喫茶店・作業場所の発言確認待ち",
+        "talkSummary": "神保町の喫茶店は候補が多いため、店名を急いで断定しない。発言元が取れたものから個別ピンへ分ける。",
+        "story": "神保町らしい静かな時間があり、派手さよりも“考えている芸人”の気配が出せる。",
+        "sourceMemo": "番組名・店名・発言内容・出典URLの確認待ち"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.6655,
+          35.7064
+        ]
+      },
+      "properties": {
+        "id": "c005",
+        "name": "中野ブロードウェイ周辺の趣味トーク候補",
+        "catch": "芸人の収集癖・漫画・ゲーム話を拾う枠",
+        "category": "街",
+        "area": "中野",
+        "role": "clue",
+        "importance": "medium",
+        "heLevel": 3,
+        "address": "東京都中野区中野5丁目周辺",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E4%B8%AD%E9%87%8E%E3%83%96%E3%83%AD%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A4",
+        "tags": [
+          "#発言候補",
+          "#中野",
+          "#趣味",
+          "#要確認"
+        ],
+        "relatedComedians": [
+          "バカリズム",
+          "ケンドーコバヤシ",
+          "空気階段"
+        ],
+        "scene": "趣味の深掘りをする芸人ほど、街の濃度と相性がいい。食事よりも“何を好きか”が見える手がかりとして使える。",
+        "sourceStatus": "要確認メモ",
+        "sourceProgram": "調査候補：趣味系番組・ラジオ・エッセイ",
+        "sourceEpisode": "漫画・フィギュア・ゲーム関連の発言確認待ち",
+        "talkSummary": "中野ブロードウェイ周辺は趣味トークの受け皿として強い。具体店名や番組回が取れたらカードを分割する。",
+        "story": "歩くだけで情報量が多く、ストックしておくと後から掘りやすいエリア。",
+        "sourceMemo": "番組名・店名・発言内容・出典URLの確認待ち"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.6682,
+          35.662
+        ]
+      },
+      "properties": {
+        "id": "c006",
+        "name": "下北沢のライブ後カレー候補（店名確認中）",
+        "catch": "小劇場帰りの食事トークを拾いたい枠",
+        "category": "カフェ",
+        "area": "下北沢",
+        "role": "clue",
+        "importance": "medium",
+        "heLevel": 3,
+        "address": "東京都世田谷区北沢周辺",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E4%B8%8B%E5%8C%97%E6%B2%A2%20%E3%82%AB%E3%83%AC%E3%83%BC",
+        "tags": [
+          "#発言候補",
+          "#下北沢",
+          "#カレー",
+          "#要確認"
+        ],
+        "relatedComedians": [
+          "シソンヌ",
+          "空気階段",
+          "男性ブランコ"
+        ],
+        "scene": "本多劇場や駅前劇場から近く、舞台の余韻と食事の導線が作りやすい。確定すると使いやすい発言カードになる。",
+        "sourceStatus": "要確認メモ",
+        "sourceProgram": "調査候補：舞台・コント・単独ライブ後の食事トーク",
+        "sourceEpisode": "下北沢のカレー店・喫茶店に関する発言確認待ち",
+        "talkSummary": "下北沢はカレー店が多く、芸人の舞台後トークと結びつく可能性が高い。店名と発言元が揃うまで候補扱い。",
+        "story": "街全体に舞台と食の距離が近い。下北沢らしいカードを増やすための調査ポイント。",
+        "sourceMemo": "番組名・店名・発言内容・出典URLの確認待ち"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.5087,
+          34.6589
+        ]
+      },
+      "properties": {
+        "id": "r001",
+        "name": "たこしげ",
+        "catch": "大悟さんの貧乏時代を支えた、愛情ナポリタン",
+        "category": "居酒屋",
+        "area": "大阪日本橋",
+        "role": "clue",
+        "importance": "high",
+        "heLevel": 5,
+        "address": "大阪府大阪市浪速区日本橋東2-2-14 ナカガワマンション 1F",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%9F%E3%81%93%E3%81%97%E3%81%92%20%E5%A4%A7%E9%98%AA%20%E6%97%A5%E6%9C%AC%E6%A9%8B",
+        "tags": [
+          "#千鳥",
+          "#大悟",
+          "#人生最高レストラン",
+          "#大阪日本橋"
+        ],
+        "relatedComedians": [
+          "千鳥",
+          "大悟"
+        ],
+        "scene": "若手時代の食の記憶と店名が公式に残っている。単なる人気店ではなく、芸人の下積みの時間をたどれる強い手がかり。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「人生最高レストラン」",
+        "sourceEpisode": "2026年5月30日放送 ごちそう様 千鳥 大悟さん",
+        "sourceDate": "2026年5月30日",
+        "sourceUrl": "https://www.tbs.co.jp/saikourestaurant/archive/202605301/",
+        "talkSummary": "番組公式アーカイブで、大阪・日本橋「貧乏時代の支え！愛情ナポリタン」として紹介。店舗情報として「たこしげ」が掲載されている。",
+        "story": "大阪日本橋の空気と、腹を満たすごはんの温度が重なる店。カードとしてかなり良い。",
+        "sourceMemo": "TBS公式アーカイブで番組回・店名・住所を確認"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.7335,
+          35.6546
+        ]
+      },
+      "properties": {
+        "id": "r002",
+        "name": "三と十",
+        "catch": "大悟さんが笑いの神様と堪能した、麻布十番の焼きそば",
+        "category": "居酒屋",
+        "area": "麻布十番",
+        "role": "clue",
+        "importance": "high",
+        "heLevel": 5,
+        "address": "東京都港区麻布十番2-12-4 第2コーボービル2F",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E4%B8%89%E3%81%A8%E5%8D%81%20%E9%BA%BB%E5%B8%83%E5%8D%81%E7%95%AA",
+        "tags": [
+          "#千鳥",
+          "#大悟",
+          "#志村けん",
+          "#麻布十番"
+        ],
+        "relatedComedians": [
+          "千鳥",
+          "大悟",
+          "志村けん"
+        ],
+        "scene": "大悟さんと志村けんさんの思い出の文脈で出てくる店。芸人同士の縦の関係まで感じられる手がかり。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「人生最高レストラン」",
+        "sourceEpisode": "2026年5月30日放送 ごちそう様 千鳥 大悟さん",
+        "sourceDate": "2026年5月30日",
+        "sourceUrl": "https://www.tbs.co.jp/saikourestaurant/archive/202605301/",
+        "talkSummary": "番組公式アーカイブで、東京・麻布十番「笑いの神様と堪能！肉増し焼きそば」として紹介。店舗情報として「三と十」が掲載されている。",
+        "story": "麻布十番の落ち着いた夜に、焼きそばの強さがある。地図で見るとかなり味が出る。",
+        "sourceMemo": "TBS公式アーカイブで番組回・店名・住所を確認"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.5127,
+          34.6575
+        ]
+      },
+      "properties": {
+        "id": "r003",
+        "name": "すし処まさる",
+        "catch": "大悟さんの“人生最高の一品”として残る寿司店",
+        "category": "寿司",
+        "area": "四天王寺前",
+        "role": "clue",
+        "importance": "high",
+        "heLevel": 5,
+        "address": "大阪府大阪市浪速区下寺2-3-10 梅吉マンション1F",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%99%E3%81%97%E5%87%A6%E3%81%BE%E3%81%95%E3%82%8B%20%E5%A4%A7%E9%98%AA",
+        "tags": [
+          "#千鳥",
+          "#大悟",
+          "#人生最高の一品",
+          "#寿司",
+          "#行きつけ系"
+        ],
+        "relatedComedians": [
+          "千鳥",
+          "大悟"
+        ],
+        "scene": "行きつけというより、人生の節目と結びついた食の記憶。芸人の物語を深く見せられるカード。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「人生最高レストラン」",
+        "sourceEpisode": "2026年5月30日放送 ごちそう様 千鳥 大悟さん",
+        "sourceDate": "2026年5月30日",
+        "sourceUrl": "https://www.tbs.co.jp/saikourestaurant/archive/202605301/",
+        "talkSummary": "番組公式アーカイブで、大阪・四天王寺前「両親との思い出が残る高級寿司」かつ人生最高の一品として紹介。店舗情報として「すし処まさる」が掲載されている。",
+        "story": "派手な探索ではなく、記憶の重さで光る店。ストックしたくなるタイプの一軒。",
+        "sourceMemo": "TBS公式アーカイブで番組回・店名・住所を確認"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.506,
+          34.6524
+        ]
+      },
+      "properties": {
+        "id": "r004",
+        "name": "三吉うどん",
+        "catch": "さらば青春の光の下積みを支えた、170円のうどん",
+        "category": "うどん",
+        "area": "新世界",
+        "role": "clue",
+        "importance": "high",
+        "heLevel": 5,
+        "address": "大阪府大阪市浪速区恵美須東1-18-6",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E4%B8%89%E5%90%89%E3%81%86%E3%81%A9%E3%82%93%20%E6%96%B0%E4%B8%96%E7%95%8C",
+        "tags": [
+          "#さらば青春の光",
+          "#人生最高レストラン",
+          "#下積み",
+          "#新世界",
+          "#行きつけ系"
+        ],
+        "relatedComedians": [
+          "さらば青春の光",
+          "森田哲矢",
+          "東ブクロ"
+        ],
+        "scene": "下積み時代を支えたという見出しが強い。芸人の売れる前の時間を地図でたどれる、かなり良い手がかり。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「人生最高レストラン」",
+        "sourceEpisode": "2024年7月6日放送 ごちそう様 さらば青春の光",
+        "sourceDate": "2024年7月6日",
+        "sourceUrl": "https://www.tbs.co.jp/saikourestaurant/oldv8/202407061/",
+        "talkSummary": "番組公式アーカイブで、大阪・新世界「下積み時代を支えてくれた！170円のうどん」として紹介。店舗情報として「三吉うどん」が掲載されている。",
+        "story": "安くて早くて温かい一杯。芸人の物語と相性が良すぎる店。",
+        "sourceMemo": "TBS公式アーカイブで番組回・店名・住所を確認"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.5066,
+          34.6506
+        ]
+      },
+      "properties": {
+        "id": "r005",
+        "name": "DEN・EN",
+        "catch": "さらば青春の光が大阪時代に通った老舗レストラン",
+        "category": "洋食",
+        "area": "新世界",
+        "role": "clue",
+        "importance": "high",
+        "heLevel": 5,
+        "address": "大阪市浪速区恵美須東2-3-22",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=DEN%E3%83%BBEN%20%E6%96%B0%E4%B8%96%E7%95%8C",
+        "tags": [
+          "#さらば青春の光",
+          "#通った",
+          "#新世界",
+          "#洋食",
+          "#行きつけ系"
+        ],
+        "relatedComedians": [
+          "さらば青春の光",
+          "森田哲矢",
+          "東ブクロ"
+        ],
+        "scene": "“通った”という言葉が公式アーカイブに残る、かなり採用しやすい手がかり。新世界エリアの濃さも出る。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「人生最高レストラン」",
+        "sourceEpisode": "2024年7月6日放送 ごちそう様 さらば青春の光",
+        "sourceDate": "2024年7月6日",
+        "sourceUrl": "https://www.tbs.co.jp/saikourestaurant/oldv8/202407061/",
+        "talkSummary": "番組公式アーカイブで、大阪・新世界「大阪時代に通った！老舗レストラン」として紹介。店舗情報として「DEN・EN」が掲載されている。",
+        "story": "レトロな洋食の気配が、芸人の大阪時代の記憶とよく合う。",
+        "sourceMemo": "TBS公式アーカイブで番組回・店名・住所を確認"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.7224,
+          35.6259
+        ]
+      },
+      "properties": {
+        "id": "r006",
+        "name": "さらばBAR",
+        "catch": "さらば青春の光が経営する、五反田の根城",
+        "category": "バー",
+        "area": "五反田",
+        "role": "clue",
+        "importance": "high",
+        "heLevel": 5,
+        "address": "東京都品川区西五反田2-11-11 ヒルトップ五反田ハイツ101",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%95%E3%82%89%E3%81%B0BAR%20%E4%BA%94%E5%8F%8D%E7%94%B0",
+        "tags": [
+          "#さらば青春の光",
+          "#五反田",
+          "#バー",
+          "#本人経営",
+          "#行きつけ系"
+        ],
+        "relatedComedians": [
+          "さらば青春の光",
+          "森田哲矢",
+          "東ブクロ"
+        ],
+        "scene": "行きつけを超えて、本人たちの活動拠点に近いカード。五反田を芸人探索の街として見せるのに強い。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「人生最高レストラン」",
+        "sourceEpisode": "2024年7月6日放送 ごちそう様 さらば青春の光",
+        "sourceDate": "2024年7月6日",
+        "sourceUrl": "https://www.tbs.co.jp/saikourestaurant/oldv8/202407061/",
+        "talkSummary": "番組公式アーカイブで、東京・五反田「さらば青春の光が経営するBAR」として紹介。店舗情報として「さらばBAR」が掲載されている。",
+        "story": "店名だけでストーリーが立つ。地図上で見つけた時の引きがかなりある。",
+        "sourceMemo": "TBS公式アーカイブで番組回・店名・住所を確認"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.7143,
+          35.6445
+        ]
+      },
+      "properties": {
+        "id": "r007",
+        "name": "SO-TEN",
+        "catch": "さらば青春の光が東京での成功を噛みしめた創作和食",
+        "category": "和食",
+        "area": "恵比寿",
+        "role": "clue",
+        "importance": "high",
+        "heLevel": 5,
+        "address": "東京都渋谷区恵比寿4-27-4",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=SO-TEN%20%E6%81%B5%E6%AF%94%E5%AF%BF",
+        "tags": [
+          "#さらば青春の光",
+          "#人生最高の一品",
+          "#恵比寿",
+          "#和食"
+        ],
+        "relatedComedians": [
+          "さらば青春の光",
+          "森田哲矢",
+          "東ブクロ"
+        ],
+        "scene": "下積みの新世界から、成功を噛みしめる恵比寿へ。地図上で見ると芸人人生の移動が見える。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「人生最高レストラン」",
+        "sourceEpisode": "2024年7月6日放送 ごちそう様 さらば青春の光",
+        "sourceDate": "2024年7月6日",
+        "sourceUrl": "https://www.tbs.co.jp/saikourestaurant/oldv8/202407061/",
+        "talkSummary": "番組公式アーカイブで、東京・恵比寿「東京での成功を噛みしめた！創作和食」かつ人生最高の一品として紹介。店舗情報として「SO-TEN」が掲載されている。",
+        "story": "恵比寿らしい大人の店。さらば青春の光のストーリーに奥行きを足せる。",
+        "sourceMemo": "TBS公式アーカイブで番組回・店名・住所を確認"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.728,
+          35.6629
+        ]
+      },
+      "properties": {
+        "id": "r008",
+        "name": "中國飯店 六本木店",
+        "catch": "藤森慎吾さんが“天下統一”を宣言された中国料理",
+        "category": "中華",
+        "area": "六本木",
+        "role": "clue",
+        "importance": "high",
+        "heLevel": 5,
+        "address": "東京都港区西麻布 1-1-5 オリエンタルビル 1F",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E4%B8%AD%E5%9C%8B%E9%A3%AF%E5%BA%97%20%E5%85%AD%E6%9C%AC%E6%9C%A8%E5%BA%97",
+        "tags": [
+          "#藤森慎吾",
+          "#オリエンタルラジオ",
+          "#人生最高レストラン",
+          "#六本木",
+          "#行きつけ系"
+        ],
+        "relatedComedians": [
+          "オリエンタルラジオ",
+          "藤森慎吾"
+        ],
+        "scene": "行きつけ断定ではなく、番組で語られた食の記憶。六本木の芸能仕事の文脈とも接続しやすい。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「人生最高レストラン」",
+        "sourceEpisode": "2024年8月10日放送 ごちそう様 オリエンタルラジオ 藤森慎吾さん",
+        "sourceDate": "2024年8月10日",
+        "sourceUrl": "https://www.tbs.co.jp/saikourestaurant/oldv8/202408101/",
+        "talkSummary": "番組公式アーカイブで、東京・六本木「天下統一を宣言された！中国料理」として紹介。店舗情報として「中國飯店 六本木店」が掲載されている。",
+        "story": "老舗感と華やかさがあり、六本木のカードとして見栄えがいい。",
+        "sourceMemo": "TBS公式アーカイブで番組回・店名・住所を確認"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.7356,
+          35.6378
+        ]
+      },
+      "properties": {
+        "id": "r009",
+        "name": "ラジャ ヴェッタ 白金高輪店",
+        "catch": "タカアンドトシの上京生活を支えた、まかないパスタ",
+        "category": "イタリアン",
+        "area": "白金高輪",
+        "role": "clue",
+        "importance": "high",
+        "heLevel": 4,
+        "address": "東京都港区高輪2-16-49 レザミ高輪ビル 1F",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E3%83%A9%E3%82%B8%E3%83%A3%20%E3%83%B4%E3%82%A7%E3%83%83%E3%82%BF%20%E7%99%BD%E9%87%91%E9%AB%98%E8%BC%AA%E5%BA%97",
+        "tags": [
+          "#タカアンドトシ",
+          "#上京生活",
+          "#人生最高レストラン",
+          "#白金高輪"
+        ],
+        "relatedComedians": [
+          "タカアンドトシ",
+          "タカ",
+          "トシ"
+        ],
+        "scene": "上京生活を支えたという文脈が強い。芸人が東京に根を張っていく時間を感じられるカード。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「人生最高レストラン」",
+        "sourceEpisode": "2024年8月31日放送 ごちそう様 タカアンドトシさん",
+        "sourceDate": "2024年8月31日",
+        "sourceUrl": "https://www.tbs.co.jp/saikourestaurant/oldv8/202408311/",
+        "talkSummary": "番組公式アーカイブで、東京・白金高輪「上京生活を支えた！まかないパスタ」として紹介。店舗情報として「ラジャ ヴェッタ 白金高輪店」が掲載されている。",
+        "story": "白金高輪の落ち着きと、まかないパスタの生活感のギャップが良い。",
+        "sourceMemo": "TBS公式アーカイブで番組回・店名・住所を確認"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.211,
+          35.171
+        ]
+      },
+      "properties": {
+        "id": "r010",
+        "name": "ラーメン藤 愛知川店",
+        "catch": "ダイアン2人の絆を深めた、滋賀の思い出ラーメン",
+        "category": "ラーメン",
+        "area": "滋賀愛荘",
+        "role": "clue",
+        "importance": "high",
+        "heLevel": 5,
+        "address": "滋賀県愛知郡愛荘町中宿265-1",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%E8%97%A4%20%E6%84%9B%E7%9F%A5%E5%B7%9D%E5%BA%97",
+        "tags": [
+          "#ダイアン",
+          "#滋賀",
+          "#人生最高レストラン",
+          "#ラーメン"
+        ],
+        "relatedComedians": [
+          "ダイアン",
+          "ユースケ",
+          "津田篤宏"
+        ],
+        "scene": "小学生から長い付き合いの2人が語る“思い出”として強い。東京の売れた後ではなく、地元の時間に戻れる手がかり。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「人生最高レストラン」",
+        "sourceEpisode": "2024年3月2日放送 ごちそう様 ダイアンさん",
+        "sourceDate": "2024年3月2日",
+        "sourceUrl": "https://www.tbs.co.jp/saikourestaurant/oldv8/202403021/",
+        "talkSummary": "番組公式アーカイブで、滋賀・愛荘町「2人の絆を深めた！思い出のラーメン」として紹介。店舗情報として「ラーメン藤 愛知川店」が掲載されている。",
+        "story": "派手さよりも、コンビの原風景として効く一杯。地図で滋賀に飛ぶのも面白い。",
+        "sourceMemo": "TBS公式アーカイブで番組回・店名・住所を確認"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.263,
+          35.27
+        ]
+      },
+      "properties": {
+        "id": "r011",
+        "name": "ちゃんぽん亭 本店",
+        "catch": "ダイアンが2人で通った、彦根の近江ちゃんぽん",
+        "category": "ラーメン",
+        "area": "彦根",
+        "role": "clue",
+        "importance": "high",
+        "heLevel": 5,
+        "address": "滋賀県彦根市幸町74-1",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%A1%E3%82%83%E3%82%93%E3%81%BD%E3%82%93%E4%BA%AD%20%E6%9C%AC%E5%BA%97",
+        "tags": [
+          "#ダイアン",
+          "#彦根",
+          "#通った",
+          "#近江ちゃんぽん",
+          "#行きつけ系"
+        ],
+        "relatedComedians": [
+          "ダイアン",
+          "ユースケ",
+          "津田篤宏"
+        ],
+        "scene": "公式見出しに“2人で通った”と残っているのが強い。行きつけ系カードとしてかなり相性がいい。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「人生最高レストラン」",
+        "sourceEpisode": "2024年3月2日放送 ごちそう様 ダイアンさん",
+        "sourceDate": "2024年3月2日",
+        "sourceUrl": "https://www.tbs.co.jp/saikourestaurant/oldv8/202403021/",
+        "talkSummary": "番組公式アーカイブで、滋賀・彦根「2人で通った！近江ちゃんぽん」として紹介。店舗情報として「ちゃんぽん亭 本店」が掲載されている。",
+        "story": "コンビの時間がそのまま店の記憶になるタイプ。滋賀エリアを作る価値がある。",
+        "sourceMemo": "TBS公式アーカイブで番組回・店名・住所を確認"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.5037,
+          34.6655
+        ]
+      },
+      "properties": {
+        "id": "r012",
+        "name": "千とせ 本店",
+        "catch": "ダイアンが芸人の仲間入りを感じた、なんばの元祖大阪味",
+        "category": "うどん",
+        "area": "難波",
+        "role": "clue",
+        "importance": "high",
+        "heLevel": 5,
+        "address": "大阪市中央区難波千日前8-1",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E5%8D%83%E3%81%A8%E3%81%9B%20%E6%9C%AC%E5%BA%97%20%E9%9B%A3%E6%B3%A2",
+        "tags": [
+          "#ダイアン",
+          "#難波",
+          "#人生最高の一品",
+          "#大阪"
+        ],
+        "relatedComedians": [
+          "ダイアン",
+          "ユースケ",
+          "津田篤宏"
+        ],
+        "scene": "難波千日前という立地と“芸人の仲間入り”の見出しが強い。劇場文化と食の記憶が直結するカード。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「人生最高レストラン」",
+        "sourceEpisode": "2024年3月2日放送 ごちそう様 ダイアンさん",
+        "sourceDate": "2024年3月2日",
+        "sourceUrl": "https://www.tbs.co.jp/saikourestaurant/oldv8/202403021/",
+        "talkSummary": "番組公式アーカイブで、大阪・難波「芸人の仲間入りを果たした！元祖・大阪の味」かつ人生最高の一品として紹介。店舗情報として「千とせ 本店」が掲載されている。",
+        "story": "大阪のお笑い地図に入れるなら外せないタイプ。芸人探索MAPの核になりやすい。",
+        "sourceMemo": "TBS公式アーカイブで番組回・店名・住所を確認"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.5019,
+          34.7335
+        ]
+      },
+      "properties": {
+        "id": "r013",
+        "name": "浪花そば",
+        "catch": "森三中の大阪ロケを支えた、新大阪駅のうどん",
+        "category": "うどん",
+        "area": "新大阪",
+        "role": "clue",
+        "importance": "high",
+        "heLevel": 4,
+        "address": "JR新大阪駅3階 在来線改札内",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E6%B5%AA%E8%8A%B1%E3%81%9D%E3%81%B0%20%E6%96%B0%E5%A4%A7%E9%98%AA%E9%A7%85",
+        "tags": [
+          "#森三中",
+          "#新大阪",
+          "#ロケ",
+          "#うどん"
+        ],
+        "relatedComedians": [
+          "森三中",
+          "黒沢かずこ",
+          "村上知子",
+          "大島美幸"
+        ],
+        "scene": "過酷なロケの移動と駅の立ち食い感がつながる。芸人の仕事のしんどさと食の楽しみが同時に見える。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「人生最高レストラン」",
+        "sourceEpisode": "2024年4月27日放送 ごちそう様 森三中さん",
+        "sourceDate": "2024年4月27日",
+        "sourceUrl": "https://www.tbs.co.jp/saikourestaurant/oldv8/202404271/",
+        "talkSummary": "番組公式アーカイブで、新大阪駅「大阪の唯一の楽しみ！うどん」として紹介。店舗情報として「浪花そば」が掲載されている。",
+        "story": "駅ナカの一杯だからこそ、仕事の導線がリアル。派手ではないが良いカード。",
+        "sourceMemo": "TBS公式アーカイブで番組回・店名・住所を確認"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.4988,
+          34.7243
+        ]
+      },
+      "properties": {
+        "id": "r014",
+        "name": "福喜鮨 本店",
+        "catch": "森三中が大御所芸人にごちそうになった、高級寿司",
+        "category": "寿司",
+        "area": "西中島南方",
+        "role": "clue",
+        "importance": "high",
+        "heLevel": 5,
+        "address": "大阪府大阪市淀川区西中島1-9-13 クレアシオン新大阪 3F",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E7%A6%8F%E5%96%9C%E9%AE%A8%20%E6%9C%AC%E5%BA%97%20%E8%A5%BF%E4%B8%AD%E5%B3%B6",
+        "tags": [
+          "#森三中",
+          "#大御所芸人",
+          "#人生最高の一品",
+          "#寿司"
+        ],
+        "relatedComedians": [
+          "森三中",
+          "黒沢かずこ",
+          "村上知子",
+          "大島美幸"
+        ],
+        "scene": "大御所芸人にごちそうになった、という上下関係と憧れの文脈が強い。芸人世界の人間関係が見える。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「人生最高レストラン」",
+        "sourceEpisode": "2024年4月27日放送 ごちそう様 森三中さん",
+        "sourceDate": "2024年4月27日",
+        "sourceUrl": "https://www.tbs.co.jp/saikourestaurant/oldv8/202404271/",
+        "talkSummary": "番組公式アーカイブで、大阪・西中島南方「憧れの大御所芸人にごちそうになった！高級寿司」かつ人生最高の一品として紹介。店舗情報として「福喜鮨 本店」が掲載されている。",
+        "story": "寿司店としての特別感と、芸人の記憶が重なる一軒。",
+        "sourceMemo": "TBS公式アーカイブで番組回・店名・住所を確認"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.517,
+          34.676
+        ]
+      },
+      "properties": {
+        "id": "r015",
+        "name": "洋食の店 もなみ",
+        "catch": "なすなかにしが語った、芸人に愛された巨大ハンバーグ",
+        "category": "洋食",
+        "area": "谷町六丁目",
+        "role": "clue",
+        "importance": "high",
+        "heLevel": 5,
+        "address": "大阪府大阪市中央区谷町6-3-14",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E6%B4%8B%E9%A3%9F%E3%81%AE%E5%BA%97%20%E3%82%82%E3%81%AA%E3%81%BF",
+        "tags": [
+          "#なすなかにし",
+          "#芸人に愛された",
+          "#谷町六丁目",
+          "#洋食"
+        ],
+        "relatedComedians": [
+          "なすなかにし",
+          "那須晃行",
+          "中西茂樹"
+        ],
+        "scene": "見出しに“芸人に愛された”と入っている、アプリ向きの直球カード。大阪芸人の食の文脈を補強できる。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「人生最高レストラン」",
+        "sourceEpisode": "2024年6月15日放送 ごちそう様 なすなかにしさん",
+        "sourceDate": "2024年6月15日",
+        "sourceUrl": "https://www.tbs.co.jp/saikourestaurant/oldv8/202406151/",
+        "talkSummary": "番組公式アーカイブで、大阪・谷町六丁目「芸人に愛された！巨大ハンバーグ」として紹介。店舗情報として「洋食の店 もなみ」が掲載されている。",
+        "story": "巨大ハンバーグという画も強く、一般ユーザーが行ってみたくなる引きがある。",
+        "sourceMemo": "TBS公式アーカイブで番組回・店名・住所を確認"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.7805,
+          35.7424
+        ]
+      },
+      "properties": {
+        "id": "r016",
+        "name": "焼肉 一幸園",
+        "catch": "なすなかにし回に出た、町屋の“焼かない肉”",
+        "category": "焼肉",
+        "area": "町屋",
+        "role": "clue",
+        "importance": "high",
+        "heLevel": 4,
+        "address": "東京都荒川区荒川6-6-1",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E7%84%BC%E8%82%89%20%E4%B8%80%E5%B9%B8%E5%9C%92%20%E7%94%BA%E5%B1%8B",
+        "tags": [
+          "#なすなかにし",
+          "#町屋",
+          "#焼肉",
+          "#人生最高レストラン"
+        ],
+        "relatedComedians": [
+          "なすなかにし",
+          "那須晃行",
+          "中西茂樹"
+        ],
+        "scene": "店名とエピソードの引きがある。町屋という少し外したエリアも、探索MAPではむしろ面白い。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「人生最高レストラン」",
+        "sourceEpisode": "2024年6月15日放送 ごちそう様 なすなかにしさん",
+        "sourceDate": "2024年6月15日",
+        "sourceUrl": "https://www.tbs.co.jp/saikourestaurant/oldv8/202406151/",
+        "talkSummary": "番組公式アーカイブで、東京・町屋「焼き肉店の焼かない肉」として紹介。店舗情報として「焼肉 一幸園」が掲載されている。",
+        "story": "焼肉なのに“焼かない肉”という記憶に残るフックがある。",
+        "sourceMemo": "TBS公式アーカイブで番組回・店名・住所を確認"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.724,
+          35.66
+        ]
+      },
+      "properties": {
+        "id": "r017",
+        "name": "焼肉うしごろ 西麻布本店",
+        "catch": "なすなかにしが大先輩との思い出を語った焼肉のシメ",
+        "category": "焼肉",
+        "area": "西麻布",
+        "role": "clue",
+        "importance": "high",
+        "heLevel": 5,
+        "address": "東京都港区西麻布2-24-14 Barbizon73 1F",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E7%84%BC%E8%82%89%E3%81%86%E3%81%97%E3%81%94%E3%82%8D%20%E8%A5%BF%E9%BA%BB%E5%B8%83%E6%9C%AC%E5%BA%97",
+        "tags": [
+          "#なすなかにし",
+          "#大先輩",
+          "#人生最高の一品",
+          "#西麻布"
+        ],
+        "relatedComedians": [
+          "なすなかにし",
+          "那須晃行",
+          "中西茂樹"
+        ],
+        "scene": "売れてからの東京の食事、先輩との関係、人生最高の一品が重なる強いカード。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「人生最高レストラン」",
+        "sourceEpisode": "2024年6月15日放送 ごちそう様 なすなかにしさん",
+        "sourceDate": "2024年6月15日",
+        "sourceUrl": "https://www.tbs.co.jp/saikourestaurant/oldv8/202406151/",
+        "talkSummary": "番組公式アーカイブで、東京・西麻布「芸能界の大先輩との思い出！焼き肉のシメ」かつ人生最高の一品として紹介。店舗情報として「焼肉うしごろ 西麻布本店」が掲載されている。",
+        "story": "西麻布の夜の空気と、芸人の先輩後輩の記憶が合う。",
+        "sourceMemo": "TBS公式アーカイブで番組回・店名・住所を確認"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.704,
+          35.6905
+        ]
+      },
+      "properties": {
+        "id": "r018",
+        "name": "中華菜房 達磨",
+        "catch": "とにかく明るい安村さんの下積みを支えた、新宿レバニラ",
+        "category": "中華",
+        "area": "新宿",
+        "role": "clue",
+        "importance": "high",
+        "heLevel": 5,
+        "address": "東京都新宿区新宿3-31-5 新宿ペガサス館 1F",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E4%B8%AD%E8%8F%AF%E8%8F%9C%E6%88%BF%20%E9%81%94%E7%A3%A8%20%E6%96%B0%E5%AE%BF",
+        "tags": [
+          "#とにかく明るい安村",
+          "#下積み",
+          "#新宿",
+          "#中華",
+          "#行きつけ系"
+        ],
+        "relatedComedians": [
+          "とにかく明るい安村"
+        ],
+        "scene": "新宿のカードとして強い。世界進出後の安村さんから、下積み時代の新宿へ戻れる手がかり。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「人生最高レストラン」",
+        "sourceEpisode": "2024年2月17日放送 ごちそう様 とにかく明るい安村さん",
+        "sourceDate": "2024年2月17日",
+        "sourceUrl": "https://www.tbs.co.jp/saikourestaurant/oldv8/202402171/",
+        "talkSummary": "番組公式アーカイブで、東京・新宿「下積み時代を支えてくれた！レバニラ」として紹介。店舗情報として「中華菜房 達磨」が掲載されている。",
+        "story": "レバニラという生活感がいい。新宿探索の“食べに行ける発言あり”としてかなり使える。",
+        "sourceMemo": "TBS公式アーカイブで番組回・店名・住所を確認"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.7468,
+          35.6628
+        ]
+      },
+      "properties": {
+        "id": "r019",
+        "name": "心・技・体 うるふ",
+        "catch": "とにかく明るい安村さんが憧れの人と食べた、虎ノ門のパイタン鍋",
+        "category": "鍋",
+        "area": "虎ノ門",
+        "role": "clue",
+        "importance": "high",
+        "heLevel": 5,
+        "address": "東京都港区虎ノ門3-21-5 愛宕グリーンヒルズプラザ2F",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E5%BF%83%E3%83%BB%E6%8A%80%E3%83%BB%E4%BD%93%20%E3%81%86%E3%82%8B%E3%81%B5",
+        "tags": [
+          "#とにかく明るい安村",
+          "#人生最高の一品",
+          "#虎ノ門",
+          "#鍋"
+        ],
+        "relatedComedians": [
+          "とにかく明るい安村"
+        ],
+        "scene": "人生最高の一品として、憧れの人との食事が残っている。芸人人生の節目を感じるカード。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「人生最高レストラン」",
+        "sourceEpisode": "2024年2月17日放送 ごちそう様 とにかく明るい安村さん",
+        "sourceDate": "2024年2月17日",
+        "sourceUrl": "https://www.tbs.co.jp/saikourestaurant/oldv8/202402171/",
+        "talkSummary": "番組公式アーカイブで、東京・虎ノ門「人生最高の憧れの人と食べた！パイタン鍋」かつ人生最高の一品として紹介。店舗情報として「心・技・体 うるふ」が掲載されている。",
+        "story": "虎ノ門のきちんとした空気と、芸人の憧れの記憶が重なる。",
+        "sourceMemo": "TBS公式アーカイブで番組回・店名・住所を確認"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.7722,
+          35.7283
+        ]
+      },
+      "properties": {
+        "id": "b001",
+        "name": "京の華",
+        "catch": "小杉さんと川島さんが歩いて輸った、日暮里の台湾グルメ",
+        "category": "中華",
+        "area": "日暮里",
+        "role": "column",
+        "importance": "medium",
+        "heLevel": 4,
+        "address": "東京都荒川区西日暮里2-22-1 ステーションプラザタワー105",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E4%BA%AC%E3%81%AE%E8%8F%AF%20%E6%97%A5%E6%9A%AE%E9%87%8C",
+        "tags": [
+          "#ベスコングルメ",
+          "#小杉竜一",
+          "#麒麟川島",
+          "#日暮里",
+          "#番組訪問"
+        ],
+        "relatedComedians": [
+          "麒麟 川島明",
+          "ブラックマヨネーズ 小杉竜一"
+        ],
+        "scene": "芸人の行きつけではないが、芸人が番組で実際に歩いてたどり着いた店。地図体験との相性が高い。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「ベスコングルメ」",
+        "sourceEpisode": "2026年5月31日放送 町屋〜日暮里編",
+        "sourceDate": "2026年5月31日",
+        "sourceUrl": "https://www.tbs.co.jp/bescon_gurume/archive/202605311/",
+        "talkSummary": "番組公式ページで、川島さん、上川隆也さん、ブラックマヨネーズ小杉さんが町屋〜日暮里を歩き、「京の華」で台湾腸詰め炒飯と焼小籠包を味わったことが掲載されている。",
+        "story": "日暮里駅すぐの台湾グルメ。歩いた後に食べる番組の温度が伝わりやすい。",
+        "sourceMemo": "TBS公式ページで番組回・ゲスト・店名・住所を確認 / 行きつけではなく番組訪問として扱う"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.7296,
+          35.5888
+        ]
+      },
+      "properties": {
+        "id": "b002",
+        "name": "インド宮廷料理マシャール",
+        "catch": "ザキヤマさんと川島さんが目指した、大森のバターチキン",
+        "category": "カレー",
+        "area": "大森",
+        "role": "column",
+        "importance": "medium",
+        "heLevel": 4,
+        "address": "東京都大田区大森北1-10-14 Luz大森 3F",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E3%82%A4%E3%83%B3%E3%83%89%E5%AE%AE%E5%BB%B7%E6%96%99%E7%90%86%E3%83%9E%E3%82%B7%E3%83%A3%E3%83%BC%E3%83%AB",
+        "tags": [
+          "#ベスコングルメ",
+          "#アンタッチャブル山崎",
+          "#麒麟川島",
+          "#大森",
+          "#番組訪問"
+        ],
+        "relatedComedians": [
+          "麒麟 川島明",
+          "アンタッチャブル 山崎弘也"
+        ],
+        "scene": "番組の歩いた距離や目的地が公式に残るので、マップに落とし込むと“追体験”しやすい。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「ベスコングルメ」",
+        "sourceEpisode": "2026年6月21日放送 平和島〜大森編",
+        "sourceDate": "2026年6月21日",
+        "sourceUrl": "https://www.tbs.co.jp/bescon_gurume/archive/202606211/",
+        "talkSummary": "番組公式ページで、川島さん、ゴスペラーズ黒沢さん、アンタッチャブル山崎さんが平和島〜大森を歩き、「インド宮廷料理マシャール」でバターチキンカレーを味わったことが掲載されている。",
+        "story": "歩いた後のカレーとビールの組み合わせが強い。大森エリアの引きになる。",
+        "sourceMemo": "TBS公式ページで番組回・ゲスト・店名・住所を確認 / 行きつけではなく番組訪問として扱う"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.2508,
+          36.4021
+        ]
+      },
+      "properties": {
+        "id": "b003",
+        "name": "食酒屋 るり家",
+        "catch": "井戸田さんと春日さんが上田で味わった美味だれ焼き鳥",
+        "category": "居酒屋",
+        "area": "上田",
+        "role": "column",
+        "importance": "medium",
+        "heLevel": 4,
+        "address": "長野県上田市中央2-4-2",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E9%A3%9F%E9%85%92%E5%B1%8B%20%E3%82%8B%E3%82%8A%E5%AE%B6%20%E4%B8%8A%E7%94%B0",
+        "tags": [
+          "#ベスコングルメ",
+          "#スピードワゴン井戸田",
+          "#オードリー春日",
+          "#上田",
+          "#番組訪問"
+        ],
+        "relatedComedians": [
+          "オードリー 春日俊彰",
+          "スピードワゴン 井戸田潤"
+        ],
+        "scene": "東京だけでなく、芸人ロケが地方の街に光を当てる例として使える。街歩きのアプリと相性がいい。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「ベスコングルメ」",
+        "sourceEpisode": "2026年6月14日放送 上田周遊編",
+        "sourceDate": "2026年6月14日",
+        "sourceUrl": "https://www.tbs.co.jp/bescon_gurume/archive/202606141/",
+        "talkSummary": "番組公式ページで、春日さん、山崎育三郎さん、スピードワゴン井戸田さんが上田周遊を歩き、「食酒屋 るり家」で美味だれ焼き鳥などを味わったことが掲載されている。",
+        "story": "上田の名物を歩いた後に味わうカード。地図の広がりが出る。",
+        "sourceMemo": "TBS公式ページで番組回・ゲスト・店名・住所を確認 / 行きつけではなく番組訪問として扱う"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.6992,
+          35.6589
+        ]
+      },
+      "properties": {
+        "id": "r020",
+        "name": "渋谷っ子居酒屋 とととりとん",
+        "catch": "ニューヨークが芸人仲間と語り合った、道玄坂の居酒屋めし",
+        "category": "居酒屋",
+        "area": "渋谷",
+        "role": "clue",
+        "importance": "high",
+        "heLevel": 5,
+        "address": "東京都渋谷区道玄坂2-7-3 三喜ビル 3F",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E6%B8%8B%E8%B0%B7%E3%81%A3%E5%AD%90%E5%B1%85%E9%85%92%E5%B1%8B%20%E3%81%A8%E3%81%A8%E3%81%A8%E3%82%8A%E3%81%A8%E3%82%93",
+        "tags": [
+          "#ニューヨーク",
+          "#渋谷",
+          "#芸人仲間",
+          "#居酒屋",
+          "#行きつけ系"
+        ],
+        "relatedComedians": [
+          "ニューヨーク",
+          "嶋佐和也",
+          "屋敷裕政"
+        ],
+        "scene": "“芸人仲間と語り合った”という公式見出しが強い。劇場に限らない、渋谷の芸人導線を感じられるカード。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「人生最高レストラン」",
+        "sourceEpisode": "2023年12月16日放送 ごちそう様 ニューヨーク",
+        "sourceDate": "2023年12月16日",
+        "sourceUrl": "https://www.tbs.co.jp/saikourestaurant/oldv8/202312161/",
+        "talkSummary": "番組公式アーカイブで、東京・渋谷「芸人仲間と語り合った！居酒屋めし」として紹介。店舗情報として「渋谷っ子居酒屋 とととりとん」が掲載されている。",
+        "story": "道玄坂の駅近居酒屋。ニューヨークの売れる前後の記憶と渋谷の夜がつながる。",
+        "sourceMemo": "TBS公式アーカイブで番組回・店名・住所を確認"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.784,
+          35.6646
+        ]
+      },
+      "properties": {
+        "id": "r021",
+        "name": "もんじゃ 大江戸坂井",
+        "catch": "海原やすよ ともこ回に出た、月島の無限ループもんじゃ",
+        "category": "もんじゃ",
+        "area": "月島",
+        "role": "clue",
+        "importance": "medium",
+        "heLevel": 4,
+        "address": "東京都中央区月島1-8-1 アイマークタワー102",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E3%82%82%E3%82%93%E3%81%98%E3%82%83%20%E5%A4%A7%E6%B1%9F%E6%88%B8%E5%9D%82%E4%BA%95",
+        "tags": [
+          "#海原やすよともこ",
+          "#月島",
+          "#人生最高レストラン",
+          "#もんじゃ"
+        ],
+        "relatedComedians": [
+          "海原やすよ ともこ"
+        ],
+        "scene": "行きつけ断定ではないが、姉妹漫才コンビの番組回に残る東京の食の記憶。劇場周辺に偏らない地図の広がりに効く。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「人生最高レストラン」",
+        "sourceEpisode": "2025年5月31日放送 ごちそう様 海原やすよ ともこ",
+        "sourceDate": "2025年5月31日",
+        "sourceUrl": "https://www.tbs.co.jp/saikourestaurant/archive/202505311/",
+        "talkSummary": "番組公式アーカイブで、東京・月島「無限ループ食い！月島もんじゃ」として紹介。店舗情報として「もんじゃ 大江戸坂井」が掲載されている。",
+        "story": "月島のもんじゃは街そのものがコンテンツ。大阪漫才師と東京の下町グルメが重なるのが面白い。",
+        "sourceMemo": "TBS公式アーカイブで番組回・店名・住所を確認"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.6587,
+          35.6977
+        ]
+      },
+      "properties": {
+        "id": "r022",
+        "name": "満州王",
+        "catch": "今田耕司さんが松本人志さんと通った、東高円寺の町中華",
+        "category": "中華",
+        "area": "東高円寺",
+        "role": "clue",
+        "importance": "high",
+        "heLevel": 5,
+        "address": "東京都杉並区高円寺南1-11-1",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E6%BA%80%E5%B7%9E%E7%8E%8B%20%E6%9D%B1%E9%AB%98%E5%86%86%E5%AF%BA",
+        "tags": [
+          "#今田耕司",
+          "#松本人志",
+          "#通った",
+          "#東高円寺",
+          "#行きつけ系"
+        ],
+        "relatedComedians": [
+          "今田耕司",
+          "松本人志"
+        ],
+        "scene": "公式見出しに“通った”と残る強い手がかり。芸人同士の関係と若い頃の時間が、東高円寺の町中華に重なる。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「人生最高レストラン」",
+        "sourceEpisode": "2023年2月25日放送 ごちそう様 今田耕司さん",
+        "sourceDate": "2023年2月25日",
+        "sourceUrl": "https://www.tbs.co.jp/saikourestaurant/oldv8/202302251/",
+        "talkSummary": "番組公式アーカイブで、東京・東高円寺「松本人志と通った！思い出の町中華」として紹介。店舗情報として「満州王」が掲載されている。",
+        "story": "派手な店ではなく、町中華という生活感が良い。都内の劇場外エリアに強い芯を作れるカード。",
+        "sourceMemo": "TBS公式アーカイブで番組回・店名・住所を確認"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.6892,
+          35.7383
+        ]
+      },
+      "properties": {
+        "id": "r023",
+        "name": "みはら庵",
+        "catch": "バイきんぐの下積み時代を支えた、千川のカツ丼",
+        "category": "和食",
+        "area": "千川",
+        "role": "clue",
+        "importance": "high",
+        "heLevel": 5,
+        "address": "東京都豊島区要町3-9-13 2F",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%BF%E3%81%AF%E3%82%89%E5%BA%B5%20%E5%8D%83%E5%B7%9D",
+        "tags": [
+          "#バイきんぐ",
+          "#下積み",
+          "#千川",
+          "#カツ丼",
+          "#行きつけ系"
+        ],
+        "relatedComedians": [
+          "バイきんぐ",
+          "小峠英二",
+          "西村瑞樹"
+        ],
+        "scene": "“下積み時代を支えた”という文脈が、会える場所MAPにかなり合う。東京の売れる前の生活導線を想像できる。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「人生最高レストラン」",
+        "sourceEpisode": "2023年3月18日放送 ごちそう様 バイきんぐ 小峠英二さん・西村瑞樹さん",
+        "sourceDate": "2023年3月18日",
+        "sourceUrl": "https://www.tbs.co.jp/saikourestaurant/oldv8/202303181/",
+        "talkSummary": "番組公式アーカイブで、東京・千川「下積み時代を支えた！カツ丼」かつ人生最高の一品として紹介。店舗情報として「みはら庵」が掲載されている。",
+        "story": "千川という少し外したエリアも良い。芸人の地図が新宿・渋谷だけではないことを見せられる。",
+        "sourceMemo": "TBS公式アーカイブで番組回・店名・住所を確認"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.6715,
+          35.6975
+        ]
+      },
+      "properties": {
+        "id": "r024",
+        "name": "鍋屋横丁 やきとん なべ屋",
+        "catch": "ヒコロヒーさんの下積み時代を支えた、中野のボリュームめし",
+        "category": "居酒屋",
+        "area": "中野",
+        "role": "clue",
+        "importance": "high",
+        "heLevel": 5,
+        "address": "東京都中野区中央4-2-3 日興マンション 1F",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E9%8D%8B%E5%B1%8B%E6%A8%AA%E4%B8%81%20%E3%82%84%E3%81%8D%E3%81%A8%E3%82%93%20%E3%81%AA%E3%81%B9%E5%B1%8B",
+        "tags": [
+          "#ヒコロヒー",
+          "#下積み",
+          "#中野",
+          "#やきとん",
+          "#行きつけ系"
+        ],
+        "relatedComedians": [
+          "ヒコロヒー"
+        ],
+        "scene": "中野エリアの強い手がかり。芸人の下積みと、街の飲み屋文化が自然につながる。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「人生最高レストラン」",
+        "sourceEpisode": "2023年6月24日放送 ごちそう様 ヒコロヒーさん",
+        "sourceDate": "2023年6月24日",
+        "sourceUrl": "https://www.tbs.co.jp/saikourestaurant/oldv8/202306241/",
+        "talkSummary": "番組公式アーカイブで「下積み時代を支えた！ボリュームめし」として紹介。店舗情報として「鍋屋横丁 やきとん なべ屋」が掲載されている。",
+        "story": "ボリュームめしという言葉が良い。食べに行く理由がすぐ伝わるカード。",
+        "sourceMemo": "TBS公式アーカイブで番組回・店名・住所を確認"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.6588,
+          35.6717
+        ]
+      },
+      "properties": {
+        "id": "r025",
+        "name": "鶏々舎",
+        "catch": "ウエストランドがM-1王者になるまでお世話になった、代田橋の焼き鳥",
+        "category": "居酒屋",
+        "area": "代田橋",
+        "role": "clue",
+        "importance": "high",
+        "heLevel": 5,
+        "address": "東京都世田谷区大原2-18-3 コーポはなみずき1F",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E9%B6%8F%E3%80%85%E8%88%8E%20%E4%BB%A3%E7%94%B0%E6%A9%8B",
+        "tags": [
+          "#ウエストランド",
+          "#M1",
+          "#代田橋",
+          "#焼き鳥",
+          "#行きつけ系"
+        ],
+        "relatedComedians": [
+          "ウエストランド",
+          "井口浩之",
+          "河本太"
+        ],
+        "scene": "“お世話になった”の文脈が強い。芸人の売れる前後を支えた店として、かなりコンセプトに近い。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「人生最高レストラン」",
+        "sourceEpisode": "2023年8月5日放送 ウエストランド 井口浩之さん・河本太さん",
+        "sourceDate": "2023年8月5日",
+        "sourceUrl": "https://www.tbs.co.jp/saikourestaurant/oldv8/202308051/",
+        "talkSummary": "番組公式アーカイブで、東京・代田橋「M-1チャンピオンになるまでお世話になった！涙の焼き鳥」として紹介。店舗情報として「鶏々舎」が掲載されている。",
+        "story": "代田橋の焼き鳥店という渋さが良い。都内の探索範囲を自然に広げてくれる。",
+        "sourceMemo": "TBS公式アーカイブで番組回・店名・住所を確認"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.6585,
+          35.6976
+        ]
+      },
+      "properties": {
+        "id": "r026",
+        "name": "松月庵",
+        "catch": "東京03角田さんの下積み時代の思い出、東高円寺のカツカレー",
+        "category": "和食",
+        "area": "東高円寺",
+        "role": "clue",
+        "importance": "high",
+        "heLevel": 5,
+        "address": "東京都杉並区高円寺南1-11-3",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E6%9D%BE%E6%9C%88%E5%BA%B5%20%E6%9D%B1%E9%AB%98%E5%86%86%E5%AF%BA",
+        "tags": [
+          "#東京03",
+          "#角田晃広",
+          "#下積み",
+          "#東高円寺",
+          "#行きつけ系"
+        ],
+        "relatedComedians": [
+          "東京03",
+          "角田晃広"
+        ],
+        "scene": "東高円寺に芸人の下積みカードが複数立つことで、街としての説得力が出る。劇場近くではない都内芸人マップの良い核。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「人生最高レストラン」",
+        "sourceEpisode": "2023年11月4日放送 東京03角田晃広さん",
+        "sourceDate": "2023年11月4日",
+        "sourceUrl": "https://www.tbs.co.jp/saikourestaurant/oldv8/202311041/",
+        "talkSummary": "番組公式アーカイブで、東京・東高円寺「下積み時代の思い出！カツカレー」として紹介。店舗情報として「松月庵」が掲載されている。",
+        "story": "カツカレーという日常食が、下積みの記憶とよく合う。",
+        "sourceMemo": "TBS公式アーカイブで番組回・店名・住所を確認"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.6816,
+          35.6504
+        ]
+      },
+      "properties": {
+        "id": "r027",
+        "name": "KO-LA 池尻店",
+        "catch": "東京03角田さんの芸人人生を変えた、池尻大橋の焼肉",
+        "category": "焼肉",
+        "area": "池尻大橋",
+        "role": "clue",
+        "importance": "high",
+        "heLevel": 5,
+        "address": "東京都世田谷区池尻3-16-2",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=KO-LA%20%E6%B1%A0%E5%B0%BB%E5%BA%97",
+        "tags": [
+          "#東京03",
+          "#角田晃広",
+          "#池尻大橋",
+          "#焼肉"
+        ],
+        "relatedComedians": [
+          "東京03",
+          "角田晃広"
+        ],
+        "scene": "行きつけ断定ではないが、“芸人人生を変えた”という見出しが強い。池尻大橋にも芸人の食の記憶を置ける。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「人生最高レストラン」",
+        "sourceEpisode": "2023年11月4日放送 東京03角田晃広さん",
+        "sourceDate": "2023年11月4日",
+        "sourceUrl": "https://www.tbs.co.jp/saikourestaurant/oldv8/202311041/",
+        "talkSummary": "番組公式アーカイブで、東京・池尻大橋「芸人人生を変えた！焼き肉」かつ人生最高の一品として紹介。店舗情報として「KO‐LA 池尻店」が掲載されている。",
+        "story": "都心から少し外れた焼肉店。芸人の節目を感じるカードとして使える。",
+        "sourceMemo": "TBS公式アーカイブで番組回・店名・住所を確認"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.5061,
+          34.6687
+        ]
+      },
+      "properties": {
+        "id": "r028",
+        "name": "居酒屋たこしげ",
+        "catch": "サバンナ高橋さんの下積み時代の思い出が詰まった、千日前の居酒屋めし",
+        "category": "居酒屋",
+        "area": "千日前",
+        "role": "clue",
+        "importance": "high",
+        "heLevel": 5,
+        "address": "大阪府大阪市中央区千日前1-4-1",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E5%B1%85%E9%85%92%E5%B1%8B%E3%81%9F%E3%81%93%E3%81%97%E3%81%92%20%E5%8D%83%E6%97%A5%E5%89%8D",
+        "tags": [
+          "#サバンナ",
+          "#高橋茂雄",
+          "#下積み",
+          "#千日前",
+          "#行きつけ系"
+        ],
+        "relatedComedians": [
+          "サバンナ",
+          "高橋茂雄"
+        ],
+        "scene": "千日前と芸人の下積みが直結する強いカード。大阪の芸人探索を厚くできる。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「人生最高レストラン」",
+        "sourceEpisode": "2023年2月11日放送 ごちそう様 高橋茂雄さん（サバンナ）",
+        "sourceDate": "2023年2月11日",
+        "sourceUrl": "https://www.tbs.co.jp/saikourestaurant/oldv8/202302111/",
+        "talkSummary": "番組公式アーカイブで、大阪・千日前「下積み時代の思い出が詰まった！居酒屋メシ」として紹介。店舗情報として「居酒屋たこしげ」が掲載されている。",
+        "story": "大阪芸人の記憶が残る居酒屋として、地図に置いた時の説得力がある。",
+        "sourceMemo": "TBS公式アーカイブで番組回・店名・住所を確認"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.5155,
+          34.6674
+        ]
+      },
+      "properties": {
+        "id": "r029",
+        "name": "谷九 ふる里",
+        "catch": "今田耕司さんが40年通う、谷町九丁目の老舗うどんと寿司",
+        "category": "和食",
+        "area": "谷町九丁目",
+        "role": "clue",
+        "importance": "high",
+        "heLevel": 5,
+        "address": "大阪府大阪市天王寺区生玉寺町1-32",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E8%B0%B7%E4%B9%9D%20%E3%81%B5%E3%82%8B%E9%87%8C",
+        "tags": [
+          "#今田耕司",
+          "#40年通う",
+          "#谷町九丁目",
+          "#行きつけ系"
+        ],
+        "relatedComedians": [
+          "今田耕司"
+        ],
+        "scene": "公式見出しに“40年通う”とある、かなり強い行きつけ系カード。芸人の長い時間がそのまま店に残っている。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「人生最高レストラン」",
+        "sourceEpisode": "2023年2月25日放送 ごちそう様 今田耕司さん",
+        "sourceDate": "2023年2月25日",
+        "sourceUrl": "https://www.tbs.co.jp/saikourestaurant/oldv8/202302251/",
+        "talkSummary": "番組公式アーカイブで、大阪・谷町九丁目「40年通う！老舗のうどんとお寿司」として紹介。店舗情報として「谷九 ふる里」が掲載されている。",
+        "story": "うどんと寿司という日常の強さがある。大阪の芸人地図に厚みを足す一軒。",
+        "sourceMemo": "TBS公式アーカイブで番組回・店名・住所を確認"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.4017,
+          33.5914
+        ]
+      },
+      "properties": {
+        "id": "r030",
+        "name": "ともちゃん",
+        "catch": "博多大吉さんの芸人人生の原点、天神の屋台めし",
+        "category": "屋台",
+        "area": "福岡天神",
+        "role": "clue",
+        "importance": "high",
+        "heLevel": 5,
+        "address": "福岡県福岡市中央区天神1-14",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%A8%E3%82%82%E3%81%A1%E3%82%83%E3%82%93%20%E5%B1%8B%E5%8F%B0%20%E5%A4%A9%E7%A5%9E",
+        "tags": [
+          "#博多大吉",
+          "#芸人人生の原点",
+          "#福岡",
+          "#屋台"
+        ],
+        "relatedComedians": [
+          "博多大吉",
+          "博多華丸・大吉"
+        ],
+        "scene": "“芸人人生の原点”という見出しが強い。会えるというより、芸人の原点を地図でたどるカード。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「人生最高レストラン」",
+        "sourceEpisode": "2023年9月23日放送 博多大吉さん",
+        "sourceDate": "2023年9月23日",
+        "sourceUrl": "https://www.tbs.co.jp/saikourestaurant/oldv8/202309231/",
+        "talkSummary": "番組公式アーカイブで、福岡・天神「芸人人生の原点の味！屋台めし」かつ人生最高の一品として紹介。店舗情報として「ともちゃん」が掲載されている。",
+        "story": "福岡の屋台文化と芸人の記憶が重なる。遠征したくなるタイプの一軒。",
+        "sourceMemo": "TBS公式アーカイブで番組回・店名・住所を確認"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.4935,
+          34.6247
+        ]
+      },
+      "properties": {
+        "id": "r031",
+        "name": "Genji",
+        "catch": "ハイヒール・モモコさんが30年以上愛する、帝塚山のウニのババロア",
+        "category": "洋食",
+        "area": "帝塚山",
+        "role": "clue",
+        "importance": "high",
+        "heLevel": 5,
+        "address": "大阪府大阪市西成区玉出東2-14-4 GRACE帝塚山1F",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Genji%20%E5%B8%9D%E5%A1%9A%E5%B1%B1",
+        "tags": [
+          "#ハイヒールモモコ",
+          "#30年以上",
+          "#大阪",
+          "#行きつけ系"
+        ],
+        "relatedComedians": [
+          "ハイヒール・モモコ",
+          "ハイヒール"
+        ],
+        "scene": "“30年以上愛してやまない”は行きつけに近い強い文脈。長く愛されている店として説得力がある。",
+        "sourceStatus": "出典確認済み",
+        "sourceProgram": "TBSテレビ「人生最高レストラン」",
+        "sourceEpisode": "2024年9月28日放送 ごちそう様 ハイヒール・モモコさん",
+        "sourceDate": "2024年9月28日",
+        "sourceUrl": "https://www.tbs.co.jp/saikourestaurant/oldv8/202409281/",
+        "talkSummary": "番組公式アーカイブで、大阪・帝塚山「30年以上愛してやまない！ウニのババロア」かつ人生最高の一品として紹介。店舗情報として「Genji」が掲載されている。",
+        "story": "料理名のインパクトも強く、カードとして読ませる力がある。",
+        "sourceMemo": "TBS公式アーカイブで番組回・店名・住所を確認"
+      }
+    }
+  ]
+}

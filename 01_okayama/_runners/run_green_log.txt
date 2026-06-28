@@ -1,0 +1,15 @@
+folium: already installed
+==================================================
+Running green_extract_osm.py ...
+==================================================
+[�L���b�V���g�p] C:\Users\rd006\Documents\projectGIS_2026\01_personspace\_overpass_green_full_cache.json
+�擾����: park=116, garden=45, square=2, pedestrian=52, footway=4290, path=832
+  �����A�[�P�[�h(covered=arcade): 2��
+
+�n�}��ۑ����܂���: C:\Users\rd006\Documents\projectGIS_2026\01_personspace\green_osm.html
+GeoJSON��ۑ����܂���: C:\Users\rd006\Documents\projectGIS_2026\01_personspace\green_osm.geojson
+
+OSM�Ζʐ� ���v: 2,121,577 m2  (212.16 ha)
+(�Q�l��r�X�L�b�v�Fgreen_plateau_217.geojson ��������܂���)
+
+Done.

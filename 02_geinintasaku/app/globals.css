@@ -1,0 +1,218 @@
+@import "maplibre-gl/dist/maplibre-gl.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .case-panel {
+    @apply border border-cyan-100/15 text-cyan-50 shadow-[0_14px_34px_rgba(0,0,0,0.46)] backdrop-blur-xl;
+    background:
+      linear-gradient(150deg, rgba(2, 6, 23, 0.92), rgba(8, 47, 73, 0.48)),
+      rgba(2, 6, 23, 0.72);
+  }
+
+  .case-panel-solid {
+    @apply border border-cyan-100/15 text-cyan-50 shadow-[0_16px_42px_rgba(0,0,0,0.58)];
+    background:
+      radial-gradient(circle at 20% 0%, rgba(34, 211, 238, 0.11), transparent 34%),
+      linear-gradient(180deg, rgba(15, 23, 42, 0.98), rgba(2, 6, 23, 1));
+  }
+
+  .case-chip {
+    @apply rounded-full border border-cyan-100/15 bg-slate-900/90 px-3 py-1 text-xs font-bold text-slate-300;
+  }
+
+  .case-chip-active {
+    @apply rounded-full bg-cyan-300 px-3 py-1 text-xs font-bold text-slate-950 shadow-[0_0_18px_rgba(103,232,249,0.38)];
+  }
+
+  .case-eyebrow {
+    @apply text-[10px] font-bold uppercase tracking-[0.2em] text-cyan-300;
+  }
+
+  .case-muted {
+    @apply text-slate-400;
+  }
+
+  .case-action {
+    @apply min-h-[52px] rounded-full bg-cyan-300 px-5 text-base font-bold text-slate-950 shadow-[0_0_24px_rgba(103,232,249,0.42)] transition active:scale-[0.98];
+  }
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: #050914;
+  color: #e5f7ff;
+  overscroll-behavior: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    radial-gradient(circle at 50% 18%, rgba(34, 211, 238, 0.08), transparent 34%);
+  background-size: 100% 4px, 100% 100%;
+  mix-blend-mode: screen;
+  opacity: 0.28;
+  content: "";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.maplibregl-ctrl-bottom-left,
+.maplibregl-ctrl-bottom-right {
+  margin-bottom: 146px;
+}
+
+.map-shell {
+  position: relative;
+  background: #050914;
+}
+
+.map-shell::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 42%, transparent 0 38%, rgba(3, 7, 18, 0.12) 68%, rgba(3, 7, 18, 0.44) 100%),
+    linear-gradient(180deg, rgba(8, 47, 73, 0.14), transparent 32%, rgba(8, 47, 73, 0.08));
+  content: "";
+}
+
+.maplibregl-ctrl-attrib {
+  border: 1px solid rgba(103, 232, 249, 0.12);
+  background: rgba(2, 6, 23, 0.72) !important;
+  color: rgba(226, 232, 240, 0.72);
+  backdrop-filter: blur(10px);
+}
+
+.maplibregl-ctrl-attrib a {
+  color: rgba(125, 211, 252, 0.85);
+}
+
+.maplibregl-marker,
+.maplibregl-control-container {
+  z-index: 2;
+}
+
+.geinin-marker {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgba(103, 232, 249, 0.78);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle, rgba(34, 211, 238, 0.22) 0 34%, rgba(34, 211, 238, 0.1) 35% 60%, rgba(34, 211, 238, 0) 61%),
+    rgba(7, 15, 30, 0.72);
+  box-shadow:
+    0 0 0 5px rgba(34, 211, 238, 0.1),
+    0 0 20px rgba(34, 211, 238, 0.58),
+    0 8px 22px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  line-height: 1;
+  touch-action: manipulation;
+  transition:
+    transform 0.16s ease,
+    box-shadow 0.16s ease;
+}
+
+.geinin-marker:hover,
+.geinin-marker:focus {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow:
+    0 0 0 8px rgba(34, 211, 238, 0.14),
+    0 0 28px rgba(34, 211, 238, 0.74),
+    0 10px 26px rgba(0, 0, 0, 0.5);
+}
+
+.geinin-marker.is-selected {
+  border-color: #f8fafc;
+  transform: translateY(-3px) scale(1.1);
+  box-shadow:
+    0 0 0 8px rgba(14, 165, 233, 0.22),
+    0 0 34px rgba(103, 232, 249, 0.95),
+    0 10px 30px rgba(0, 0, 0, 0.56);
+}
+
+.geinin-marker-core {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: #cffafe;
+  box-shadow: 0 0 14px #67e8f9;
+}
+
+.geinin-marker.is-anchor {
+  border-color: rgba(252, 165, 165, 0.92);
+  background:
+    radial-gradient(circle, rgba(248, 113, 113, 0.28) 0 34%, rgba(248, 113, 113, 0.12) 35% 60%, rgba(248, 113, 113, 0) 61%),
+    rgba(30, 7, 12, 0.78);
+  box-shadow:
+    0 0 0 6px rgba(248, 113, 113, 0.12),
+    0 0 22px rgba(248, 113, 113, 0.6),
+    0 8px 22px rgba(0, 0, 0, 0.44);
+}
+
+.geinin-marker.is-anchor .geinin-marker-core {
+  background: #fee2e2;
+  box-shadow: 0 0 16px #f87171;
+}
+
+.geinin-marker.is-column,
+.geinin-marker.is-low {
+  width: 30px;
+  height: 30px;
+  border-color: rgba(148, 163, 184, 0.44);
+  background: rgba(15, 23, 42, 0.66);
+  box-shadow:
+    0 0 0 3px rgba(148, 163, 184, 0.08),
+    0 0 10px rgba(148, 163, 184, 0.24);
+}
+
+.geinin-marker.is-column .geinin-marker-core,
+.geinin-marker.is-low .geinin-marker-core {
+  width: 8px;
+  height: 8px;
+  background: #94a3b8;
+  box-shadow: none;
+}
+
+.user-location-marker {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #fff;
+  border-radius: 999px;
+  background: #38bdf8;
+  box-shadow: 0 2px 14px rgba(56, 189, 248, 0.7);
+}
+
+.user-location-marker::after {
+  position: absolute;
+  inset: -13px;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.18);
+  content: "";
+}

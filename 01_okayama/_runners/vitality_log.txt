@@ -1,0 +1,12 @@
+[キャッシュ使用] C:\Users\rd006\Documents\projectGIS_2026\01_personspace\_overpass_vitality_cache.json
+shop ノード: 1795 件
+道路 way   : 10501 件
+店密度でティア分類中...
+  Tier S: 443 way
+  Tier A: 1002 way
+  Tier B: 1645 way
+
+保存完了: C:\Users\rd006\Documents\projectGIS_2026\01_personspace\vitality_map.html
+  Tier S バッファ: 443 ポリゴン
+  Tier A バッファ: 1002 ポリゴン
+  Tier B バッファ: 1645 ポリゴン

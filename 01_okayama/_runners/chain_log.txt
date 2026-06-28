@@ -1,0 +1,42 @@
+﻿
+=== green_extract_osm.py ===
+[・ｽL・ｽ・ｽ・ｽb・ｽV・ｽ・ｽ・ｽg・ｽp] C:\Users\rd006\Documents\projectGIS_2026\01_personspace\_overpass_green_full_cache.json
+・ｽ謫ｾ・ｽ・ｽ・ｽ・ｽ: park=116, garden=45, square=2, pedestrian=52, footway=4290, path=832
+  ・ｽ・ｽ・ｽ・ｽ・ｽA・ｽ[・ｽP・ｽ[・ｽh(covered=arcade): 2・ｽ・ｽ
+
+・ｽn・ｽ}・ｽ・ｽﾛ托ｿｽ・ｽ・ｽ・ｽﾜゑｿｽ・ｽ・ｽ: C:\Users\rd006\Documents\projectGIS_2026\01_personspace\green_osm.html
+GeoJSON・ｽ・ｽﾛ托ｿｽ・ｽ・ｽ・ｽﾜゑｿｽ・ｽ・ｽ: C:\Users\rd006\Documents\projectGIS_2026\01_personspace\green_osm.geojson
+
+OSM・ｽﾎ面撰ｿｽ ・ｽ・ｽ・ｽv: 2,121,577 m2  (212.16 ha)
+(・ｽQ・ｽl・ｽ・ｽr・ｽX・ｽL・ｽb・ｽv・ｽFgreen_plateau_217.geojson ・ｽ・ｽ・ｽ・ｽ・ｽﾂゑｿｽ・ｽ・ｽﾜゑｿｽ・ｽ・ｽ)
+
+
+=== build_overlay_map.py ===
+・ｽl・ｽ・ｽ・ｽS・ｽ・ｽ・ｽt・ｽB・ｽ[・ｽ`・ｽ・ｽ: 22 ・ｽ・ｽ (・ｽ・ｽ・ｽO・ｽt・ｽ・ｽ pedestrian/arcade)
+・ｽ・ｽ・ｽﾔ擾ｿｽﾌ近接費ｿｽ・ｽ闥・..
+  ・ｽ・ｽ・ｽﾉ抵ｿｽ・ｽ・ｽt・ｽ・ｽ・ｽ・ｽ・ｽﾔ擾ｿｽ: 52 ・ｽ・ｽ (3.5%)
+  ・ｽ・ｽ・ｽﾌ托ｿｽ            : 1447 ・ｽ・ｽ
+・ｽl・ｽ・ｽ・ｽ・ｽ・ｽC・ｽ・ｽ・ｽ[・ｽ・ｽﾇ会ｿｽ・ｽ・ｽ...
+  ・ｽl・ｽ・ｽ・ｽ・ｽ・ｽC・ｽ・ｽ・ｽ[: 22 ・ｽG・ｽ・ｽ・ｽA
+・ｽ・ｽ・ｽﾆ施・ｽﾝ・ｿｽ・ｽC・ｽ・ｽ・ｽ[・ｽ・ｽﾇ会ｿｽ・ｽ・ｽ...
+  [・ｽL・ｽ・ｽ・ｽb・ｽV・ｽ・ｽ・ｽg・ｽp] C:\Users\rd006\Documents\projectGIS_2026\01_personspace\_overpass_commercial_cache.json
+  ・ｽ・ｽ・ｽﾆ施・ｽﾝ・・ｽﾏ鯉ｿｽ・ｽn・ｽ・ｽ・ｽC・ｽ・ｽ・ｽ[: 23 ・ｽ・ｽ
+  [・ｽL・ｽ・ｽ・ｽb・ｽV・ｽ・ｽ・ｽg・ｽp] C:\Users\rd006\Documents\projectGIS_2026\01_personspace\_overpass_commercial_cache.json
+  ・ｽX・ｽ[・ｽp・ｽ[・ｽ・ｽ・ｽC・ｽ・ｽ・ｽ[: 80 ・ｽ・ｽ
+・ｽI・ｽt・ｽB・ｽX・ｽ・ｽ・ｽC・ｽ・ｽ・ｽ[・ｽ・ｽﾇ会ｿｽ・ｽ・ｽ...
+  [・ｽL・ｽ・ｽ・ｽb・ｽV・ｽ・ｽ・ｽg・ｽp] C:\Users\rd006\Documents\projectGIS_2026\01_personspace\_overpass_office_cache.json
+  ・ｽI・ｽt・ｽB・ｽX・ｽ・ｽ・ｽC・ｽ・ｽ・ｽ[: 633 ・ｽ・ｽ
+・ｽ・ｽ・ｽH・ｽX・ｽ・ｽ・ｽC・ｽ・ｽ・ｽ[・ｽ・ｽﾇ会ｿｽ・ｽ・ｽ...
+  [・ｽL・ｽ・ｽ・ｽb・ｽV・ｽ・ｽ・ｽg・ｽp] C:\Users\rd006\Documents\projectGIS_2026\01_personspace\_overpass_restaurant_cache.json
+  ・ｽ・ｽ・ｽH・ｽX・ｽ・ｽ・ｽC・ｽ・ｽ・ｽ[: 1295 ・ｽ・ｽ
+・ｽ・ｽﾔ人・ｽ・ｽ・ｽ・ｽ・ｽC・ｽ・ｽ・ｽ[・ｽ・ｽﾇ会ｿｽ・ｽ・ｽ...
+  ・ｽ・ｽﾔ人・ｽ・ｽ・ｽ・ｽ・ｽC・ｽ・ｽ・ｽ[: 22 ・ｽG・ｽ・ｽ・ｽA
+・ｽ・ｽ・ｽ・ｽ・ｽ・ｽﾊゑｿｽﾇ会ｿｽ・ｽ・ｽ...
+  ・ｽH・ｽﾊ電・ｽﾔ（・ｽ・ｽ・ｽd・ｽj: 17 ・ｽ笳ｯ・ｽ・ｽ
+  ・ｽ・ｽ・ｽd・ｽo・ｽX・ｽi・ｽ笳ｯ・ｽ・ｽ・ｽE・ｽH・ｽ・ｽ・ｽj: 457 ・ｽ笳ｯ・ｽ・ｽ, 253 ・ｽH・ｽ・ｽ
+  ・ｽ・ｽ・ｽ・ｽ・ｽo・ｽX・ｽi・ｽ笳ｯ・ｽ・ｽ・ｽE・ｽH・ｽ・ｽ・ｽj: 472 ・ｽ笳ｯ・ｽ・ｽ, 113 ・ｽH・ｽ・ｽ
+
+・ｽﾛ托ｿｽ・ｽ・ｽ・ｽ・ｽ: C:\Users\rd006\Documents\projectGIS_2026\01_personspace\overlay_parking_green.html
+
+
+=== 螳御ｺ・===
